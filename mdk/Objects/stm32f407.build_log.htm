@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=YA39H-WFWCM-GKVBG-VD9JW-SL42U-RJC4N
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+F:\project\Smart_weather_clock_based_on_FreeRTOS\my_project\STM32F4_Clock\mdk\stm32f407.uvprojx
+Project File Date:  04/27/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin'
+Build target 'stm32f407'
+compiling main.c...
+..\app\main.c(34): warning:  #177-D: variable "Green"  was declared but never referenced
+  	const uint16_t Green = mkcolor(0, 255, 0);
+..\app\main.c(35): warning:  #177-D: variable "Blue"  was declared but never referenced
+  	const uint16_t Blue = mkcolor(0, 0, 255);
+..\app\main.c(36): warning:  #177-D: variable "White"  was declared but never referenced
+  	const uint16_t White = mkcolor(255, 255, 255);
+..\app\main.c: 3 warnings, 0 errors
+compiling st7789.c...
+linking...
+Program Size: Code=9820 RO-data=24144 RW-data=44 ZI-data=1028  
+".\Objects\stm32f407.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.3.1.1.pack
+                Keil.STM32F4xx_DFP.3.1.1
+                STMicroelectronics STM32F4 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
