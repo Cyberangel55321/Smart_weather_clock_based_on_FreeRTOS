@@ -15,6 +15,7 @@
             "includePath": [
                 "app",
                 "app/font",
+                "app/image",
 
                 "driver/aht20",
                 "driver/cpu_delay",

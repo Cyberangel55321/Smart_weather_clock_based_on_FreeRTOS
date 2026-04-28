@@ -3,6 +3,7 @@
 ".\objects\font16.o"
 ".\objects\font32.o"
 ".\objects\font48.o"
+".\objects\image.o"
 ".\objects\aht20.o"
 ".\objects\cpu_delay.o"
 ".\objects\led.o"

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc;..\app;..\app\font;..\driver\aht20;..\driver\cpu_delay;..\driver\led;..\driver\usart;..\driver\st7789;..\third_lib</IncludePath>
+              <IncludePath>..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc;..\app;..\app\font;..\app\image;..\driver\aht20;..\driver\cpu_delay;..\driver\led;..\driver\usart;..\driver\st7789;..\third_lib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -407,6 +407,16 @@
               <FileName>font48.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\font\font48.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>app/image</GroupName>
+          <Files>
+            <File>
+              <FileName>image.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\image\image.c</FilePath>
             </File>
           </Files>
         </Group>

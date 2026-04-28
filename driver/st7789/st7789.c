@@ -6,6 +6,7 @@
 #include "cpu_delay.h"
 #include "st7789.h"
 #include "font.h"
+#include "image.h"
 
 // CLK ！！ PB13
 // MOSI ！！ PC3
@@ -303,4 +304,26 @@ void st7789_write_string(uint16_t x, uint16_t y, char *str, uint16_t color, uint
     }
 }
 
+void st7789_draw_image(uint16_t x, uint16_t y, const image_t *image)
+{
+    if (x >= ST7789_WIDTH || y >= ST7789_HEIGHT || 
+        x + image->width - 1 >= ST7789_WIDTH || y + image->height + 1 >= ST7789_HEIGHT)
+        return;
+    
+    st7789_set_range_and_prepare_gram(x, y, x + image->width - 1, y + image->height - 1);
+    
+    GPIO_ResetBits(CS_PORT, CS_PIN);
+    GPIO_SetBits(DC_PORT, DC_PIN);
+    uint32_t size = image->width * image->height * 2;
+    const uint8_t *data = image->data;
+	for (uint32_t i = 0; i < size; i += 2)
+	{
+        SPI_SendData(SPI2, data[i + 1]);
+        while (SPI_GetFlagStatus(SPI2, SPI_FLAG_TXE) == RESET);
+        SPI_SendData(SPI2, data[i]);
+        while (SPI_GetFlagStatus(SPI2, SPI_FLAG_TXE) == RESET);
+	}
+    while (SPI_GetFlagStatus(SPI2, SPI_FLAG_BSY) != RESET);
+    GPIO_SetBits(CS_PORT, CS_PIN);
+}
 

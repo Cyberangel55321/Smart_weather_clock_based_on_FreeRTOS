@@ -41,3 +41,4 @@
 .\objects\main.o: ..\driver\cpu_delay\cpu_delay.h
 .\objects\main.o: ..\driver\st7789\st7789.h
 .\objects\main.o: ..\app\font\font.h
+.\objects\main.o: ..\app\image\image.h

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\stm32f407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\stm32f407.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Apr 27 17:30:46 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Apr 28 12:25:30 2026
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -130,7 +130,7 @@ Global Symbols
 <P><STRONG><a name="[5e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(.text)
 </UL>
-<P><STRONG><a name="[b7]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[b1]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[60]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -140,17 +140,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[b8]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[b2]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[b9]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[b3]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[ba]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[b4]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[bb]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[b5]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[bc]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[b6]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[bd]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[b7]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f40_41xxx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
@@ -465,23 +465,11 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40_41xxx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
-<P><STRONG><a name="[b2]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strncpy
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_string
-</UL>
-
-<P><STRONG><a name="[b0]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
-</UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_chinese
-</UL>
-
 <P><STRONG><a name="[9d]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[be]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[b8]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[7c]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -495,7 +483,7 @@ Global Symbols
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[bf]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[b9]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[65]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
@@ -545,7 +533,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[c0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[ba]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[64]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -554,7 +542,7 @@ Global Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[c1]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[bb]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[63]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -562,13 +550,13 @@ Global Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[c2]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[bc]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[66]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[c3]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[bd]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[68]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -601,20 +589,20 @@ Global Symbols
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_init
 </UL>
 
-<P><STRONG><a name="[a0]"></a>GPIO_ResetBits</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_ResetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
+<P><STRONG><a name="[9f]"></a>GPIO_ResetBits</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_ResetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 </UL>
 
-<P><STRONG><a name="[a1]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_SetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
+<P><STRONG><a name="[a0]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_SetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 </UL>
 
 <P><STRONG><a name="[7e]"></a>GPIO_StructInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_StructInit))
@@ -623,8 +611,8 @@ Global Symbols
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_init
 </UL>
 
-<P><STRONG><a name="[ad]"></a>GPIO_WriteBit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_WriteBit))
-<BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_backlight
+<P><STRONG><a name="[ac]"></a>GPIO_WriteBit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_WriteBit))
+<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_backlight
 </UL>
 
 <P><STRONG><a name="[89]"></a>I2C_AcknowledgeConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_i2c.o(i.I2C_AcknowledgeConfig))
@@ -678,7 +666,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_init
 </UL>
 
-<P><STRONG><a name="[b6]"></a>NVIC_Init</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<P><STRONG><a name="[b0]"></a>NVIC_Init</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
@@ -703,29 +691,29 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Init
 </UL>
 
-<P><STRONG><a name="[a8]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_Cmd))
+<P><STRONG><a name="[a7]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_Cmd))
 <BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
 </UL>
 
-<P><STRONG><a name="[a3]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_I2S_GetFlagStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
+<P><STRONG><a name="[a2]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_I2S_GetFlagStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 </UL>
 
-<P><STRONG><a name="[a2]"></a>SPI_I2S_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_I2S_SendData))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
+<P><STRONG><a name="[a1]"></a>SPI_I2S_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_I2S_SendData))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 </UL>
 
-<P><STRONG><a name="[a7]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f4xx_spi.o(i.SPI_Init))
+<P><STRONG><a name="[a6]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f4xx_spi.o(i.SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
 </UL>
 
-<P><STRONG><a name="[a6]"></a>SPI_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_StructInit))
+<P><STRONG><a name="[a5]"></a>SPI_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_StructInit))
 <BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
 </UL>
 
@@ -755,7 +743,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[b5]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_Cmd))
+<P><STRONG><a name="[af]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_Cmd))
 <BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
@@ -769,7 +757,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[b4]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f4xx_usart.o(i.USART_ITConfig))
+<P><STRONG><a name="[ae]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f4xx_usart.o(i.USART_ITConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
@@ -791,7 +779,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[b3]"></a>USART_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_StructInit))
+<P><STRONG><a name="[ad]"></a>USART_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_usart.o(i.USART_StructInit))
 <BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
@@ -799,7 +787,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[c4]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[be]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[9b]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -807,15 +795,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c5]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[bf]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[c6]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[c0]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[c7]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[c1]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[c8]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[c2]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[c9]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[c3]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[7d]"></a>aht20_init</STRONG> (Thumb, 200 bytes, Stack size 40 bytes, aht20.o(i.aht20_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = aht20_init &rArr; I2C_Init &rArr; RCC_GetClocksFreq
@@ -859,8 +847,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[83]"></a>cpu_delay</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, cpu_delay.o(i.cpu_delay))
-<BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_write
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_read
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_wait_for_measurement
@@ -877,12 +865,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 360 bytes, Stack size 32 bytes, main.o(i.main))
+<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 230 bytes, Stack size 32 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = main &rArr; st7789_init &rArr; st7789_init_display &rArr; st7789_fill_color &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
 </UL>
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_string
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_delay
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_wait_for_measurement
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_start_measurement
@@ -896,28 +884,40 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[a4]"></a>st7789_fill_color</STRONG> (Thumb, 178 bytes, Stack size 40 bytes, st7789.o(i.st7789_fill_color))
+<P><STRONG><a name="[9c]"></a>st7789_draw_image</STRONG> (Thumb, 186 bytes, Stack size 32 bytes, st7789.o(i.st7789_draw_image))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = st7789_draw_image &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[a3]"></a>st7789_fill_color</STRONG> (Thumb, 178 bytes, Stack size 40 bytes, st7789.o(i.st7789_fill_color))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = st7789_fill_color &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;in_screen_range
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;in_screen_range
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 </UL>
 
 <P><STRONG><a name="[9a]"></a>st7789_init</STRONG> (Thumb, 220 bytes, Stack size 32 bytes, st7789.o(i.st7789_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = st7789_init &rArr; st7789_init_display &rArr; st7789_fill_color &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_StructInit
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_StructInit
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_StructInit
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -925,25 +925,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9c]"></a>st7789_write_string</STRONG> (Thumb, 126 bytes, Stack size 48 bytes, st7789.o(i.st7789_write_string))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = st7789_write_string &rArr; st7789_write_ascii &rArr; st7789_draw_font &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
-</UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_chinese
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_ascii
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_gb2312
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
 <P><STRONG><a name="[99]"></a>usart_init</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, usart.o(i.usart_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = usart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_StructInit
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_StructInit
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_StructInit
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -1011,99 +1000,61 @@ Local Symbols
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aht20_init
 </UL>
 
-<P><STRONG><a name="[a5]"></a>in_screen_range</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, st7789.o(i.in_screen_range))
+<P><STRONG><a name="[a4]"></a>in_screen_range</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, st7789.o(i.in_screen_range))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = in_screen_range
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_chinese
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_ascii
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
 </UL>
 
-<P><STRONG><a name="[b1]"></a>is_gb2312</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, st7789.o(i.is_gb2312))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_string
-</UL>
-
-<P><STRONG><a name="[9e]"></a>st7789_draw_font</STRONG> (Thumb, 310 bytes, Stack size 56 bytes, st7789.o(i.st7789_draw_font))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = st7789_draw_font &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
-</UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
-</UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_chinese
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_ascii
-</UL>
-
-<P><STRONG><a name="[a9]"></a>st7789_init_display</STRONG> (Thumb, 370 bytes, Stack size 104 bytes, st7789.o(i.st7789_init_display))
+<P><STRONG><a name="[a8]"></a>st7789_init_display</STRONG> (Thumb, 370 bytes, Stack size 104 bytes, st7789.o(i.st7789_init_display))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = st7789_init_display &rArr; st7789_fill_color &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_backlight
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_backlight
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_reset
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init
 </UL>
 
-<P><STRONG><a name="[aa]"></a>st7789_reset</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, st7789.o(i.st7789_reset))
+<P><STRONG><a name="[a9]"></a>st7789_reset</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, st7789.o(i.st7789_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = st7789_reset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 </UL>
 
-<P><STRONG><a name="[ac]"></a>st7789_set_backlight</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, st7789.o(i.st7789_set_backlight))
+<P><STRONG><a name="[ab]"></a>st7789_set_backlight</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, st7789.o(i.st7789_set_backlight))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = st7789_set_backlight
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 </UL>
 
-<P><STRONG><a name="[9f]"></a>st7789_set_range_and_prepare_gram</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, st7789.o(i.st7789_set_range_and_prepare_gram))
+<P><STRONG><a name="[9e]"></a>st7789_set_range_and_prepare_gram</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, st7789.o(i.st7789_set_range_and_prepare_gram))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = st7789_set_range_and_prepare_gram &rArr; st7789_write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_register
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
-</UL>
-
-<P><STRONG><a name="[ae]"></a>st7789_write_ascii</STRONG> (Thumb, 120 bytes, Stack size 56 bytes, st7789.o(i.st7789_write_ascii))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = st7789_write_ascii &rArr; st7789_draw_font &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;in_screen_range
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_string
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_fill_color
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_image
 </UL>
 
-<P><STRONG><a name="[af]"></a>st7789_write_chinese</STRONG> (Thumb, 114 bytes, Stack size 48 bytes, st7789.o(i.st7789_write_chinese))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = st7789_write_chinese &rArr; st7789_draw_font &rArr; st7789_set_range_and_prepare_gram &rArr; st7789_write_register
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_draw_font
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;in_screen_range
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_string
-</UL>
-
-<P><STRONG><a name="[ab]"></a>st7789_write_register</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, st7789.o(i.st7789_write_register))
+<P><STRONG><a name="[aa]"></a>st7789_write_register</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, st7789.o(i.st7789_write_register))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = st7789_write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_set_range_and_prepare_gram
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_init_display
 </UL>
 
 <P><STRONG><a name="[71]"></a>SetSysClock</STRONG> (Thumb, 220 bytes, Stack size 12 bytes, system_stm32f4xx.o(i.SetSysClock))
