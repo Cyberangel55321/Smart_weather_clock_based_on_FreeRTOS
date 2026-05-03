@@ -1,4 +1,5 @@
 .\objects\main.o: ..\app\main.c
+.\objects\main.o: ..\app\main.h
 .\objects\main.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: ..\firmware\cmsis\device\stm32f4xx.h

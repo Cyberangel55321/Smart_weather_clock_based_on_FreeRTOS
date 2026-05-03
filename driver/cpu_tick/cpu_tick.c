@@ -7,6 +7,7 @@
 #define TICKS_PER_US    (SystemCoreClock / 1000000)
 
 static volatile uint64_t cpu_tick_count;
+static cpu_periodic_callback_t periodic_callback;
 
 void cpu_tick_init(void)
 {
@@ -50,7 +51,14 @@ void cpu_delay_ms(uint32_t ms)
     while (cpu_now() - now < (uint64_t)ms * TICKS_PER_MS);
 }
 
+void cpu_register_periodic_callback(cpu_periodic_callback_t callback)
+{
+    periodic_callback = callback;
+}
+
 void SysTick_Handler(void)
 {
     cpu_tick_count += TICKS_PER_MS;
+    if (periodic_callback)
+        periodic_callback();
 }

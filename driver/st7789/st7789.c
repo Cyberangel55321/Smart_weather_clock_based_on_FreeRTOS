@@ -33,7 +33,7 @@ static bool in_screen_range(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
 static void st7789_set_range_and_prepare_gram(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
 static void st7789_draw_font(uint16_t x, uint16_t y, uint16_t width, uint16_t height, const uint8_t *model, uint16_t color, uint16_t bg_color);
 static void st7789_write_ascii(uint16_t x, uint16_t y, char ch, uint16_t color, uint16_t bg_color, const font_t *font);
-static void st7789_write_chinese(uint16_t x, uint16_t y, char *ch, uint16_t color, uint16_t bg_color, const font_t *font);
+static void st7789_write_chinese(uint16_t x, uint16_t y, const char *ch, uint16_t color, uint16_t bg_color, const font_t *font);
 static bool is_gb2312(char ch);
 
 void st7789_init(void)
@@ -230,6 +230,47 @@ static void st7789_draw_font(uint16_t x, uint16_t y, uint16_t width, uint16_t he
     GPIO_SetBits(CS_PORT, CS_PIN);
 }
 
+static const uint8_t *ascii_get_model(const char ch, const font_t *font)
+{
+    uint16_t bytes_per_row = (font->size / 2 + 7) / 8;
+    uint16_t bytes_per_char = font->size * bytes_per_row;
+    
+    if (font->ascii_map)
+    {
+        const char *map = font->ascii_map;
+        do
+        {
+            if (*map == ch)
+            {
+                return font->ascii_model + (map - font->ascii_map) * bytes_per_char;
+            }
+        } while (*(++map) != '\0');
+    }
+    else
+    {
+        return font->ascii_model + (ch - ' ') * bytes_per_char;
+    }
+    
+    return NULL;
+}
+
+// static void st7789_write_ascii(uint16_t x, uint16_t y, char ch, uint16_t color, uint16_t bg_color, const font_t *font)
+// {
+//     if (font == NULL)
+//         return;
+    
+//     uint16_t fheight = font->size, fwidth = font->size / 2;
+//     if (!in_screen_range(x, y, x + fwidth - 1, y + fheight - 1))
+//         return;
+    
+//     if (ch < 0x20 || ch > 0x7E)
+//         return;
+    
+//     uint16_t bytes_per_row = (fwidth + 7) / 8;
+// 	const uint8_t *model = font->ascii_model + (ch - ' ') * fheight * bytes_per_row;
+//     st7789_draw_font(x, y, fwidth, fheight, model, color, bg_color);
+// }
+
 static void st7789_write_ascii(uint16_t x, uint16_t y, char ch, uint16_t color, uint16_t bg_color, const font_t *font)
 {
     if (font == NULL)
@@ -242,12 +283,12 @@ static void st7789_write_ascii(uint16_t x, uint16_t y, char ch, uint16_t color, 
     if (ch < 0x20 || ch > 0x7E)
         return;
     
-    uint16_t bytes_per_row = (fwidth + 7) / 8;
-	const uint8_t *model = font->ascii_model + (ch - ' ') * fheight * bytes_per_row;
-    st7789_draw_font(x, y, fwidth, fheight, model, color, bg_color);
+	const uint8_t *model = ascii_get_model(ch, font);
+    if (model)
+        st7789_draw_font(x, y, fwidth, fheight, model, color, bg_color);
 }
 
-static void st7789_write_chinese(uint16_t x, uint16_t y, char *ch, uint16_t color, uint16_t bg_color, const font_t *font)
+static void st7789_write_chinese(uint16_t x, uint16_t y, const char *ch, uint16_t color, uint16_t bg_color, const font_t *font)
 {
     if (ch == NULL || font == NULL)
         return;
@@ -273,7 +314,7 @@ static bool is_gb2312(char ch)
     return ((unsigned char)ch >= 0xA1 && (unsigned char)ch <= 0xF7);
 }
 
-void st7789_write_string(uint16_t x, uint16_t y, char *str, uint16_t color, uint16_t bg_color, const font_t *font)
+void st7789_write_string(uint16_t x, uint16_t y, const char *str, uint16_t color, uint16_t bg_color, const font_t *font)
 {
     while (*str)
     {

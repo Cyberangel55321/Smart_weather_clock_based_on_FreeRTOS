@@ -16,6 +16,7 @@
                 "app",
                 "app/font",
                 "app/image",
+                "app/page",
 
                 "driver/aht20",
                 "driver/cpu_tick",
@@ -23,6 +24,7 @@
                 "driver/led",
                 "driver/st7789",
                 "driver/usart",
+                "driver/rtc",
 
                 "firmware/cmsis/core",
                 "firmware/cmsis/device",

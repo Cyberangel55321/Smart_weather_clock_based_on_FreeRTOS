@@ -13,4 +13,19 @@ typedef struct
 extern const image_t image_touxiang;
 extern const image_t image_ktxy;
 
+extern const image_t img_touxiang;
+extern const image_t img_meihua;
+extern const image_t img_error;
+extern const image_t img_wifi;
+extern const image_t icon_wenduji;
+extern const image_t icon_wifi;
+extern const image_t icon_duoyun;
+extern const image_t icon_leizhenyu;
+extern const image_t icon_qing;
+extern const image_t icon_yintian;
+extern const image_t icon_yueliang;
+extern const image_t icon_zhongxue;
+extern const image_t icon_zhongyu;
+extern const image_t icon_na;
+
 #endif /* __IMAGE_H__ */
