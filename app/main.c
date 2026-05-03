@@ -1,8 +1,5 @@
 #include "main.h"
 
-uint32_t failcount = 0;
-float temperature, humidity;
-
 int main(void)
 {
     board_lowlevel_init();
