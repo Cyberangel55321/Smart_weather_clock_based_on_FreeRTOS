@@ -18,7 +18,8 @@
                 "app/image",
 
                 "driver/aht20",
-                "driver/cpu_delay",
+                "driver/cpu_tick",
+                "driver/esp_at",
                 "driver/led",
                 "driver/st7789",
                 "driver/usart",

@@ -1,6 +1,6 @@
 #include "stm32f4xx.h"
 #include "aht20.h"
-#include "cpu_delay.h"
+#include "cpu_tick.h"
 
 static bool aht20_write(uint8_t data[], uint32_t len);
 static bool aht20_read(uint8_t data[], uint32_t len);
@@ -54,7 +54,7 @@ bool aht20_init(void)
         uint32_t timeout = TIMEOUT; \
         while (!I2C_CheckEvent(I2C2, EVENT) && timeout > 0)  \
         { \
-            cpu_delay(10); \
+            cpu_delay_us(10); \
             timeout -= 10; \
         } \
         if (timeout <= 0) \

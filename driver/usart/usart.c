@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "stm32f4xx.h"
 #include "usart.h"
-#include "cpu_delay.h"
+#include "cpu_tick.h"
 
 static usart_received_func_t received_func;
 
@@ -77,3 +77,4 @@ int fputc(int ch, FILE *f)
     while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
     return ch;
 }
+

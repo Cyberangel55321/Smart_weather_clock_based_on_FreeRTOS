@@ -36,4 +36,4 @@
 .\objects\aht20.o: ..\firmware\driver\inc\stm32f4xx_fsmc.h
 .\objects\aht20.o: ..\driver\aht20\aht20.h
 .\objects\aht20.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\aht20.o: ..\driver\cpu_delay\cpu_delay.h
+.\objects\aht20.o: ..\driver\cpu_tick\cpu_tick.h

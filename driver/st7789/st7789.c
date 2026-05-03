@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <string.h>
 #include "stm32f4xx.h"
-#include "cpu_delay.h"
+#include "cpu_tick.h"
 #include "st7789.h"
 #include "font.h"
 #include "image.h"
@@ -24,9 +24,6 @@
 #define DC_PIN      GPIO_Pin_4
 #define BL_PORT     GPIOE
 #define BL_PIN      GPIO_Pin_5
-
-#define delay_us(x) cpu_delay(x)
-#define delay_ms(x) cpu_delay((x) * 1000)
 
 static void st7789_init_display(void);
 static void st7789_write_register(uint8_t reg, uint8_t data[], uint16_t length);
@@ -104,9 +101,9 @@ static void st7789_write_register(uint8_t reg, uint8_t data[], uint16_t length)
 static void st7789_reset(void)
 {
     GPIO_ResetBits(RESET_PORT, RESET_PIN);
-    delay_us(20);
+    cpu_delay_us(20);
     GPIO_SetBits(RESET_PORT, RESET_PIN);
-    delay_ms(120);
+    cpu_delay_ms(120);
 }
 
 static void st7789_set_backlight(bool on)
@@ -120,10 +117,10 @@ static void st7789_init_display(void)
     st7789_reset();
 
     st7789_write_register(0x01, NULL, 0); // Software reset
-    delay_ms(120);
+    cpu_delay_ms(120);
 
     st7789_write_register(0x11, NULL, 0); // Sleep out
-    delay_ms(120);
+    cpu_delay_ms(120);
 
     st7789_write_register(0x3A, (uint8_t[]){0x05}, 1); // RGB565
     st7789_write_register(0x36, (uint8_t[]){0x00}, 1); 
@@ -148,7 +145,7 @@ static void st7789_init_display(void)
         0x32,0x32,0x3B,0x14,0x13,0x28,0x2F
     }, 14);
     st7789_write_register(0x20, NULL, 0);
-    delay_ms(120);
+    cpu_delay_ms(120);
     st7789_write_register(0x29, NULL, 0);
     st7789_fill_color(0, 0, ST7789_WIDTH - 1, ST7789_HEIGHT - 1, 0x0000);
     st7789_set_backlight(true);

@@ -37,4 +37,4 @@
 .\objects\usart.o: ..\firmware\driver\inc\stm32f4xx_dcmi.h
 .\objects\usart.o: ..\firmware\driver\inc\stm32f4xx_fsmc.h
 .\objects\usart.o: ..\driver\usart\usart.h
-.\objects\usart.o: ..\driver\cpu_delay\cpu_delay.h
+.\objects\usart.o: ..\driver\cpu_tick\cpu_tick.h

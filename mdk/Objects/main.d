@@ -38,7 +38,9 @@
 .\objects\main.o: ..\driver\aht20\aht20.h
 .\objects\main.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: ..\driver\usart\usart.h
-.\objects\main.o: ..\driver\cpu_delay\cpu_delay.h
+.\objects\main.o: ..\driver\cpu_tick\cpu_tick.h
 .\objects\main.o: ..\driver\st7789\st7789.h
 .\objects\main.o: ..\app\font\font.h
 .\objects\main.o: ..\app\image\image.h
+.\objects\main.o: ..\driver\esp_at\esp_at.h
+.\objects\main.o: ..\app\weather.h
