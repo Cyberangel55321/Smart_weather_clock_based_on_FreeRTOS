@@ -21,7 +21,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_MUTEXES                                           1   // 是否使用互斥锁, 互斥锁是一种特殊的二值信号量, 用于保护共享资源的访问, 可以避免优先级反转问题
 #define configUSE_RECURSIVE_MUTEXES                                 1   // 是否使用递归互斥锁, 递归互斥锁允许同一个任务多次获取同一个互斥锁而不会导致死锁, 只有当configUSE_MUTEXES为1时才有效
 #define configUSE_COUNTING_SEMAPHORES                               1   // 是否使用计数信号量, 计数信号量是一种可以取值大于1的信号量, 用于控制对多个实例资源的访问
-#define configUSE_ALTERNATIVE_API                                   0 /* Deprecated! */   // 是否使用替代API, 替代API是一组与原有API功能相同但参数不同的函数, 已经废弃, 不建议使用
+#define configUSE_ALTERNATIVE_API                                   0   // 是否使用替代API, 替代API是一组与原有API功能相同但参数不同的函数, 已经废弃, 不建议使用
 #define configQUEUE_REGISTRY_SIZE                                   10  // 队列注册表的大小, 队列注册表是一个全局数组, 用于存储系统中所有创建的队列和信号量的名字和句柄, 以便在调试时查看
 #define configUSE_QUEUE_SETS                                        1   // 是否使用队列集合, 队列集合是一种特殊的数据结构, 可以同时包含多个队列和信号量, 允许任务等待集合中任意一个对象变为可用, 只有当configUSE_QUEUE_SETS为1时才有效
 #define configUSE_TIME_SLICING                                      1   // 是否使用时间片轮转调度, 当多个同优先级的任务同时就绪时, 是否让它们轮流占用CPU, 0为不使用, 1为使用
