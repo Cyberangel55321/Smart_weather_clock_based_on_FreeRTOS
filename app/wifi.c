@@ -1,9 +1,11 @@
 #include <stdint.h>
 #include <stdio.h>
-#include "cpu_tick.h"
+#include "tim_delay.h"
 #include "esp_at.h"
 #include "page.h"
 #include "main.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 void wifi_init(void)
 {
@@ -46,7 +48,7 @@ void wifi_wait_connect(void)
     
     for (uint32_t t = 0; t < 10 * 1000; t += 100)
     {
-        cpu_delay_ms(100);
+        vTaskDelay(pdMS_TO_TICKS(100));
         esp_wifi_info_t wifi = { 0 };
         if (esp_at_get_wifi_info(&wifi) && wifi.connected)
         {

@@ -19,18 +19,19 @@
                 "app/page",
 
                 "driver/aht20",
-                "driver/cpu_tick",
+                "driver/tim_delay",
                 "driver/esp_at",
-                "driver/led",
                 "driver/st7789",
-                "driver/usart",
+                "driver/console",
                 "driver/rtc",
 
                 "firmware/cmsis/core",
                 "firmware/cmsis/device",
                 "firmware/driver/inc",
                 
-                "third_lib"
+                "third_lib/FreeRTOS",
+                "third_lib/FreeRTOS/include",
+                "third_lib/FreeRTOS/portable"
             ],
             "intelliSenseMode": "windows-gcc-arm",
             "name": "ARM32"

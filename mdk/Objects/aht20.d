@@ -36,4 +36,14 @@
 .\objects\aht20.o: ..\firmware\driver\inc\stm32f4xx_fsmc.h
 .\objects\aht20.o: ..\driver\aht20\aht20.h
 .\objects\aht20.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\aht20.o: ..\driver\cpu_tick\cpu_tick.h
+.\objects\aht20.o: ..\driver\tim_delay\tim_delay.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\FreeRTOS.h
+.\objects\aht20.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\portable\FreeRTOSConfig.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\projdefs.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\portable.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\deprecated_definitions.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\portable\portmacro.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\mpu_wrappers.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\task.h
+.\objects\aht20.o: ..\third_lib\FreeRTOS\include\list.h

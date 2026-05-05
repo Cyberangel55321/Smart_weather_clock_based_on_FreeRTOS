@@ -44,7 +44,7 @@
 .\objects\mloop.o: ..\firmware\driver\inc\stm32f4xx_dac.h
 .\objects\mloop.o: ..\firmware\driver\inc\stm32f4xx_dcmi.h
 .\objects\mloop.o: ..\firmware\driver\inc\stm32f4xx_fsmc.h
-.\objects\mloop.o: ..\driver\usart\usart.h
+.\objects\mloop.o: ..\driver\console\console.h
 .\objects\mloop.o: ..\driver\st7789\st7789.h
 .\objects\mloop.o: ..\app\font\font.h
 .\objects\mloop.o: ..\app\image\image.h

@@ -5,13 +5,17 @@
 #include <stdio.h>
 #include "stm32f4xx.h"
 #include "aht20.h"
-#include "usart.h"
-#include "cpu_tick.h"
+#include "console.h"
+#include "tim_delay.h"
 #include "st7789.h"
 #include "font.h"
 #include "image.h"
 #include "esp_at.h"
 #include "weather.h"
+#include "workqueue.h"
+#include "ui.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 #define APP_VERSION "v1.0"
 #define WIFI_SSID   "iPhone14"
@@ -25,8 +29,7 @@ void wifi_init(void);
 void wifi_wait_connect(void);
 void wifi_page_display(void);
 
-void main_loop_init(void);
-void main_loop(void);
+void app_init(void);
 void main_page_display(void);
 
 #endif /* __MAIN_H__ */

@@ -5,3 +5,4 @@
 .\objects\error_page.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\error_page.o: ..\app\font\font.h
 .\objects\error_page.o: ..\app\image\image.h
+.\objects\error_page.o: ..\app\ui.h

@@ -1,6 +1,9 @@
 .\objects\board.o: ..\app\board.c
 .\objects\board.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\board.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\FreeRTOS.h
+.\objects\board.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\board.o: ..\third_lib\FreeRTOS\portable\FreeRTOSConfig.h
 .\objects\board.o: ..\firmware\cmsis\device\stm32f4xx.h
 .\objects\board.o: ..\firmware\cmsis\core\core_cm4.h
 .\objects\board.o: ..\firmware\cmsis\core\core_cmInstr.h
@@ -35,8 +38,15 @@
 .\objects\board.o: ..\firmware\driver\inc\stm32f4xx_dac.h
 .\objects\board.o: ..\firmware\driver\inc\stm32f4xx_dcmi.h
 .\objects\board.o: ..\firmware\driver\inc\stm32f4xx_fsmc.h
-.\objects\board.o: ..\driver\cpu_tick\cpu_tick.h
-.\objects\board.o: ..\driver\usart\usart.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\projdefs.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\portable.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\deprecated_definitions.h
+.\objects\board.o: ..\third_lib\FreeRTOS\portable\portmacro.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\mpu_wrappers.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\task.h
+.\objects\board.o: ..\third_lib\FreeRTOS\include\list.h
+.\objects\board.o: ..\driver\tim_delay\tim_delay.h
+.\objects\board.o: ..\driver\console\console.h
 .\objects\board.o: ..\driver\rtc\rtc.h
 .\objects\board.o: ..\driver\aht20\aht20.h
 .\objects\board.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

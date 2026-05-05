@@ -1,6 +1,8 @@
 #include "stm32f4xx.h"
 #include "aht20.h"
-#include "cpu_tick.h"
+#include "tim_delay.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 static bool aht20_write(uint8_t data[], uint32_t len);
 static bool aht20_read(uint8_t data[], uint32_t len);
@@ -32,7 +34,7 @@ bool aht20_init(void)
     I2C_Init(I2C2, &I2C_InitStruct);
     I2C_Cmd(I2C2, ENABLE);
 
-    cpu_delay_ms(40);
+    vTaskDelay(pdMS_TO_TICKS(40));
     if (aht20_is_ready())
         return true;
 
@@ -41,7 +43,7 @@ bool aht20_init(void)
 
     for (uint32_t t = 0; t < 100; t++)
     {
-        cpu_delay_ms(1);
+        vTaskDelay(pdMS_TO_TICKS(5));
         if (aht20_is_ready())
             return true;
     }
@@ -54,7 +56,7 @@ bool aht20_init(void)
         uint32_t timeout = TIMEOUT; \
         while (!I2C_CheckEvent(I2C2, EVENT) && timeout > 0)  \
         { \
-            cpu_delay_us(10); \
+            tim_delay_us(10); \
             timeout -= 10; \
         } \
         if (timeout <= 0) \
@@ -143,7 +145,7 @@ bool aht20_wait_for_measurement(void)
 {
     for (uint32_t t = 0; t < 200; t++)
     {
-        cpu_delay_ms(1);
+        vTaskDelay(pdMS_TO_TICKS(10));
         if (!aht20_is_busy())
             return true;
     }

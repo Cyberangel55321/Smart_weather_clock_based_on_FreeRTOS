@@ -2,7 +2,10 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
-#include "cpu_tick.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+#include "workqueue.h"
 #include "rtc.h"
 #include "aht20.h"
 #include "esp_at.h"
@@ -16,65 +19,51 @@
 #define HOURS(x)        MINUTES((x) * 60)
 #define DAYS(x)          HOURS((x) * 24)
 
-#define TIME_SYNC_INTERVAL          DAYS(1)
+#define TIME_SYNC_INTERVAL          HOURS(1)
 #define WIFI_UPDATE_INTERVAL        SECONDS(5)
 #define TIME_UPDATE_INTERVAL        SECONDS(1)
 #define INNER_UPDATE_INTERVAL       SECONDS(3)
 #define OUTDOOR_UPDATE_INTERVAL     MINUTES(1)
 
-static uint32_t time_sync_delay;
-static uint32_t wifi_update_delay;
-static uint32_t time_update_delay;
-static uint32_t inner_update_delay;
-static uint32_t outdoor_update_delay;
+#define MLOOP_EVT_TIME_SYNC         (1 << 0)
+#define MLOOP_EVT_WIFI_UPDATE       (1 << 1)
+#define MLOOP_EVT_INNER_UPDATE      (1 << 2)
+#define MLOOP_EVT_OUTDOOR_UPDATE    (1 << 3)
+#define MLOOP_EVT_ALL               (MLOOP_EVT_TIME_SYNC | \
+                                     MLOOP_EVT_WIFI_UPDATE | \
+                                     MLOOP_EVT_INNER_UPDATE | \
+                                     MLOOP_EVT_OUTDOOR_UPDATE)
 
-static void cpu_periodic_callback(void)
-{
-    if (time_sync_delay > 0)
-        time_sync_delay--;
-    if (wifi_update_delay > 0)
-        wifi_update_delay--;
-    if (time_update_delay > 0)
-        time_update_delay--;
-    if (inner_update_delay > 0)
-        inner_update_delay--;
-    if (outdoor_update_delay > 0)
-        outdoor_update_delay--;
-}
-
-
-void main_loop_init(void)
-{
-    cpu_register_periodic_callback(cpu_periodic_callback);
-}
+static TimerHandle_t time_sync_timer;
+static TimerHandle_t wifi_update_timer;
+static TimerHandle_t time_update_timer;
+static TimerHandle_t inner_update_timer;
+static TimerHandle_t outdoor_update_timer;
 
 static void time_sync(void)
 {
-    if (time_sync_delay > 0)
-        return;
-    
-    time_sync_delay = TIME_SYNC_INTERVAL;
-    
+    uint32_t restart_sync_delay = TIME_SYNC_INTERVAL;
+    rtc_date_time_t rtc_date = { 0 };
+
     esp_date_time_t esp_date = { 0 };
     if (!esp_at_sntp_get_time(&esp_date))
     {
         printf("[SNTP] get time failed\n");
-        time_sync_delay = SECONDS(1);
-        return;
+        restart_sync_delay = SECONDS(1);
+        goto err;
     }
     
     if (esp_date.year < 2000)
     {
         printf("[SNTP] invalid date formate\n");
-        time_sync_delay = SECONDS(1);
-        return;
+        restart_sync_delay = SECONDS(1);
+        goto err;
     }
     
     printf("[SNTP] sync time: %04u-%02u-%02u %02u:%02u:%02u (%d)\n",
         esp_date.year, esp_date.month, esp_date.day,
         esp_date.hour, esp_date.minute, esp_date.second, esp_date.weekday);
     
-    rtc_date_time_t rtc_date = { 0 };
     rtc_date.year = esp_date.year;
     rtc_date.month = esp_date.month;
     rtc_date.day = esp_date.day;
@@ -84,18 +73,14 @@ static void time_sync(void)
     rtc_date.weekday = esp_date.weekday;
     rtc_set_time(&rtc_date);
     
-    time_update_delay = 0;
+err:
+    xTimerChangePeriod(time_sync_timer, pdMS_TO_TICKS(restart_sync_delay), 0);
 }
 
 static void wifi_update(void)
 {
     static esp_wifi_info_t last_info = { 0 };
 
-    if (wifi_update_delay > 0)
-        return;
-    
-    wifi_update_delay = WIFI_UPDATE_INTERVAL;
-    
     esp_wifi_info_t info = { 0 };
     if (!esp_at_get_wifi_info(&info))
     {
@@ -133,11 +118,6 @@ static void time_update(void)
 {
     static rtc_date_time_t last_date = { 0 };
     
-    if (time_update_delay > 0)
-        return;
-    
-    time_update_delay = TIME_UPDATE_INTERVAL;
-    
     rtc_date_time_t date;
     rtc_get_time(&date);
     
@@ -159,11 +139,6 @@ static void time_update(void)
 static void inner_update(void)
 {
     static float last_temperature, last_humidity;
-    
-    if (inner_update_delay > 0)
-        return;
-    
-    inner_update_delay = INNER_UPDATE_INTERVAL;
     
     if (!aht20_start_measurement())
     {
@@ -202,11 +177,6 @@ static void outdoor_update(void)
 {
     static weather_info_t last_weather = { 0 };
     
-    if (outdoor_update_delay > 0)
-        return;
-    
-    outdoor_update_delay = OUTDOOR_UPDATE_INTERVAL;
-    
     weather_info_t weather = { 0 };
     const char *weather_url = "https://api.seniverse.com/v3/weather/now.json?key=SOi5-h3NaxmEoye66&location=huainan&language=en&unit=c";
     const char *weather_http_response = esp_at_http_get(weather_url);
@@ -234,13 +204,44 @@ static void outdoor_update(void)
     main_page_redraw_outdoor_weather_icon(weather.weather_code);
 }
 
-void main_loop(void)
+typedef void (*app_job_t)(void);
+
+static void app_work(void *param)
 {
-    time_sync();
-    wifi_update();
-    time_update();
-    inner_update();
-    outdoor_update();
+    app_job_t job = (app_job_t)param;
+    job();
+}
+
+static void work_timer_cb(TimerHandle_t timer)
+{
+    app_job_t job = (app_job_t)pvTimerGetTimerID(timer);
+    workqueue_run(app_work, job);
+}
+
+static void app_timer_cb(TimerHandle_t timer)
+{
+    app_job_t job = (app_job_t)pvTimerGetTimerID(timer);
+    job();
+}
+
+void app_init(void)
+{
+    time_update_timer = xTimerCreate("time update", pdMS_TO_TICKS(TIME_UPDATE_INTERVAL), pdTRUE, time_update, app_timer_cb);
+    time_sync_timer = xTimerCreate("time sync", pdMS_TO_TICKS(200), pdFALSE, time_sync, work_timer_cb);
+    wifi_update_timer = xTimerCreate("wifi update", pdMS_TO_TICKS(WIFI_UPDATE_INTERVAL), pdTRUE, wifi_update, work_timer_cb);
+    inner_update_timer = xTimerCreate("inner upadte", pdMS_TO_TICKS(INNER_UPDATE_INTERVAL), pdTRUE, inner_update, work_timer_cb);
+    outdoor_update_timer = xTimerCreate("outdoor update", pdMS_TO_TICKS(OUTDOOR_UPDATE_INTERVAL), pdTRUE, outdoor_update, work_timer_cb);
+
+    workqueue_run(app_work, time_sync);
+    workqueue_run(app_work, wifi_update);
+    workqueue_run(app_work, inner_update);
+    workqueue_run(app_work, outdoor_update);
+    
+    xTimerStart(time_update_timer, 0);
+    xTimerStart(time_sync_timer, 0);
+    xTimerStart(wifi_update_timer, 0);
+    xTimerStart(inner_update_timer, 0);
+    xTimerStart(outdoor_update_timer, 0);
 }
 
 

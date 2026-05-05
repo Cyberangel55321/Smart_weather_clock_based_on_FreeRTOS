@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc;..\app;..\app\font;..\app\image;..\app\page;..\driver\aht20;..\driver\cpu_tick;..\driver\esp_at;..\driver\led;..\driver\usart;..\driver\st7789;..\driver\rtc;..\third_lib</IncludePath>
+              <IncludePath>..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc;..\app;..\app\font;..\app\image;..\app\page;..\driver\aht20;..\driver\tim_delay;..\driver\esp_at;..\driver\led;..\driver\console;..\driver\st7789;..\driver\rtc;..\third_lib\FreeRTOS\include;..\third_lib\FreeRTOS\portable</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -394,9 +394,9 @@
               <FilePath>..\app\board.c</FilePath>
             </File>
             <File>
-              <FileName>mloop.c</FileName>
+              <FileName>app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\mloop.c</FilePath>
+              <FilePath>..\app\app.c</FilePath>
             </File>
             <File>
               <FileName>wifi.c</FileName>
@@ -407,6 +407,16 @@
               <FileName>weather.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\weather.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\ui.c</FilePath>
+            </File>
+            <File>
+              <FileName>workqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\workqueue.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -579,19 +589,14 @@
           <GroupName>driver</GroupName>
           <Files>
             <File>
-              <FileName>cpu_tick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\cpu_tick\cpu_tick.c</FilePath>
-            </File>
-            <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\rtc\rtc.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
+              <FileName>console.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\usart\usart.c</FilePath>
+              <FilePath>..\driver\console\console.c</FilePath>
             </File>
             <File>
               <FileName>aht20.c</FileName>
@@ -607,6 +612,11 @@
               <FileName>esp_at.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\esp_at\esp_at.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\tim_delay\tim_delay.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -842,6 +852,38 @@
         </Group>
         <Group>
           <GroupName>third_lib</GroupName>
+          <Files>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\list.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\tasks.c</FilePath>
+            </File>
+            <File>
+              <FileName>timers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\timers.c</FilePath>
+            </File>
+            <File>
+              <FileName>heap_4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\portable\heap_4.c</FilePath>
+            </File>
+            <File>
+              <FileName>port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\third_lib\freertos\portable\port.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
