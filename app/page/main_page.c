@@ -15,9 +15,12 @@ static const uint16_t color_bg_outdoor = mkcolor(254, 135, 75);
 
 void main_page_display(void)
 {
-    ui_fill_color(0, 0, UI_WIDTH - 1, UI_HEIGHT - 1, mkcolor(0, 0, 0));
+    // 清屏,背景色为黑色
+    const uint16_t color_bg = mkcolor(0, 0, 0);
+    ui_fill_color(0, 0, UI_WIDTH - 1, UI_HEIGHT - 1, color_bg);
     
-    do {
+    do 
+    {
         ui_fill_color(15, 15, 224, 154, color_bg_time);
         // wifi图标
         ui_draw_image(23, 20, &icon_wifi);
@@ -26,7 +29,8 @@ void main_page_display(void)
         ui_write_string(35, 121, "----/--/-- 星期四", mkcolor(143, 143, 143), color_bg_time, &font20_maple_bold);
     } while (0);
     
-    do {
+    do 
+    {
         ui_fill_color(15, 165, 114, 304, color_bg_inner);
         ui_write_string(19, 170, "室内环境", mkcolor(0, 0, 0), color_bg_inner, &font24_maple_semibold);
         ui_write_string(86, 191, "C", mkcolor(0, 0, 0), color_bg_inner, &font32_maple_bold);
@@ -35,7 +39,8 @@ void main_page_display(void)
         main_page_redraw_inner_humidity(999.9f);
     } while (0);
     
-    do {
+    do 
+    {
         ui_fill_color(125, 165, 224, 304, color_bg_outdoor);
         ui_write_string(192, 189, "C", mkcolor(0, 0, 0), color_bg_outdoor, &font32_maple_bold);
         ui_draw_image(139, 239, &icon_wenduji);
