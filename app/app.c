@@ -176,8 +176,8 @@ static void inner_update(void)
 static void outdoor_update(void)
 {
     static weather_info_t last_weather = { 0 };
-    
     weather_info_t weather = { 0 };
+	
     const char *weather_url = "https://api.seniverse.com/v3/weather/now.json?key=SOi5-h3NaxmEoye66&location=huainan&language=en&unit=c";
     const char *weather_http_response = esp_at_http_get(weather_url);
     if (weather_http_response == NULL)

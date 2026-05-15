@@ -1,8 +1,7 @@
 #ifndef __FREERTOS_CONFIG_H__
 #define __FREERTOS_CONFIG_H__
 
-/* Here is a good place to include header files that are required across
-   your application. */
+/* Here is a good place to include header files that are required across your application. */
 #include "stm32f4xx.h"
 extern uint32_t SystemCoreClock;
 

@@ -1,6 +1,7 @@
 .\objects\st7789.o: ..\driver\st7789\st7789.c
 .\objects\st7789.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\st7789.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\st7789.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\st7789.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\st7789.o: F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\st7789.o: ..\firmware\cmsis\device\stm32f4xx.h

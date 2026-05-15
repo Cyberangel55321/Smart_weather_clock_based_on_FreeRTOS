@@ -12,8 +12,14 @@
         "cmath": "cpp",
         "limits": "cpp"
     },
+
+    "files.autoGuessEncoding": false,
+
+    "files.encoding": "gb2312",
+
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
     ],
+    
     "C_Cpp.errorSquiggles": "enabled"
 }

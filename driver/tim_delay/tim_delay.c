@@ -33,10 +33,12 @@ void tim_delay_init(void)
 uint64_t tim_now(void)
 {
     uint64_t now, last_count;
-    do {
+    do
+    {
         last_count = tim_tick_count;
         now = tim_tick_count + TIM_GetCounter(TIM6);
-    } while (last_count != tim_tick_count);
+    }
+    while (last_count != tim_tick_count);
     return now;
 }
 

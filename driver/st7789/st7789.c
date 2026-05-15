@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <stddef.h>
 #include <string.h>
 #include "stm32f4xx.h"
@@ -11,12 +12,13 @@
 #include "task.h"
 #include "semphr.h"
 
-// CLK ！！ PB13
-// MOSI ！！ PC3
-// MISO ！！ PC2
-// CS ！！ PE2
+// GND
+// VCC
+// CLK ！！ PB13 ------ CH0
+// MOSI ！！ PC3 ------ CH1
 // RESET ！！ PE3
-// DC ！！ PE4
+// DC ！！ PE4 ------ CH2
+// CS ！！ PE2 ------ CH3
 // BL ！！ PE5
 
 #define CS_PORT     GPIOE
@@ -150,6 +152,16 @@ static void st7789_write_gram(uint8_t data[], uint32_t length, bool singlecolor)
     
     GPIO_ResetBits(CS_PORT, CS_PIN);
     GPIO_SetBits(DC_PORT, DC_PIN);
+
+    // ======== 起始测试帧率部分开始 ========
+    uint32_t original_length = length;
+    uint64_t start_us = 0;
+    // 当传输内容是全屏时（宽度*高度*每像素2字节），开始计时
+    if (original_length >= ST7789_WIDTH * ST7789_HEIGHT * 2) 
+    {
+        start_us = tim_get_us();
+    }
+    // ======== 起始测试帧率部分开始 ========
     
     length >>= 1;
     
@@ -170,12 +182,23 @@ static void st7789_write_gram(uint8_t data[], uint32_t length, bool singlecolor)
         if (!singlecolor)
             data += chunk_size * 2;
         length -= chunk_size;
-    } 
+    }
 	while (length > 0);
     
     while (SPI_GetFlagStatus(SPI2, SPI_FLAG_BSY) != RESET);
 
     GPIO_SetBits(CS_PORT, CS_PIN);
+
+    // ======== 终止测试帧率部分开始 ========
+    if (start_us != 0) 
+    {
+        // 由于是微秒求差，1秒内的数据uint32完全够算，防溢出
+        uint32_t cost_us = (uint32_t)(tim_get_us() - start_us);
+        float fps = 1000000.0f / (float)cost_us;
+        // 使用整数+小数点后两位的形式代替%f（考虑到单片机printf有时候不支持%f）
+        printf("[TEST] LCD Full Refresh Time: %lu us, FPS: %lu.%02lu\r\n", cost_us, (uint32_t)fps, (uint32_t)(fps * 100) % 100);
+    }
+    // ======== 终止测试帧率部分结束 ========
 }
 
 static void st7789_reset(void)
