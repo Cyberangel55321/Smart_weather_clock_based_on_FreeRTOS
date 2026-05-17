@@ -17,6 +17,17 @@
 
     "files.encoding": "gb2312",
 
+    // 隐藏一些不需要的文件夹和文件 true/false
+    "files.exclude": 
+    {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "mdk": true,
+    },
+
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
     ],

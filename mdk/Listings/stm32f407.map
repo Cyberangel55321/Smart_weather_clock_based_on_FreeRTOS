@@ -12,6 +12,7 @@ Section Cross References
     main.o(i.main_init) refers to board.o(i.board_init) for board_init
     main.o(i.main_init) refers to ui.o(i.ui_init) for ui_init
     main.o(i.main_init) refers to welcome_page.o(i.welcome_page_display) for welcome_page_display
+    main.o(i.main_init) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.main_init) refers to wifi.o(i.wifi_init) for wifi_init
     main.o(i.main_init) refers to wifi_page.o(i.wifi_page_display) for wifi_page_display
     main.o(i.main_init) refers to wifi.o(i.wifi_wait_connect) for wifi_wait_connect
@@ -2810,371 +2811,371 @@ Image Symbol Table
     ascii_get_model                          0x080134cb   Thumb Code    82  st7789.o(i.ascii_get_model)
     i.board_init                             0x0801351c   Section        0  board.o(i.board_init)
     i.board_lowlevel_init                    0x080135a0   Section        0  board.o(i.board_lowlevel_init)
-    i.console_dma_init                       0x0801363c   Section        0  console.o(i.console_dma_init)
-    console_dma_init                         0x0801363d   Thumb Code    84  console.o(i.console_dma_init)
-    i.console_init                           0x08013698   Section        0  console.o(i.console_init)
-    i.console_int_init                       0x080136e8   Section        0  console.o(i.console_int_init)
-    console_int_init                         0x080136e9   Thumb Code    62  console.o(i.console_int_init)
-    i.console_io_init                        0x08013728   Section        0  console.o(i.console_io_init)
-    console_io_init                          0x08013729   Thumb Code    54  console.o(i.console_io_init)
-    i.console_usart_init                     0x08013764   Section        0  console.o(i.console_usart_init)
-    console_usart_init                       0x08013765   Thumb Code    80  console.o(i.console_usart_init)
-    i.error_page_display                     0x080137b8   Section        0  error_page.o(i.error_page_display)
-    i.esp_at_connect_wifi                    0x0801381c   Section        0  esp_at.o(i.esp_at_connect_wifi)
-    i.esp_at_dma_init                        0x08013888   Section        0  esp_at.o(i.esp_at_dma_init)
-    esp_at_dma_init                          0x08013889   Thumb Code    78  esp_at.o(i.esp_at_dma_init)
-    i.esp_at_get_response                    0x080138e0   Section        0  esp_at.o(i.esp_at_get_response)
-    esp_at_get_response                      0x080138e1   Thumb Code     4  esp_at.o(i.esp_at_get_response)
-    i.esp_at_get_wifi_info                   0x080138e8   Section        0  esp_at.o(i.esp_at_get_wifi_info)
-    i.esp_at_http_get                        0x08013958   Section        0  esp_at.o(i.esp_at_http_get)
-    i.esp_at_init                            0x080139a8   Section        0  esp_at.o(i.esp_at_init)
-    i.esp_at_int_init                        0x08013a2c   Section        0  esp_at.o(i.esp_at_int_init)
-    esp_at_int_init                          0x08013a2d   Thumb Code    68  esp_at.o(i.esp_at_int_init)
-    i.esp_at_io_init                         0x08013a78   Section        0  esp_at.o(i.esp_at_io_init)
-    esp_at_io_init                           0x08013a79   Thumb Code    54  esp_at.o(i.esp_at_io_init)
-    i.esp_at_lowlevel_init                   0x08013ab4   Section        0  esp_at.o(i.esp_at_lowlevel_init)
-    esp_at_lowlevel_init                     0x08013ab5   Thumb Code    20  esp_at.o(i.esp_at_lowlevel_init)
-    i.esp_at_sntp_get_time                   0x08013ac8   Section        0  esp_at.o(i.esp_at_sntp_get_time)
-    i.esp_at_sntp_init                       0x08013b08   Section        0  esp_at.o(i.esp_at_sntp_init)
-    i.esp_at_usart_init                      0x08013b34   Section        0  esp_at.o(i.esp_at_usart_init)
-    esp_at_usart_init                        0x08013b35   Thumb Code    80  esp_at.o(i.esp_at_usart_init)
-    i.esp_at_usart_wait_receive              0x08013b88   Section        0  esp_at.o(i.esp_at_usart_wait_receive)
-    esp_at_usart_wait_receive                0x08013b89   Thumb Code    62  esp_at.o(i.esp_at_usart_wait_receive)
-    i.esp_at_usart_write                     0x08013bdc   Section        0  esp_at.o(i.esp_at_usart_write)
-    esp_at_usart_write                       0x08013bdd   Thumb Code    46  esp_at.o(i.esp_at_usart_write)
-    i.esp_at_wait_boot                       0x08013c14   Section        0  esp_at.o(i.esp_at_wait_boot)
-    esp_at_wait_boot                         0x08013c15   Thumb Code    32  esp_at.o(i.esp_at_wait_boot)
-    i.esp_at_wait_ready                      0x08013c3c   Section        0  esp_at.o(i.esp_at_wait_ready)
-    esp_at_wait_ready                        0x08013c3d   Thumb Code    22  esp_at.o(i.esp_at_wait_ready)
-    i.esp_at_wifi_init                       0x08013c54   Section        0  esp_at.o(i.esp_at_wifi_init)
-    i.esp_at_write_command                   0x08013c74   Section        0  esp_at.o(i.esp_at_write_command)
-    esp_at_write_command                     0x08013c75   Thumb Code    48  esp_at.o(i.esp_at_write_command)
-    i.fputc                                  0x08013cd4   Section        0  board.o(i.fputc)
-    i.in_screen_range                        0x08013d00   Section        0  st7789.o(i.in_screen_range)
-    in_screen_range                          0x08013d01   Thumb Code    48  st7789.o(i.in_screen_range)
-    i.inner_update                           0x08013d30   Section        0  app.o(i.inner_update)
-    inner_update                             0x08013d31   Thumb Code   192  app.o(i.inner_update)
-    i.is_gb2312                              0x08013e98   Section        0  st7789.o(i.is_gb2312)
-    is_gb2312                                0x08013e99   Thumb Code    18  st7789.o(i.is_gb2312)
-    i.main                                   0x08013eac   Section        0  main.o(i.main)
-    i.main_init                              0x08013ee0   Section        0  main.o(i.main_init)
-    main_init                                0x08013ee1   Thumb Code    44  main.o(i.main_init)
-    i.main_page_display                      0x08013f0c   Section        0  main_page.o(i.main_page_display)
-    i.main_page_redraw_date                  0x08014090   Section        0  main_page.o(i.main_page_redraw_date)
-    i.main_page_redraw_inner_humidity        0x0801414c   Section        0  main_page.o(i.main_page_redraw_inner_humidity)
-    i.main_page_redraw_inner_temperature     0x080141b8   Section        0  main_page.o(i.main_page_redraw_inner_temperature)
-    i.main_page_redraw_outdoor_city          0x08014234   Section        0  main_page.o(i.main_page_redraw_outdoor_city)
-    i.main_page_redraw_outdoor_temperature   0x08014268   Section        0  main_page.o(i.main_page_redraw_outdoor_temperature)
-    i.main_page_redraw_outdoor_weather_icon  0x080142e4   Section        0  main_page.o(i.main_page_redraw_outdoor_weather_icon)
-    i.main_page_redraw_time                  0x0801439c   Section        0  main_page.o(i.main_page_redraw_time)
-    i.main_page_redraw_wifi_ssid             0x080143f0   Section        0  main_page.o(i.main_page_redraw_wifi_ssid)
-    i.match_internal_ack                     0x0801442c   Section        0  esp_at.o(i.match_internal_ack)
-    match_internal_ack                       0x0801442d   Thumb Code    42  esp_at.o(i.match_internal_ack)
-    i.month_str_to_num                       0x0801445c   Section        0  esp_at.o(i.month_str_to_num)
-    month_str_to_num                         0x0801445d   Thumb Code    54  esp_at.o(i.month_str_to_num)
-    i.outdoor_update                         0x08014498   Section        0  app.o(i.outdoor_update)
-    outdoor_update                           0x08014499   Thumb Code   138  app.o(i.outdoor_update)
-    i.parse_cipsntptime_response             0x08014574   Section        0  esp_at.o(i.parse_cipsntptime_response)
-    parse_cipsntptime_response               0x08014575   Thumb Code    78  esp_at.o(i.parse_cipsntptime_response)
-    i.parse_cwjap_response                   0x08014604   Section        0  esp_at.o(i.parse_cwjap_response)
-    parse_cwjap_response                     0x08014605   Thumb Code    58  esp_at.o(i.parse_cwjap_response)
-    i.parse_cwstate_response                 0x0801466c   Section        0  esp_at.o(i.parse_cwstate_response)
-    parse_cwstate_response                   0x0801466d   Thumb Code    62  esp_at.o(i.parse_cwstate_response)
-    i.parse_seniverse_response               0x080146d0   Section        0  weather.o(i.parse_seniverse_response)
-    i.prvAddCurrentTaskToDelayedList         0x08014880   Section        0  tasks.o(i.prvAddCurrentTaskToDelayedList)
-    prvAddCurrentTaskToDelayedList           0x08014881   Thumb Code   124  tasks.o(i.prvAddCurrentTaskToDelayedList)
-    i.prvAddNewTaskToReadyList               0x08014918   Section        0  tasks.o(i.prvAddNewTaskToReadyList)
-    prvAddNewTaskToReadyList                 0x08014919   Thumb Code   150  tasks.o(i.prvAddNewTaskToReadyList)
-    i.prvCheckForValidListAndQueue           0x080149cc   Section        0  timers.o(i.prvCheckForValidListAndQueue)
-    prvCheckForValidListAndQueue             0x080149cd   Thumb Code    72  timers.o(i.prvCheckForValidListAndQueue)
-    i.prvCheckTasksWaitingTermination        0x08014a30   Section        0  tasks.o(i.prvCheckTasksWaitingTermination)
-    prvCheckTasksWaitingTermination          0x08014a31   Thumb Code    60  tasks.o(i.prvCheckTasksWaitingTermination)
-    i.prvCopyDataFromQueue                   0x08014a78   Section        0  queue.o(i.prvCopyDataFromQueue)
-    prvCopyDataFromQueue                     0x08014a79   Thumb Code    42  queue.o(i.prvCopyDataFromQueue)
-    i.prvCopyDataToQueue                     0x08014aa2   Section        0  queue.o(i.prvCopyDataToQueue)
-    prvCopyDataToQueue                       0x08014aa3   Thumb Code   126  queue.o(i.prvCopyDataToQueue)
-    i.prvDeleteTCB                           0x08014b20   Section        0  tasks.o(i.prvDeleteTCB)
-    prvDeleteTCB                             0x08014b21   Thumb Code    18  tasks.o(i.prvDeleteTCB)
-    i.prvGetDisinheritPriorityAfterTimeout   0x08014b32   Section        0  queue.o(i.prvGetDisinheritPriorityAfterTimeout)
-    prvGetDisinheritPriorityAfterTimeout     0x08014b33   Thumb Code    20  queue.o(i.prvGetDisinheritPriorityAfterTimeout)
-    i.prvGetNextExpireTime                   0x08014b48   Section        0  timers.o(i.prvGetNextExpireTime)
-    prvGetNextExpireTime                     0x08014b49   Thumb Code    36  timers.o(i.prvGetNextExpireTime)
-    i.prvHeapInit                            0x08014b70   Section        0  heap_4.o(i.prvHeapInit)
-    prvHeapInit                              0x08014b71   Thumb Code    98  heap_4.o(i.prvHeapInit)
-    i.prvIdleTask                            0x08014bec   Section        0  tasks.o(i.prvIdleTask)
-    prvIdleTask                              0x08014bed   Thumb Code    32  tasks.o(i.prvIdleTask)
-    i.prvInitialiseNewQueue                  0x08014c14   Section        0  queue.o(i.prvInitialiseNewQueue)
-    prvInitialiseNewQueue                    0x08014c15   Thumb Code    42  queue.o(i.prvInitialiseNewQueue)
-    i.prvInitialiseNewTask                   0x08014c40   Section        0  tasks.o(i.prvInitialiseNewTask)
-    prvInitialiseNewTask                     0x08014c41   Thumb Code   196  tasks.o(i.prvInitialiseNewTask)
-    i.prvInitialiseNewTimer                  0x08014d24   Section        0  timers.o(i.prvInitialiseNewTimer)
-    prvInitialiseNewTimer                    0x08014d25   Thumb Code    78  timers.o(i.prvInitialiseNewTimer)
-    i.prvInitialiseTaskLists                 0x08014d94   Section        0  tasks.o(i.prvInitialiseTaskLists)
-    prvInitialiseTaskLists                   0x08014d95   Thumb Code    70  tasks.o(i.prvInitialiseTaskLists)
-    i.prvInsertBlockIntoFreeList             0x08014dfc   Section        0  heap_4.o(i.prvInsertBlockIntoFreeList)
-    prvInsertBlockIntoFreeList               0x08014dfd   Thumb Code    96  heap_4.o(i.prvInsertBlockIntoFreeList)
-    i.prvInsertTimerInActiveList             0x08014e64   Section        0  timers.o(i.prvInsertTimerInActiveList)
-    prvInsertTimerInActiveList               0x08014e65   Thumb Code    80  timers.o(i.prvInsertTimerInActiveList)
-    i.prvIsQueueEmpty                        0x08014ebc   Section        0  queue.o(i.prvIsQueueEmpty)
-    prvIsQueueEmpty                          0x08014ebd   Thumb Code    26  queue.o(i.prvIsQueueEmpty)
-    i.prvIsQueueFull                         0x08014ed6   Section        0  queue.o(i.prvIsQueueFull)
-    prvIsQueueFull                           0x08014ed7   Thumb Code    30  queue.o(i.prvIsQueueFull)
-    i.prvNotifyQueueSetContainer             0x08014ef4   Section        0  queue.o(i.prvNotifyQueueSetContainer)
-    prvNotifyQueueSetContainer               0x08014ef5   Thumb Code   136  queue.o(i.prvNotifyQueueSetContainer)
-    i.prvProcessExpiredTimer                 0x08014f9c   Section        0  timers.o(i.prvProcessExpiredTimer)
-    prvProcessExpiredTimer                   0x08014f9d   Thumb Code    98  timers.o(i.prvProcessExpiredTimer)
-    i.prvProcessReceivedCommands             0x08015024   Section        0  timers.o(i.prvProcessReceivedCommands)
-    prvProcessReceivedCommands               0x08015025   Thumb Code   282  timers.o(i.prvProcessReceivedCommands)
-    i.prvProcessTimerOrBlockTask             0x08015164   Section        0  timers.o(i.prvProcessTimerOrBlockTask)
-    prvProcessTimerOrBlockTask               0x08015165   Thumb Code   102  timers.o(i.prvProcessTimerOrBlockTask)
-    i.prvResetNextTaskUnblockTime            0x080151d8   Section        0  tasks.o(i.prvResetNextTaskUnblockTime)
-    prvResetNextTaskUnblockTime              0x080151d9   Thumb Code    40  tasks.o(i.prvResetNextTaskUnblockTime)
-    i.prvSampleTimeNow                       0x08015208   Section        0  timers.o(i.prvSampleTimeNow)
-    prvSampleTimeNow                         0x08015209   Thumb Code    40  timers.o(i.prvSampleTimeNow)
-    i.prvSwitchTimerLists                    0x08015234   Section        0  timers.o(i.prvSwitchTimerLists)
-    prvSwitchTimerLists                      0x08015235   Thumb Code   142  timers.o(i.prvSwitchTimerLists)
-    i.prvTaskExitError                       0x080152ec   Section        0  port.o(i.prvTaskExitError)
-    prvTaskExitError                         0x080152ed   Thumb Code    46  port.o(i.prvTaskExitError)
-    i.prvTimerTask                           0x08015348   Section        0  timers.o(i.prvTimerTask)
-    prvTimerTask                             0x08015349   Thumb Code    26  timers.o(i.prvTimerTask)
-    i.prvUnlockQueue                         0x08015362   Section        0  queue.o(i.prvUnlockQueue)
-    prvUnlockQueue                           0x08015363   Thumb Code   144  queue.o(i.prvUnlockQueue)
-    i.pvPortMalloc                           0x080153f4   Section        0  heap_4.o(i.pvPortMalloc)
-    i.pvTaskIncrementMutexHeldCount          0x08015568   Section        0  tasks.o(i.pvTaskIncrementMutexHeldCount)
-    i.pvTimerGetTimerID                      0x08015588   Section        0  timers.o(i.pvTimerGetTimerID)
-    i.pxPortInitialiseStack                  0x080155c8   Section        0  port.o(i.pxPortInitialiseStack)
-    i.rtc_get_time                           0x080155f4   Section        0  rtc.o(i.rtc_get_time)
-    i.rtc_init                               0x0801561e   Section        0  rtc.o(i.rtc_init)
-    i.rtc_set_time                           0x08015638   Section        0  rtc.o(i.rtc_set_time)
-    i.st7789_dma_init                        0x08015658   Section        0  st7789.o(i.st7789_dma_init)
-    st7789_dma_init                          0x08015659   Thumb Code    86  st7789.o(i.st7789_dma_init)
-    i.st7789_draw_font                       0x080156b8   Section        0  st7789.o(i.st7789_draw_font)
-    st7789_draw_font                         0x080156b9   Thumb Code   176  st7789.o(i.st7789_draw_font)
-    i.st7789_draw_image                      0x0801576c   Section        0  st7789.o(i.st7789_draw_image)
-    i.st7789_fill_color                      0x080157c2   Section        0  st7789.o(i.st7789_fill_color)
-    i.st7789_init                            0x08015808   Section        0  st7789.o(i.st7789_init)
-    i.st7789_init_display                    0x0801585c   Section        0  st7789.o(i.st7789_init_display)
-    st7789_init_display                      0x0801585d   Thumb Code   348  st7789.o(i.st7789_init_display)
-    i.st7789_int_init                        0x08015a08   Section        0  st7789.o(i.st7789_int_init)
-    st7789_int_init                          0x08015a09   Thumb Code    68  st7789.o(i.st7789_int_init)
-    i.st7789_io_init                         0x08015a54   Section        0  st7789.o(i.st7789_io_init)
-    st7789_io_init                           0x08015a55   Thumb Code   142  st7789.o(i.st7789_io_init)
-    i.st7789_reset                           0x08015af0   Section        0  st7789.o(i.st7789_reset)
-    st7789_reset                             0x08015af1   Thumb Code    32  st7789.o(i.st7789_reset)
-    i.st7789_set_backlight                   0x08015b14   Section        0  st7789.o(i.st7789_set_backlight)
-    st7789_set_backlight                     0x08015b15   Thumb Code    16  st7789.o(i.st7789_set_backlight)
-    i.st7789_set_range_and_prepare_gram      0x08015b28   Section        0  st7789.o(i.st7789_set_range_and_prepare_gram)
-    st7789_set_range_and_prepare_gram        0x08015b29   Thumb Code    94  st7789.o(i.st7789_set_range_and_prepare_gram)
-    i.st7789_spi_init                        0x08015b88   Section        0  st7789.o(i.st7789_spi_init)
-    st7789_spi_init                          0x08015b89   Thumb Code    88  st7789.o(i.st7789_spi_init)
-    i.st7789_write_ascii                     0x08015be4   Section        0  st7789.o(i.st7789_write_ascii)
-    st7789_write_ascii                       0x08015be5   Thumb Code   106  st7789.o(i.st7789_write_ascii)
-    i.st7789_write_chinese                   0x08015c4e   Section        0  st7789.o(i.st7789_write_chinese)
-    st7789_write_chinese                     0x08015c4f   Thumb Code   114  st7789.o(i.st7789_write_chinese)
-    i.st7789_write_gram                      0x08015cc0   Section        0  st7789.o(i.st7789_write_gram)
-    st7789_write_gram                        0x08015cc1   Thumb Code   278  st7789.o(i.st7789_write_gram)
-    i.st7789_write_register                  0x08015e28   Section        0  st7789.o(i.st7789_write_register)
-    st7789_write_register                    0x08015e29   Thumb Code   138  st7789.o(i.st7789_write_register)
-    i.st7789_write_string                    0x08015ebc   Section        0  st7789.o(i.st7789_write_string)
-    i.tim_delay_init                         0x08015f3c   Section        0  tim_delay.o(i.tim_delay_init)
-    i.tim_delay_us                           0x08015fb4   Section        0  tim_delay.o(i.tim_delay_us)
-    i.tim_get_us                             0x08015fd6   Section        0  tim_delay.o(i.tim_get_us)
-    i.tim_now                                0x08015fe0   Section        0  tim_delay.o(i.tim_now)
-    i.time_sync                              0x0801601c   Section        0  app.o(i.time_sync)
-    time_sync                                0x0801601d   Thumb Code   200  app.o(i.time_sync)
-    i.time_update                            0x0801615c   Section        0  app.o(i.time_update)
-    time_update                              0x0801615d   Thumb Code    62  app.o(i.time_update)
-    i.ui_draw_image                          0x080161a0   Section        0  ui.o(i.ui_draw_image)
-    i.ui_fill_color                          0x080161d0   Section        0  ui.o(i.ui_fill_color)
-    i.ui_func                                0x08016214   Section        0  ui.o(i.ui_func)
-    ui_func                                  0x08016215   Thumb Code   134  ui.o(i.ui_func)
-    i.ui_init                                0x080162b8   Section        0  ui.o(i.ui_init)
-    i.ui_write_string                        0x08016304   Section        0  ui.o(i.ui_write_string)
-    i.uxListRemove                           0x08016398   Section        0  list.o(i.uxListRemove)
-    i.vApplicationMallocFailedHook           0x080163c0   Section        0  board.o(i.vApplicationMallocFailedHook)
-    i.vApplicationStackOverflowHook          0x080163f4   Section        0  board.o(i.vApplicationStackOverflowHook)
-    i.vAssertCalled                          0x08016434   Section        0  board.o(i.vAssertCalled)
-    i.vListInitialise                        0x08016470   Section        0  list.o(i.vListInitialise)
-    i.vListInitialiseItem                    0x0801648a   Section        0  list.o(i.vListInitialiseItem)
-    i.vListInsert                            0x08016490   Section        0  list.o(i.vListInsert)
-    i.vListInsertEnd                         0x080164c4   Section        0  list.o(i.vListInsertEnd)
-    i.vPortEnterCritical                     0x080164dc   Section        0  port.o(i.vPortEnterCritical)
-    i.vPortExitCritical                      0x08016550   Section        0  port.o(i.vPortExitCritical)
-    i.vPortFree                              0x080165ac   Section        0  heap_4.o(i.vPortFree)
-    i.vPortSetupTimerInterrupt               0x08016660   Section        0  port.o(i.vPortSetupTimerInterrupt)
-    i.vPortValidateInterruptPriority         0x08016688   Section        0  port.o(i.vPortValidateInterruptPriority)
-    i.vQueueAddToRegistry                    0x08016710   Section        0  queue.o(i.vQueueAddToRegistry)
-    i.vQueueWaitForMessageRestricted         0x0801673c   Section        0  queue.o(i.vQueueWaitForMessageRestricted)
-    i.vTaskDelay                             0x08016788   Section        0  tasks.o(i.vTaskDelay)
-    i.vTaskDelete                            0x080167f8   Section        0  tasks.o(i.vTaskDelete)
-    i.vTaskInternalSetTimeOutState           0x08016908   Section        0  tasks.o(i.vTaskInternalSetTimeOutState)
-    i.vTaskMissedYield                       0x08016920   Section        0  tasks.o(i.vTaskMissedYield)
-    i.vTaskPlaceOnEventList                  0x0801692c   Section        0  tasks.o(i.vTaskPlaceOnEventList)
-    i.vTaskPlaceOnEventListRestricted        0x08016978   Section        0  tasks.o(i.vTaskPlaceOnEventListRestricted)
-    i.vTaskPriorityDisinheritAfterTimeout    0x080169cc   Section        0  tasks.o(i.vTaskPriorityDisinheritAfterTimeout)
-    i.vTaskStartScheduler                    0x08016ab8   Section        0  tasks.o(i.vTaskStartScheduler)
-    i.vTaskSuspendAll                        0x08016b68   Section        0  tasks.o(i.vTaskSuspendAll)
-    i.vTaskSwitchContext                     0x08016b78   Section        0  tasks.o(i.vTaskSwitchContext)
-    i.weekday_str_to_num                     0x08016c34   Section        0  esp_at.o(i.weekday_str_to_num)
-    weekday_str_to_num                       0x08016c35   Thumb Code    52  esp_at.o(i.weekday_str_to_num)
-    i.welcome_page_display                   0x08016c6c   Section        0  welcome_page.o(i.welcome_page_display)
-    i.wifi_init                              0x08016d00   Section        0  wifi.o(i.wifi_init)
-    i.wifi_page_display                      0x08016dd0   Section        0  wifi_page.o(i.wifi_page_display)
-    i.wifi_update                            0x08016e7c   Section        0  app.o(i.wifi_update)
-    wifi_update                              0x08016e7d   Thumb Code   126  app.o(i.wifi_update)
-    i.wifi_wait_connect                      0x08016f94   Section        0  wifi.o(i.wifi_wait_connect)
-    i.work_func                              0x080170a4   Section        0  workqueue.o(i.work_func)
-    work_func                                0x080170a5   Thumb Code    26  workqueue.o(i.work_func)
-    i.work_timer_cb                          0x080170c4   Section        0  app.o(i.work_timer_cb)
-    work_timer_cb                            0x080170c5   Thumb Code    22  app.o(i.work_timer_cb)
-    i.workqueue_init                         0x080170e0   Section        0  workqueue.o(i.workqueue_init)
-    i.workqueue_run                          0x08017140   Section        0  workqueue.o(i.workqueue_run)
-    i.xPortStartScheduler                    0x08017180   Section        0  port.o(i.xPortStartScheduler)
-    i.xQueueGenericCreate                    0x080172fc   Section        0  queue.o(i.xQueueGenericCreate)
-    i.xQueueGenericReset                     0x0801739c   Section        0  queue.o(i.xQueueGenericReset)
-    i.xQueueGenericSend                      0x08017448   Section        0  queue.o(i.xQueueGenericSend)
-    i.xQueueGenericSendFromISR               0x08017610   Section        0  queue.o(i.xQueueGenericSendFromISR)
-    i.xQueueGiveFromISR                      0x08017738   Section        0  queue.o(i.xQueueGiveFromISR)
-    i.xQueueReceive                          0x08017840   Section        0  queue.o(i.xQueueReceive)
-    i.xQueueSemaphoreTake                    0x080179a4   Section        0  queue.o(i.xQueueSemaphoreTake)
-    i.xTaskCheckForTimeOut                   0x08017b4c   Section        0  tasks.o(i.xTaskCheckForTimeOut)
-    i.xTaskCreate                            0x08017be4   Section        0  tasks.o(i.xTaskCreate)
-    i.xTaskGetSchedulerState                 0x08017c44   Section        0  tasks.o(i.xTaskGetSchedulerState)
-    i.xTaskGetTickCount                      0x08017c64   Section        0  tasks.o(i.xTaskGetTickCount)
-    i.xTaskIncrementTick                     0x08017c70   Section        0  tasks.o(i.xTaskIncrementTick)
-    i.xTaskPriorityDisinherit                0x08017dcc   Section        0  tasks.o(i.xTaskPriorityDisinherit)
-    i.xTaskPriorityInherit                   0x08017e90   Section        0  tasks.o(i.xTaskPriorityInherit)
-    i.xTaskRemoveFromEventList               0x08017f48   Section        0  tasks.o(i.xTaskRemoveFromEventList)
-    i.xTaskResumeAll                         0x08017ff4   Section        0  tasks.o(i.xTaskResumeAll)
-    i.xTimerCreate                           0x0801810c   Section        0  timers.o(i.xTimerCreate)
-    i.xTimerCreateTimerTask                  0x08018144   Section        0  timers.o(i.xTimerCreateTimerTask)
-    i.xTimerGenericCommand                   0x080181ac   Section        0  timers.o(i.xTimerGenericCommand)
-    .constdata                               0x08018244   Section     5944  font24_maple_bold.o(.constdata)
-    <Data1>                                  0x08018244   Data          72  font24_maple_bold.o(.constdata)
-    <Data2>                                  0x0801828c   Data          72  font24_maple_bold.o(.constdata)
-    <Data3>                                  0x080182d4   Data          72  font24_maple_bold.o(.constdata)
-    <Data4>                                  0x0801831c   Data          72  font24_maple_bold.o(.constdata)
-    <Data5>                                  0x08018364   Data          72  font24_maple_bold.o(.constdata)
-    <Data6>                                  0x080183ac   Data          72  font24_maple_bold.o(.constdata)
-    <Data7>                                  0x080183f4   Data          72  font24_maple_bold.o(.constdata)
-    <Data8>                                  0x0801843c   Data          72  font24_maple_bold.o(.constdata)
-    <Data9>                                  0x08018484   Data          72  font24_maple_bold.o(.constdata)
-    <Data10>                                 0x080184cc   Data          72  font24_maple_bold.o(.constdata)
-    <Data11>                                 0x08018514   Data          72  font24_maple_bold.o(.constdata)
-    <Data12>                                 0x0801855c   Data          72  font24_maple_bold.o(.constdata)
-    <Data13>                                 0x080185a4   Data          72  font24_maple_bold.o(.constdata)
-    <Data14>                                 0x080185ec   Data          72  font24_maple_bold.o(.constdata)
-    <Data15>                                 0x08018634   Data          72  font24_maple_bold.o(.constdata)
-    <Data16>                                 0x0801867c   Data          72  font24_maple_bold.o(.constdata)
-    <Data17>                                 0x080186c4   Data          72  font24_maple_bold.o(.constdata)
-    ascii_model                              0x0801870c   Data        4560  font24_maple_bold.o(.constdata)
-    chinese_model                            0x080198dc   Data         144  font24_maple_bold.o(.constdata)
-    .constdata                               0x0801997c   Section     7600  font32_maple_bold.o(.constdata)
-    <Data1>                                  0x0801997c   Data         128  font32_maple_bold.o(.constdata)
-    <Data2>                                  0x080199fc   Data         128  font32_maple_bold.o(.constdata)
-    <Data3>                                  0x08019a7c   Data         128  font32_maple_bold.o(.constdata)
-    <Data4>                                  0x08019afc   Data         128  font32_maple_bold.o(.constdata)
-    <Data5>                                  0x08019b7c   Data         128  font32_maple_bold.o(.constdata)
-    <Data6>                                  0x08019bfc   Data         128  font32_maple_bold.o(.constdata)
-    <Data7>                                  0x08019c7c   Data         128  font32_maple_bold.o(.constdata)
-    <Data8>                                  0x08019cfc   Data         128  font32_maple_bold.o(.constdata)
-    <Data9>                                  0x08019d7c   Data         128  font32_maple_bold.o(.constdata)
-    <Data10>                                 0x08019dfc   Data         128  font32_maple_bold.o(.constdata)
-    <Data11>                                 0x08019e7c   Data         128  font32_maple_bold.o(.constdata)
-    ascii_model                              0x08019efc   Data        6080  font32_maple_bold.o(.constdata)
-    chinese_model                            0x0801b6bc   Data          96  font32_maple_bold.o(.constdata)
-    .constdata                               0x0801b72c   Section     5320  font20_maple_bold.o(.constdata)
-    <Data1>                                  0x0801b72c   Data          60  font20_maple_bold.o(.constdata)
-    <Data2>                                  0x0801b768   Data          60  font20_maple_bold.o(.constdata)
-    <Data3>                                  0x0801b7a4   Data          60  font20_maple_bold.o(.constdata)
-    <Data4>                                  0x0801b7e0   Data          60  font20_maple_bold.o(.constdata)
-    <Data5>                                  0x0801b81c   Data          60  font20_maple_bold.o(.constdata)
-    <Data6>                                  0x0801b858   Data          60  font20_maple_bold.o(.constdata)
-    <Data7>                                  0x0801b894   Data          60  font20_maple_bold.o(.constdata)
-    <Data8>                                  0x0801b8d0   Data          60  font20_maple_bold.o(.constdata)
-    <Data9>                                  0x0801b90c   Data          60  font20_maple_bold.o(.constdata)
-    <Data10>                                 0x0801b948   Data          60  font20_maple_bold.o(.constdata)
-    <Data11>                                 0x0801b984   Data          60  font20_maple_bold.o(.constdata)
-    <Data12>                                 0x0801b9c0   Data          60  font20_maple_bold.o(.constdata)
-    <Data13>                                 0x0801b9fc   Data          60  font20_maple_bold.o(.constdata)
-    <Data14>                                 0x0801ba38   Data          60  font20_maple_bold.o(.constdata)
-    <Data15>                                 0x0801ba74   Data          60  font20_maple_bold.o(.constdata)
-    <Data16>                                 0x0801bab0   Data          60  font20_maple_bold.o(.constdata)
-    <Data17>                                 0x0801baec   Data          60  font20_maple_bold.o(.constdata)
-    <Data18>                                 0x0801bb28   Data          60  font20_maple_bold.o(.constdata)
-    <Data19>                                 0x0801bb64   Data          60  font20_maple_bold.o(.constdata)
-    <Data20>                                 0x0801bba0   Data          60  font20_maple_bold.o(.constdata)
-    <Data21>                                 0x0801bbdc   Data          60  font20_maple_bold.o(.constdata)
-    <Data22>                                 0x0801bc18   Data          60  font20_maple_bold.o(.constdata)
-    ascii_model                              0x0801bc54   Data        3800  font20_maple_bold.o(.constdata)
-    chinese_model                            0x0801cb2c   Data         184  font20_maple_bold.o(.constdata)
-    .constdata                               0x0801cbf4   Section     1536  font16_maple.o(.constdata)
-    ascii_model                              0x0801cbf4   Data        1520  font16_maple.o(.constdata)
-    .constdata                               0x0801d1f4   Section     1224  font24_maple_semibold.o(.constdata)
-    <Data1>                                  0x0801d1f4   Data          72  font24_maple_semibold.o(.constdata)
-    <Data2>                                  0x0801d23c   Data          72  font24_maple_semibold.o(.constdata)
-    <Data3>                                  0x0801d284   Data          72  font24_maple_semibold.o(.constdata)
-    <Data4>                                  0x0801d2cc   Data          72  font24_maple_semibold.o(.constdata)
-    <Data5>                                  0x0801d314   Data          72  font24_maple_semibold.o(.constdata)
-    <Data6>                                  0x0801d35c   Data          72  font24_maple_semibold.o(.constdata)
-    <Data7>                                  0x0801d3a4   Data          72  font24_maple_semibold.o(.constdata)
-    <Data8>                                  0x0801d3ec   Data          72  font24_maple_semibold.o(.constdata)
-    <Data9>                                  0x0801d434   Data          72  font24_maple_semibold.o(.constdata)
-    <Data10>                                 0x0801d47c   Data          72  font24_maple_semibold.o(.constdata)
-    <Data11>                                 0x0801d4c4   Data          72  font24_maple_semibold.o(.constdata)
-    <Data12>                                 0x0801d50c   Data          72  font24_maple_semibold.o(.constdata)
-    <Data13>                                 0x0801d554   Data          72  font24_maple_semibold.o(.constdata)
-    <Data14>                                 0x0801d59c   Data          72  font24_maple_semibold.o(.constdata)
-    <Data15>                                 0x0801d5e4   Data          72  font24_maple_semibold.o(.constdata)
-    chinese_model                            0x0801d62c   Data         128  font24_maple_semibold.o(.constdata)
-    .constdata                               0x0801d6bc   Section     2824  font54_maple_bold.o(.constdata)
-    ascii_model                              0x0801d6bc   Data        2808  font54_maple_bold.o(.constdata)
-    .constdata                               0x0801e1c4   Section     2824  font54_maple_semibold.o(.constdata)
-    ascii_model                              0x0801e1c4   Data        2808  font54_maple_semibold.o(.constdata)
-    .constdata                               0x0801eccc   Section     3344  font64_maple_extrabold.o(.constdata)
-    ascii_model                              0x0801eccc   Data        3328  font64_maple_extrabold.o(.constdata)
-    .constdata                               0x0801f9dc   Section     4956  font76_maple_extrabold.o(.constdata)
-    ascii_model                              0x0801f9dc   Data        4940  font76_maple_extrabold.o(.constdata)
-    .constdata                               0x08020d38   Section     5840  icon_duoyun.o(.constdata)
-    gImage_icon_duoyun                       0x08020d38   Data        5832  icon_duoyun.o(.constdata)
-    .constdata                               0x08022408   Section     5840  icon_leizhenyu.o(.constdata)
-    gImage_icon_leizhenyu                    0x08022408   Data        5832  icon_leizhenyu.o(.constdata)
-    .constdata                               0x08023ad8   Section     5840  icon_na.o(.constdata)
-    gImage_icon_na                           0x08023ad8   Data        5832  icon_na.o(.constdata)
-    .constdata                               0x080251a8   Section     5840  icon_qing.o(.constdata)
-    gImage_icon_qing                         0x080251a8   Data        5832  icon_qing.o(.constdata)
-    .constdata                               0x08026878   Section     2152  icon_wenduji.o(.constdata)
-    gImage_icon_wenduji                      0x08026878   Data        2142  icon_wenduji.o(.constdata)
-    .constdata                               0x080270e0   Section     1160  icon_wifi.o(.constdata)
-    gImage_icon_wifi                         0x080270e0   Data        1152  icon_wifi.o(.constdata)
-    .constdata                               0x08027568   Section     5840  icon_yintian.o(.constdata)
-    gImage_icon_yintian                      0x08027568   Data        5832  icon_yintian.o(.constdata)
-    .constdata                               0x08028c38   Section     5840  icon_yueliang.o(.constdata)
-    gImage_icon_yueliang                     0x08028c38   Data        5832  icon_yueliang.o(.constdata)
-    .constdata                               0x0802a308   Section     5840  icon_zhongxue.o(.constdata)
-    gImage_icon_zhongxue                     0x0802a308   Data        5832  icon_zhongxue.o(.constdata)
-    .constdata                               0x0802b9d8   Section     5840  icon_zhongyu.o(.constdata)
-    gImage_icon_zhongyu                      0x0802b9d8   Data        5832  icon_zhongyu.o(.constdata)
-    .constdata                               0x0802d0a8   Section    51208  img_error.o(.constdata)
-    gImage_img_error                         0x0802d0a8   Data       51200  img_error.o(.constdata)
-    .constdata                               0x080398b0   Section    128896  img_meihua.o(.constdata)
-    gImage_img_meihua                        0x080398b0   Data       64800  img_meihua.o(.constdata)
-    gImage_touxiang                          0x080495d0   Data       64080  img_meihua.o(.constdata)
-    .constdata                               0x08059030   Section    59048  img_wifi.o(.constdata)
-    gImage_img_wifi                          0x08059030   Data       59040  img_wifi.o(.constdata)
-    .constdata                               0x080676d8   Section        7  main_page.o(.constdata)
-    .constdata                               0x080676e0   Section      108  esp_at.o(.constdata)
-    at_ack_matches                           0x080676e0   Data          32  esp_at.o(.constdata)
-    .constdata                               0x0806774c   Section       64  ctype_c.o(.constdata)
-    .conststring                             0x0806778c   Section      104  app.o(.conststring)
-    .conststring                             0x080677f4   Section       63  font24_maple_bold.o(.conststring)
-    .conststring                             0x08067834   Section       43  font32_maple_bold.o(.conststring)
-    .conststring                             0x08067860   Section       35  font20_maple_bold.o(.conststring)
-    .conststring                             0x08067884   Section        3  font24_maple_semibold.o(.conststring)
-    .conststring                             0x08067888   Section       14  font54_maple_bold.o(.conststring)
-    .conststring                             0x08067898   Section       14  font76_maple_extrabold.o(.conststring)
-    .conststring                             0x080678a8   Section        9  wifi_page.o(.conststring)
-    .conststring                             0x080678b4   Section      112  esp_at.o(.conststring)
+    i.console_dma_init                       0x08013644   Section        0  console.o(i.console_dma_init)
+    console_dma_init                         0x08013645   Thumb Code    84  console.o(i.console_dma_init)
+    i.console_init                           0x080136a0   Section        0  console.o(i.console_init)
+    i.console_int_init                       0x080136f0   Section        0  console.o(i.console_int_init)
+    console_int_init                         0x080136f1   Thumb Code    62  console.o(i.console_int_init)
+    i.console_io_init                        0x08013730   Section        0  console.o(i.console_io_init)
+    console_io_init                          0x08013731   Thumb Code    54  console.o(i.console_io_init)
+    i.console_usart_init                     0x0801376c   Section        0  console.o(i.console_usart_init)
+    console_usart_init                       0x0801376d   Thumb Code    80  console.o(i.console_usart_init)
+    i.error_page_display                     0x080137c0   Section        0  error_page.o(i.error_page_display)
+    i.esp_at_connect_wifi                    0x08013824   Section        0  esp_at.o(i.esp_at_connect_wifi)
+    i.esp_at_dma_init                        0x08013890   Section        0  esp_at.o(i.esp_at_dma_init)
+    esp_at_dma_init                          0x08013891   Thumb Code    78  esp_at.o(i.esp_at_dma_init)
+    i.esp_at_get_response                    0x080138e8   Section        0  esp_at.o(i.esp_at_get_response)
+    esp_at_get_response                      0x080138e9   Thumb Code     4  esp_at.o(i.esp_at_get_response)
+    i.esp_at_get_wifi_info                   0x080138f0   Section        0  esp_at.o(i.esp_at_get_wifi_info)
+    i.esp_at_http_get                        0x08013960   Section        0  esp_at.o(i.esp_at_http_get)
+    i.esp_at_init                            0x080139b0   Section        0  esp_at.o(i.esp_at_init)
+    i.esp_at_int_init                        0x08013a34   Section        0  esp_at.o(i.esp_at_int_init)
+    esp_at_int_init                          0x08013a35   Thumb Code    68  esp_at.o(i.esp_at_int_init)
+    i.esp_at_io_init                         0x08013a80   Section        0  esp_at.o(i.esp_at_io_init)
+    esp_at_io_init                           0x08013a81   Thumb Code    54  esp_at.o(i.esp_at_io_init)
+    i.esp_at_lowlevel_init                   0x08013abc   Section        0  esp_at.o(i.esp_at_lowlevel_init)
+    esp_at_lowlevel_init                     0x08013abd   Thumb Code    20  esp_at.o(i.esp_at_lowlevel_init)
+    i.esp_at_sntp_get_time                   0x08013ad0   Section        0  esp_at.o(i.esp_at_sntp_get_time)
+    i.esp_at_sntp_init                       0x08013b10   Section        0  esp_at.o(i.esp_at_sntp_init)
+    i.esp_at_usart_init                      0x08013b3c   Section        0  esp_at.o(i.esp_at_usart_init)
+    esp_at_usart_init                        0x08013b3d   Thumb Code    80  esp_at.o(i.esp_at_usart_init)
+    i.esp_at_usart_wait_receive              0x08013b90   Section        0  esp_at.o(i.esp_at_usart_wait_receive)
+    esp_at_usart_wait_receive                0x08013b91   Thumb Code    62  esp_at.o(i.esp_at_usart_wait_receive)
+    i.esp_at_usart_write                     0x08013be4   Section        0  esp_at.o(i.esp_at_usart_write)
+    esp_at_usart_write                       0x08013be5   Thumb Code    46  esp_at.o(i.esp_at_usart_write)
+    i.esp_at_wait_boot                       0x08013c1c   Section        0  esp_at.o(i.esp_at_wait_boot)
+    esp_at_wait_boot                         0x08013c1d   Thumb Code    32  esp_at.o(i.esp_at_wait_boot)
+    i.esp_at_wait_ready                      0x08013c44   Section        0  esp_at.o(i.esp_at_wait_ready)
+    esp_at_wait_ready                        0x08013c45   Thumb Code    22  esp_at.o(i.esp_at_wait_ready)
+    i.esp_at_wifi_init                       0x08013c5c   Section        0  esp_at.o(i.esp_at_wifi_init)
+    i.esp_at_write_command                   0x08013c7c   Section        0  esp_at.o(i.esp_at_write_command)
+    esp_at_write_command                     0x08013c7d   Thumb Code    48  esp_at.o(i.esp_at_write_command)
+    i.fputc                                  0x08013cdc   Section        0  board.o(i.fputc)
+    i.in_screen_range                        0x08013d08   Section        0  st7789.o(i.in_screen_range)
+    in_screen_range                          0x08013d09   Thumb Code    48  st7789.o(i.in_screen_range)
+    i.inner_update                           0x08013d38   Section        0  app.o(i.inner_update)
+    inner_update                             0x08013d39   Thumb Code   192  app.o(i.inner_update)
+    i.is_gb2312                              0x08013ea0   Section        0  st7789.o(i.is_gb2312)
+    is_gb2312                                0x08013ea1   Thumb Code    18  st7789.o(i.is_gb2312)
+    i.main                                   0x08013eb4   Section        0  main.o(i.main)
+    i.main_init                              0x08013ee8   Section        0  main.o(i.main_init)
+    main_init                                0x08013ee9   Thumb Code    50  main.o(i.main_init)
+    i.main_page_display                      0x08013f38   Section        0  main_page.o(i.main_page_display)
+    i.main_page_redraw_date                  0x080140bc   Section        0  main_page.o(i.main_page_redraw_date)
+    i.main_page_redraw_inner_humidity        0x08014178   Section        0  main_page.o(i.main_page_redraw_inner_humidity)
+    i.main_page_redraw_inner_temperature     0x080141e4   Section        0  main_page.o(i.main_page_redraw_inner_temperature)
+    i.main_page_redraw_outdoor_city          0x08014260   Section        0  main_page.o(i.main_page_redraw_outdoor_city)
+    i.main_page_redraw_outdoor_temperature   0x08014294   Section        0  main_page.o(i.main_page_redraw_outdoor_temperature)
+    i.main_page_redraw_outdoor_weather_icon  0x08014310   Section        0  main_page.o(i.main_page_redraw_outdoor_weather_icon)
+    i.main_page_redraw_time                  0x080143c8   Section        0  main_page.o(i.main_page_redraw_time)
+    i.main_page_redraw_wifi_ssid             0x0801441c   Section        0  main_page.o(i.main_page_redraw_wifi_ssid)
+    i.match_internal_ack                     0x08014458   Section        0  esp_at.o(i.match_internal_ack)
+    match_internal_ack                       0x08014459   Thumb Code    42  esp_at.o(i.match_internal_ack)
+    i.month_str_to_num                       0x08014488   Section        0  esp_at.o(i.month_str_to_num)
+    month_str_to_num                         0x08014489   Thumb Code    54  esp_at.o(i.month_str_to_num)
+    i.outdoor_update                         0x080144c4   Section        0  app.o(i.outdoor_update)
+    outdoor_update                           0x080144c5   Thumb Code   138  app.o(i.outdoor_update)
+    i.parse_cipsntptime_response             0x080145a0   Section        0  esp_at.o(i.parse_cipsntptime_response)
+    parse_cipsntptime_response               0x080145a1   Thumb Code    78  esp_at.o(i.parse_cipsntptime_response)
+    i.parse_cwjap_response                   0x08014630   Section        0  esp_at.o(i.parse_cwjap_response)
+    parse_cwjap_response                     0x08014631   Thumb Code    58  esp_at.o(i.parse_cwjap_response)
+    i.parse_cwstate_response                 0x08014698   Section        0  esp_at.o(i.parse_cwstate_response)
+    parse_cwstate_response                   0x08014699   Thumb Code    62  esp_at.o(i.parse_cwstate_response)
+    i.parse_seniverse_response               0x080146fc   Section        0  weather.o(i.parse_seniverse_response)
+    i.prvAddCurrentTaskToDelayedList         0x080148ac   Section        0  tasks.o(i.prvAddCurrentTaskToDelayedList)
+    prvAddCurrentTaskToDelayedList           0x080148ad   Thumb Code   124  tasks.o(i.prvAddCurrentTaskToDelayedList)
+    i.prvAddNewTaskToReadyList               0x08014944   Section        0  tasks.o(i.prvAddNewTaskToReadyList)
+    prvAddNewTaskToReadyList                 0x08014945   Thumb Code   150  tasks.o(i.prvAddNewTaskToReadyList)
+    i.prvCheckForValidListAndQueue           0x080149f8   Section        0  timers.o(i.prvCheckForValidListAndQueue)
+    prvCheckForValidListAndQueue             0x080149f9   Thumb Code    72  timers.o(i.prvCheckForValidListAndQueue)
+    i.prvCheckTasksWaitingTermination        0x08014a5c   Section        0  tasks.o(i.prvCheckTasksWaitingTermination)
+    prvCheckTasksWaitingTermination          0x08014a5d   Thumb Code    60  tasks.o(i.prvCheckTasksWaitingTermination)
+    i.prvCopyDataFromQueue                   0x08014aa4   Section        0  queue.o(i.prvCopyDataFromQueue)
+    prvCopyDataFromQueue                     0x08014aa5   Thumb Code    42  queue.o(i.prvCopyDataFromQueue)
+    i.prvCopyDataToQueue                     0x08014ace   Section        0  queue.o(i.prvCopyDataToQueue)
+    prvCopyDataToQueue                       0x08014acf   Thumb Code   126  queue.o(i.prvCopyDataToQueue)
+    i.prvDeleteTCB                           0x08014b4c   Section        0  tasks.o(i.prvDeleteTCB)
+    prvDeleteTCB                             0x08014b4d   Thumb Code    18  tasks.o(i.prvDeleteTCB)
+    i.prvGetDisinheritPriorityAfterTimeout   0x08014b5e   Section        0  queue.o(i.prvGetDisinheritPriorityAfterTimeout)
+    prvGetDisinheritPriorityAfterTimeout     0x08014b5f   Thumb Code    20  queue.o(i.prvGetDisinheritPriorityAfterTimeout)
+    i.prvGetNextExpireTime                   0x08014b74   Section        0  timers.o(i.prvGetNextExpireTime)
+    prvGetNextExpireTime                     0x08014b75   Thumb Code    36  timers.o(i.prvGetNextExpireTime)
+    i.prvHeapInit                            0x08014b9c   Section        0  heap_4.o(i.prvHeapInit)
+    prvHeapInit                              0x08014b9d   Thumb Code    98  heap_4.o(i.prvHeapInit)
+    i.prvIdleTask                            0x08014c18   Section        0  tasks.o(i.prvIdleTask)
+    prvIdleTask                              0x08014c19   Thumb Code    32  tasks.o(i.prvIdleTask)
+    i.prvInitialiseNewQueue                  0x08014c40   Section        0  queue.o(i.prvInitialiseNewQueue)
+    prvInitialiseNewQueue                    0x08014c41   Thumb Code    42  queue.o(i.prvInitialiseNewQueue)
+    i.prvInitialiseNewTask                   0x08014c6c   Section        0  tasks.o(i.prvInitialiseNewTask)
+    prvInitialiseNewTask                     0x08014c6d   Thumb Code   196  tasks.o(i.prvInitialiseNewTask)
+    i.prvInitialiseNewTimer                  0x08014d50   Section        0  timers.o(i.prvInitialiseNewTimer)
+    prvInitialiseNewTimer                    0x08014d51   Thumb Code    78  timers.o(i.prvInitialiseNewTimer)
+    i.prvInitialiseTaskLists                 0x08014dc0   Section        0  tasks.o(i.prvInitialiseTaskLists)
+    prvInitialiseTaskLists                   0x08014dc1   Thumb Code    70  tasks.o(i.prvInitialiseTaskLists)
+    i.prvInsertBlockIntoFreeList             0x08014e28   Section        0  heap_4.o(i.prvInsertBlockIntoFreeList)
+    prvInsertBlockIntoFreeList               0x08014e29   Thumb Code    96  heap_4.o(i.prvInsertBlockIntoFreeList)
+    i.prvInsertTimerInActiveList             0x08014e90   Section        0  timers.o(i.prvInsertTimerInActiveList)
+    prvInsertTimerInActiveList               0x08014e91   Thumb Code    80  timers.o(i.prvInsertTimerInActiveList)
+    i.prvIsQueueEmpty                        0x08014ee8   Section        0  queue.o(i.prvIsQueueEmpty)
+    prvIsQueueEmpty                          0x08014ee9   Thumb Code    26  queue.o(i.prvIsQueueEmpty)
+    i.prvIsQueueFull                         0x08014f02   Section        0  queue.o(i.prvIsQueueFull)
+    prvIsQueueFull                           0x08014f03   Thumb Code    30  queue.o(i.prvIsQueueFull)
+    i.prvNotifyQueueSetContainer             0x08014f20   Section        0  queue.o(i.prvNotifyQueueSetContainer)
+    prvNotifyQueueSetContainer               0x08014f21   Thumb Code   136  queue.o(i.prvNotifyQueueSetContainer)
+    i.prvProcessExpiredTimer                 0x08014fc8   Section        0  timers.o(i.prvProcessExpiredTimer)
+    prvProcessExpiredTimer                   0x08014fc9   Thumb Code    98  timers.o(i.prvProcessExpiredTimer)
+    i.prvProcessReceivedCommands             0x08015050   Section        0  timers.o(i.prvProcessReceivedCommands)
+    prvProcessReceivedCommands               0x08015051   Thumb Code   282  timers.o(i.prvProcessReceivedCommands)
+    i.prvProcessTimerOrBlockTask             0x08015190   Section        0  timers.o(i.prvProcessTimerOrBlockTask)
+    prvProcessTimerOrBlockTask               0x08015191   Thumb Code   102  timers.o(i.prvProcessTimerOrBlockTask)
+    i.prvResetNextTaskUnblockTime            0x08015204   Section        0  tasks.o(i.prvResetNextTaskUnblockTime)
+    prvResetNextTaskUnblockTime              0x08015205   Thumb Code    40  tasks.o(i.prvResetNextTaskUnblockTime)
+    i.prvSampleTimeNow                       0x08015234   Section        0  timers.o(i.prvSampleTimeNow)
+    prvSampleTimeNow                         0x08015235   Thumb Code    40  timers.o(i.prvSampleTimeNow)
+    i.prvSwitchTimerLists                    0x08015260   Section        0  timers.o(i.prvSwitchTimerLists)
+    prvSwitchTimerLists                      0x08015261   Thumb Code   142  timers.o(i.prvSwitchTimerLists)
+    i.prvTaskExitError                       0x08015318   Section        0  port.o(i.prvTaskExitError)
+    prvTaskExitError                         0x08015319   Thumb Code    46  port.o(i.prvTaskExitError)
+    i.prvTimerTask                           0x08015374   Section        0  timers.o(i.prvTimerTask)
+    prvTimerTask                             0x08015375   Thumb Code    26  timers.o(i.prvTimerTask)
+    i.prvUnlockQueue                         0x0801538e   Section        0  queue.o(i.prvUnlockQueue)
+    prvUnlockQueue                           0x0801538f   Thumb Code   144  queue.o(i.prvUnlockQueue)
+    i.pvPortMalloc                           0x08015420   Section        0  heap_4.o(i.pvPortMalloc)
+    i.pvTaskIncrementMutexHeldCount          0x08015594   Section        0  tasks.o(i.pvTaskIncrementMutexHeldCount)
+    i.pvTimerGetTimerID                      0x080155b4   Section        0  timers.o(i.pvTimerGetTimerID)
+    i.pxPortInitialiseStack                  0x080155f4   Section        0  port.o(i.pxPortInitialiseStack)
+    i.rtc_get_time                           0x08015620   Section        0  rtc.o(i.rtc_get_time)
+    i.rtc_init                               0x0801564a   Section        0  rtc.o(i.rtc_init)
+    i.rtc_set_time                           0x08015664   Section        0  rtc.o(i.rtc_set_time)
+    i.st7789_dma_init                        0x08015684   Section        0  st7789.o(i.st7789_dma_init)
+    st7789_dma_init                          0x08015685   Thumb Code    86  st7789.o(i.st7789_dma_init)
+    i.st7789_draw_font                       0x080156e4   Section        0  st7789.o(i.st7789_draw_font)
+    st7789_draw_font                         0x080156e5   Thumb Code   176  st7789.o(i.st7789_draw_font)
+    i.st7789_draw_image                      0x08015798   Section        0  st7789.o(i.st7789_draw_image)
+    i.st7789_fill_color                      0x080157ee   Section        0  st7789.o(i.st7789_fill_color)
+    i.st7789_init                            0x08015834   Section        0  st7789.o(i.st7789_init)
+    i.st7789_init_display                    0x08015888   Section        0  st7789.o(i.st7789_init_display)
+    st7789_init_display                      0x08015889   Thumb Code   348  st7789.o(i.st7789_init_display)
+    i.st7789_int_init                        0x08015a34   Section        0  st7789.o(i.st7789_int_init)
+    st7789_int_init                          0x08015a35   Thumb Code    68  st7789.o(i.st7789_int_init)
+    i.st7789_io_init                         0x08015a80   Section        0  st7789.o(i.st7789_io_init)
+    st7789_io_init                           0x08015a81   Thumb Code   142  st7789.o(i.st7789_io_init)
+    i.st7789_reset                           0x08015b1c   Section        0  st7789.o(i.st7789_reset)
+    st7789_reset                             0x08015b1d   Thumb Code    32  st7789.o(i.st7789_reset)
+    i.st7789_set_backlight                   0x08015b40   Section        0  st7789.o(i.st7789_set_backlight)
+    st7789_set_backlight                     0x08015b41   Thumb Code    16  st7789.o(i.st7789_set_backlight)
+    i.st7789_set_range_and_prepare_gram      0x08015b54   Section        0  st7789.o(i.st7789_set_range_and_prepare_gram)
+    st7789_set_range_and_prepare_gram        0x08015b55   Thumb Code    94  st7789.o(i.st7789_set_range_and_prepare_gram)
+    i.st7789_spi_init                        0x08015bb4   Section        0  st7789.o(i.st7789_spi_init)
+    st7789_spi_init                          0x08015bb5   Thumb Code    88  st7789.o(i.st7789_spi_init)
+    i.st7789_write_ascii                     0x08015c10   Section        0  st7789.o(i.st7789_write_ascii)
+    st7789_write_ascii                       0x08015c11   Thumb Code   106  st7789.o(i.st7789_write_ascii)
+    i.st7789_write_chinese                   0x08015c7a   Section        0  st7789.o(i.st7789_write_chinese)
+    st7789_write_chinese                     0x08015c7b   Thumb Code   114  st7789.o(i.st7789_write_chinese)
+    i.st7789_write_gram                      0x08015cec   Section        0  st7789.o(i.st7789_write_gram)
+    st7789_write_gram                        0x08015ced   Thumb Code   278  st7789.o(i.st7789_write_gram)
+    i.st7789_write_register                  0x08015e54   Section        0  st7789.o(i.st7789_write_register)
+    st7789_write_register                    0x08015e55   Thumb Code   138  st7789.o(i.st7789_write_register)
+    i.st7789_write_string                    0x08015ee8   Section        0  st7789.o(i.st7789_write_string)
+    i.tim_delay_init                         0x08015f68   Section        0  tim_delay.o(i.tim_delay_init)
+    i.tim_delay_us                           0x08015fe0   Section        0  tim_delay.o(i.tim_delay_us)
+    i.tim_get_us                             0x08016002   Section        0  tim_delay.o(i.tim_get_us)
+    i.tim_now                                0x0801600c   Section        0  tim_delay.o(i.tim_now)
+    i.time_sync                              0x08016048   Section        0  app.o(i.time_sync)
+    time_sync                                0x08016049   Thumb Code   200  app.o(i.time_sync)
+    i.time_update                            0x08016188   Section        0  app.o(i.time_update)
+    time_update                              0x08016189   Thumb Code    62  app.o(i.time_update)
+    i.ui_draw_image                          0x080161cc   Section        0  ui.o(i.ui_draw_image)
+    i.ui_fill_color                          0x080161fc   Section        0  ui.o(i.ui_fill_color)
+    i.ui_func                                0x08016240   Section        0  ui.o(i.ui_func)
+    ui_func                                  0x08016241   Thumb Code   134  ui.o(i.ui_func)
+    i.ui_init                                0x080162e4   Section        0  ui.o(i.ui_init)
+    i.ui_write_string                        0x08016330   Section        0  ui.o(i.ui_write_string)
+    i.uxListRemove                           0x080163c4   Section        0  list.o(i.uxListRemove)
+    i.vApplicationMallocFailedHook           0x080163ec   Section        0  board.o(i.vApplicationMallocFailedHook)
+    i.vApplicationStackOverflowHook          0x08016420   Section        0  board.o(i.vApplicationStackOverflowHook)
+    i.vAssertCalled                          0x08016460   Section        0  board.o(i.vAssertCalled)
+    i.vListInitialise                        0x0801649c   Section        0  list.o(i.vListInitialise)
+    i.vListInitialiseItem                    0x080164b6   Section        0  list.o(i.vListInitialiseItem)
+    i.vListInsert                            0x080164bc   Section        0  list.o(i.vListInsert)
+    i.vListInsertEnd                         0x080164f0   Section        0  list.o(i.vListInsertEnd)
+    i.vPortEnterCritical                     0x08016508   Section        0  port.o(i.vPortEnterCritical)
+    i.vPortExitCritical                      0x0801657c   Section        0  port.o(i.vPortExitCritical)
+    i.vPortFree                              0x080165d8   Section        0  heap_4.o(i.vPortFree)
+    i.vPortSetupTimerInterrupt               0x0801668c   Section        0  port.o(i.vPortSetupTimerInterrupt)
+    i.vPortValidateInterruptPriority         0x080166b4   Section        0  port.o(i.vPortValidateInterruptPriority)
+    i.vQueueAddToRegistry                    0x0801673c   Section        0  queue.o(i.vQueueAddToRegistry)
+    i.vQueueWaitForMessageRestricted         0x08016768   Section        0  queue.o(i.vQueueWaitForMessageRestricted)
+    i.vTaskDelay                             0x080167b4   Section        0  tasks.o(i.vTaskDelay)
+    i.vTaskDelete                            0x08016824   Section        0  tasks.o(i.vTaskDelete)
+    i.vTaskInternalSetTimeOutState           0x08016934   Section        0  tasks.o(i.vTaskInternalSetTimeOutState)
+    i.vTaskMissedYield                       0x0801694c   Section        0  tasks.o(i.vTaskMissedYield)
+    i.vTaskPlaceOnEventList                  0x08016958   Section        0  tasks.o(i.vTaskPlaceOnEventList)
+    i.vTaskPlaceOnEventListRestricted        0x080169a4   Section        0  tasks.o(i.vTaskPlaceOnEventListRestricted)
+    i.vTaskPriorityDisinheritAfterTimeout    0x080169f8   Section        0  tasks.o(i.vTaskPriorityDisinheritAfterTimeout)
+    i.vTaskStartScheduler                    0x08016ae4   Section        0  tasks.o(i.vTaskStartScheduler)
+    i.vTaskSuspendAll                        0x08016b94   Section        0  tasks.o(i.vTaskSuspendAll)
+    i.vTaskSwitchContext                     0x08016ba4   Section        0  tasks.o(i.vTaskSwitchContext)
+    i.weekday_str_to_num                     0x08016c60   Section        0  esp_at.o(i.weekday_str_to_num)
+    weekday_str_to_num                       0x08016c61   Thumb Code    52  esp_at.o(i.weekday_str_to_num)
+    i.welcome_page_display                   0x08016c98   Section        0  welcome_page.o(i.welcome_page_display)
+    i.wifi_init                              0x08016d2c   Section        0  wifi.o(i.wifi_init)
+    i.wifi_page_display                      0x08016dfc   Section        0  wifi_page.o(i.wifi_page_display)
+    i.wifi_update                            0x08016ea8   Section        0  app.o(i.wifi_update)
+    wifi_update                              0x08016ea9   Thumb Code   126  app.o(i.wifi_update)
+    i.wifi_wait_connect                      0x08016fc0   Section        0  wifi.o(i.wifi_wait_connect)
+    i.work_func                              0x080170d0   Section        0  workqueue.o(i.work_func)
+    work_func                                0x080170d1   Thumb Code    26  workqueue.o(i.work_func)
+    i.work_timer_cb                          0x080170f0   Section        0  app.o(i.work_timer_cb)
+    work_timer_cb                            0x080170f1   Thumb Code    22  app.o(i.work_timer_cb)
+    i.workqueue_init                         0x0801710c   Section        0  workqueue.o(i.workqueue_init)
+    i.workqueue_run                          0x0801716c   Section        0  workqueue.o(i.workqueue_run)
+    i.xPortStartScheduler                    0x080171ac   Section        0  port.o(i.xPortStartScheduler)
+    i.xQueueGenericCreate                    0x08017328   Section        0  queue.o(i.xQueueGenericCreate)
+    i.xQueueGenericReset                     0x080173c8   Section        0  queue.o(i.xQueueGenericReset)
+    i.xQueueGenericSend                      0x08017474   Section        0  queue.o(i.xQueueGenericSend)
+    i.xQueueGenericSendFromISR               0x0801763c   Section        0  queue.o(i.xQueueGenericSendFromISR)
+    i.xQueueGiveFromISR                      0x08017764   Section        0  queue.o(i.xQueueGiveFromISR)
+    i.xQueueReceive                          0x0801786c   Section        0  queue.o(i.xQueueReceive)
+    i.xQueueSemaphoreTake                    0x080179d0   Section        0  queue.o(i.xQueueSemaphoreTake)
+    i.xTaskCheckForTimeOut                   0x08017b78   Section        0  tasks.o(i.xTaskCheckForTimeOut)
+    i.xTaskCreate                            0x08017c10   Section        0  tasks.o(i.xTaskCreate)
+    i.xTaskGetSchedulerState                 0x08017c70   Section        0  tasks.o(i.xTaskGetSchedulerState)
+    i.xTaskGetTickCount                      0x08017c90   Section        0  tasks.o(i.xTaskGetTickCount)
+    i.xTaskIncrementTick                     0x08017c9c   Section        0  tasks.o(i.xTaskIncrementTick)
+    i.xTaskPriorityDisinherit                0x08017df8   Section        0  tasks.o(i.xTaskPriorityDisinherit)
+    i.xTaskPriorityInherit                   0x08017ebc   Section        0  tasks.o(i.xTaskPriorityInherit)
+    i.xTaskRemoveFromEventList               0x08017f74   Section        0  tasks.o(i.xTaskRemoveFromEventList)
+    i.xTaskResumeAll                         0x08018020   Section        0  tasks.o(i.xTaskResumeAll)
+    i.xTimerCreate                           0x08018138   Section        0  timers.o(i.xTimerCreate)
+    i.xTimerCreateTimerTask                  0x08018170   Section        0  timers.o(i.xTimerCreateTimerTask)
+    i.xTimerGenericCommand                   0x080181d8   Section        0  timers.o(i.xTimerGenericCommand)
+    .constdata                               0x08018270   Section     5944  font24_maple_bold.o(.constdata)
+    <Data1>                                  0x08018270   Data          72  font24_maple_bold.o(.constdata)
+    <Data2>                                  0x080182b8   Data          72  font24_maple_bold.o(.constdata)
+    <Data3>                                  0x08018300   Data          72  font24_maple_bold.o(.constdata)
+    <Data4>                                  0x08018348   Data          72  font24_maple_bold.o(.constdata)
+    <Data5>                                  0x08018390   Data          72  font24_maple_bold.o(.constdata)
+    <Data6>                                  0x080183d8   Data          72  font24_maple_bold.o(.constdata)
+    <Data7>                                  0x08018420   Data          72  font24_maple_bold.o(.constdata)
+    <Data8>                                  0x08018468   Data          72  font24_maple_bold.o(.constdata)
+    <Data9>                                  0x080184b0   Data          72  font24_maple_bold.o(.constdata)
+    <Data10>                                 0x080184f8   Data          72  font24_maple_bold.o(.constdata)
+    <Data11>                                 0x08018540   Data          72  font24_maple_bold.o(.constdata)
+    <Data12>                                 0x08018588   Data          72  font24_maple_bold.o(.constdata)
+    <Data13>                                 0x080185d0   Data          72  font24_maple_bold.o(.constdata)
+    <Data14>                                 0x08018618   Data          72  font24_maple_bold.o(.constdata)
+    <Data15>                                 0x08018660   Data          72  font24_maple_bold.o(.constdata)
+    <Data16>                                 0x080186a8   Data          72  font24_maple_bold.o(.constdata)
+    <Data17>                                 0x080186f0   Data          72  font24_maple_bold.o(.constdata)
+    ascii_model                              0x08018738   Data        4560  font24_maple_bold.o(.constdata)
+    chinese_model                            0x08019908   Data         144  font24_maple_bold.o(.constdata)
+    .constdata                               0x080199a8   Section     7600  font32_maple_bold.o(.constdata)
+    <Data1>                                  0x080199a8   Data         128  font32_maple_bold.o(.constdata)
+    <Data2>                                  0x08019a28   Data         128  font32_maple_bold.o(.constdata)
+    <Data3>                                  0x08019aa8   Data         128  font32_maple_bold.o(.constdata)
+    <Data4>                                  0x08019b28   Data         128  font32_maple_bold.o(.constdata)
+    <Data5>                                  0x08019ba8   Data         128  font32_maple_bold.o(.constdata)
+    <Data6>                                  0x08019c28   Data         128  font32_maple_bold.o(.constdata)
+    <Data7>                                  0x08019ca8   Data         128  font32_maple_bold.o(.constdata)
+    <Data8>                                  0x08019d28   Data         128  font32_maple_bold.o(.constdata)
+    <Data9>                                  0x08019da8   Data         128  font32_maple_bold.o(.constdata)
+    <Data10>                                 0x08019e28   Data         128  font32_maple_bold.o(.constdata)
+    <Data11>                                 0x08019ea8   Data         128  font32_maple_bold.o(.constdata)
+    ascii_model                              0x08019f28   Data        6080  font32_maple_bold.o(.constdata)
+    chinese_model                            0x0801b6e8   Data          96  font32_maple_bold.o(.constdata)
+    .constdata                               0x0801b758   Section     5320  font20_maple_bold.o(.constdata)
+    <Data1>                                  0x0801b758   Data          60  font20_maple_bold.o(.constdata)
+    <Data2>                                  0x0801b794   Data          60  font20_maple_bold.o(.constdata)
+    <Data3>                                  0x0801b7d0   Data          60  font20_maple_bold.o(.constdata)
+    <Data4>                                  0x0801b80c   Data          60  font20_maple_bold.o(.constdata)
+    <Data5>                                  0x0801b848   Data          60  font20_maple_bold.o(.constdata)
+    <Data6>                                  0x0801b884   Data          60  font20_maple_bold.o(.constdata)
+    <Data7>                                  0x0801b8c0   Data          60  font20_maple_bold.o(.constdata)
+    <Data8>                                  0x0801b8fc   Data          60  font20_maple_bold.o(.constdata)
+    <Data9>                                  0x0801b938   Data          60  font20_maple_bold.o(.constdata)
+    <Data10>                                 0x0801b974   Data          60  font20_maple_bold.o(.constdata)
+    <Data11>                                 0x0801b9b0   Data          60  font20_maple_bold.o(.constdata)
+    <Data12>                                 0x0801b9ec   Data          60  font20_maple_bold.o(.constdata)
+    <Data13>                                 0x0801ba28   Data          60  font20_maple_bold.o(.constdata)
+    <Data14>                                 0x0801ba64   Data          60  font20_maple_bold.o(.constdata)
+    <Data15>                                 0x0801baa0   Data          60  font20_maple_bold.o(.constdata)
+    <Data16>                                 0x0801badc   Data          60  font20_maple_bold.o(.constdata)
+    <Data17>                                 0x0801bb18   Data          60  font20_maple_bold.o(.constdata)
+    <Data18>                                 0x0801bb54   Data          60  font20_maple_bold.o(.constdata)
+    <Data19>                                 0x0801bb90   Data          60  font20_maple_bold.o(.constdata)
+    <Data20>                                 0x0801bbcc   Data          60  font20_maple_bold.o(.constdata)
+    <Data21>                                 0x0801bc08   Data          60  font20_maple_bold.o(.constdata)
+    <Data22>                                 0x0801bc44   Data          60  font20_maple_bold.o(.constdata)
+    ascii_model                              0x0801bc80   Data        3800  font20_maple_bold.o(.constdata)
+    chinese_model                            0x0801cb58   Data         184  font20_maple_bold.o(.constdata)
+    .constdata                               0x0801cc20   Section     1536  font16_maple.o(.constdata)
+    ascii_model                              0x0801cc20   Data        1520  font16_maple.o(.constdata)
+    .constdata                               0x0801d220   Section     1224  font24_maple_semibold.o(.constdata)
+    <Data1>                                  0x0801d220   Data          72  font24_maple_semibold.o(.constdata)
+    <Data2>                                  0x0801d268   Data          72  font24_maple_semibold.o(.constdata)
+    <Data3>                                  0x0801d2b0   Data          72  font24_maple_semibold.o(.constdata)
+    <Data4>                                  0x0801d2f8   Data          72  font24_maple_semibold.o(.constdata)
+    <Data5>                                  0x0801d340   Data          72  font24_maple_semibold.o(.constdata)
+    <Data6>                                  0x0801d388   Data          72  font24_maple_semibold.o(.constdata)
+    <Data7>                                  0x0801d3d0   Data          72  font24_maple_semibold.o(.constdata)
+    <Data8>                                  0x0801d418   Data          72  font24_maple_semibold.o(.constdata)
+    <Data9>                                  0x0801d460   Data          72  font24_maple_semibold.o(.constdata)
+    <Data10>                                 0x0801d4a8   Data          72  font24_maple_semibold.o(.constdata)
+    <Data11>                                 0x0801d4f0   Data          72  font24_maple_semibold.o(.constdata)
+    <Data12>                                 0x0801d538   Data          72  font24_maple_semibold.o(.constdata)
+    <Data13>                                 0x0801d580   Data          72  font24_maple_semibold.o(.constdata)
+    <Data14>                                 0x0801d5c8   Data          72  font24_maple_semibold.o(.constdata)
+    <Data15>                                 0x0801d610   Data          72  font24_maple_semibold.o(.constdata)
+    chinese_model                            0x0801d658   Data         128  font24_maple_semibold.o(.constdata)
+    .constdata                               0x0801d6e8   Section     2824  font54_maple_bold.o(.constdata)
+    ascii_model                              0x0801d6e8   Data        2808  font54_maple_bold.o(.constdata)
+    .constdata                               0x0801e1f0   Section     2824  font54_maple_semibold.o(.constdata)
+    ascii_model                              0x0801e1f0   Data        2808  font54_maple_semibold.o(.constdata)
+    .constdata                               0x0801ecf8   Section     3344  font64_maple_extrabold.o(.constdata)
+    ascii_model                              0x0801ecf8   Data        3328  font64_maple_extrabold.o(.constdata)
+    .constdata                               0x0801fa08   Section     4956  font76_maple_extrabold.o(.constdata)
+    ascii_model                              0x0801fa08   Data        4940  font76_maple_extrabold.o(.constdata)
+    .constdata                               0x08020d64   Section     5840  icon_duoyun.o(.constdata)
+    gImage_icon_duoyun                       0x08020d64   Data        5832  icon_duoyun.o(.constdata)
+    .constdata                               0x08022434   Section     5840  icon_leizhenyu.o(.constdata)
+    gImage_icon_leizhenyu                    0x08022434   Data        5832  icon_leizhenyu.o(.constdata)
+    .constdata                               0x08023b04   Section     5840  icon_na.o(.constdata)
+    gImage_icon_na                           0x08023b04   Data        5832  icon_na.o(.constdata)
+    .constdata                               0x080251d4   Section     5840  icon_qing.o(.constdata)
+    gImage_icon_qing                         0x080251d4   Data        5832  icon_qing.o(.constdata)
+    .constdata                               0x080268a4   Section     2152  icon_wenduji.o(.constdata)
+    gImage_icon_wenduji                      0x080268a4   Data        2142  icon_wenduji.o(.constdata)
+    .constdata                               0x0802710c   Section     1160  icon_wifi.o(.constdata)
+    gImage_icon_wifi                         0x0802710c   Data        1152  icon_wifi.o(.constdata)
+    .constdata                               0x08027594   Section     5840  icon_yintian.o(.constdata)
+    gImage_icon_yintian                      0x08027594   Data        5832  icon_yintian.o(.constdata)
+    .constdata                               0x08028c64   Section     5840  icon_yueliang.o(.constdata)
+    gImage_icon_yueliang                     0x08028c64   Data        5832  icon_yueliang.o(.constdata)
+    .constdata                               0x0802a334   Section     5840  icon_zhongxue.o(.constdata)
+    gImage_icon_zhongxue                     0x0802a334   Data        5832  icon_zhongxue.o(.constdata)
+    .constdata                               0x0802ba04   Section     5840  icon_zhongyu.o(.constdata)
+    gImage_icon_zhongyu                      0x0802ba04   Data        5832  icon_zhongyu.o(.constdata)
+    .constdata                               0x0802d0d4   Section    51208  img_error.o(.constdata)
+    gImage_img_error                         0x0802d0d4   Data       51200  img_error.o(.constdata)
+    .constdata                               0x080398dc   Section    128896  img_meihua.o(.constdata)
+    gImage_img_meihua                        0x080398dc   Data       64800  img_meihua.o(.constdata)
+    gImage_touxiang                          0x080495fc   Data       64080  img_meihua.o(.constdata)
+    .constdata                               0x0805905c   Section    59048  img_wifi.o(.constdata)
+    gImage_img_wifi                          0x0805905c   Data       59040  img_wifi.o(.constdata)
+    .constdata                               0x08067704   Section        7  main_page.o(.constdata)
+    .constdata                               0x0806770c   Section      108  esp_at.o(.constdata)
+    at_ack_matches                           0x0806770c   Data          32  esp_at.o(.constdata)
+    .constdata                               0x08067778   Section       64  ctype_c.o(.constdata)
+    .conststring                             0x080677b8   Section      104  app.o(.conststring)
+    .conststring                             0x08067820   Section       63  font24_maple_bold.o(.conststring)
+    .conststring                             0x08067860   Section       43  font32_maple_bold.o(.conststring)
+    .conststring                             0x0806788c   Section       35  font20_maple_bold.o(.conststring)
+    .conststring                             0x080678b0   Section        3  font24_maple_semibold.o(.conststring)
+    .conststring                             0x080678b4   Section       14  font54_maple_bold.o(.conststring)
+    .conststring                             0x080678c4   Section       14  font76_maple_extrabold.o(.conststring)
+    .conststring                             0x080678d4   Section        9  wifi_page.o(.conststring)
+    .conststring                             0x080678e0   Section      112  esp_at.o(.conststring)
     .data                                    0x20000000   Section       36  app.o(.data)
     time_sync_timer                          0x20000000   Data           4  app.o(.data)
     wifi_update_timer                        0x20000004   Data           4  app.o(.data)
@@ -3568,130 +3569,130 @@ Image Symbol Table
     __scatterload_zeroinit                   0x08012625   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     __set_errno                              0x08012635   Thumb Code     6  errno.o(i.__set_errno)
     _is_digit                                0x080127c5   Thumb Code    14  scanf_fp.o(i._is_digit)
-    aht20_init                               0x08012f95   Thumb Code   196  aht20.o(i.aht20_init)
+    aht20_init                               0x08012f95   Thumb Code   194  aht20.o(i.aht20_init)
     aht20_read_measurement                   0x08013169   Thumb Code   138  aht20.o(i.aht20_read_measurement)
     aht20_start_measurement                  0x0801322d   Thumb Code    26  aht20.o(i.aht20_start_measurement)
     aht20_wait_for_measurement               0x0801324d   Thumb Code    32  aht20.o(i.aht20_wait_for_measurement)
     app_init                                 0x08013331   Thumb Code   264  app.o(i.app_init)
     board_init                               0x0801351d   Thumb Code    46  board.o(i.board_init)
-    board_lowlevel_init                      0x080135a1   Thumb Code   146  board.o(i.board_lowlevel_init)
-    console_init                             0x08013699   Thumb Code    48  console.o(i.console_init)
-    error_page_display                       0x080137b9   Thumb Code    92  error_page.o(i.error_page_display)
-    esp_at_connect_wifi                      0x0801381d   Thumb Code    72  esp_at.o(i.esp_at_connect_wifi)
-    esp_at_get_wifi_info                     0x080138e9   Thumb Code    84  esp_at.o(i.esp_at_get_wifi_info)
-    esp_at_http_get                          0x08013959   Thumb Code    44  esp_at.o(i.esp_at_http_get)
-    esp_at_init                              0x080139a9   Thumb Code    82  esp_at.o(i.esp_at_init)
-    esp_at_sntp_get_time                     0x08013ac9   Thumb Code    42  esp_at.o(i.esp_at_sntp_get_time)
-    esp_at_sntp_init                         0x08013b09   Thumb Code    22  esp_at.o(i.esp_at_sntp_init)
-    esp_at_wifi_init                         0x08013c55   Thumb Code    14  esp_at.o(i.esp_at_wifi_init)
-    fputc                                    0x08013cd5   Thumb Code    40  board.o(i.fputc)
-    main                                     0x08013ead   Thumb Code    40  main.o(i.main)
-    main_page_display                        0x08013f0d   Thumb Code   290  main_page.o(i.main_page_display)
-    main_page_redraw_date                    0x08014091   Thumb Code   128  main_page.o(i.main_page_redraw_date)
-    main_page_redraw_inner_humidity          0x0801414d   Thumb Code    92  main_page.o(i.main_page_redraw_inner_humidity)
-    main_page_redraw_inner_temperature       0x080141b9   Thumb Code   102  main_page.o(i.main_page_redraw_inner_temperature)
-    main_page_redraw_outdoor_city            0x08014235   Thumb Code    44  main_page.o(i.main_page_redraw_outdoor_city)
-    main_page_redraw_outdoor_temperature     0x08014269   Thumb Code   102  main_page.o(i.main_page_redraw_outdoor_temperature)
-    main_page_redraw_outdoor_weather_icon    0x080142e5   Thumb Code   152  main_page.o(i.main_page_redraw_outdoor_weather_icon)
-    main_page_redraw_time                    0x0801439d   Thumb Code    68  main_page.o(i.main_page_redraw_time)
-    main_page_redraw_wifi_ssid               0x080143f1   Thumb Code    46  main_page.o(i.main_page_redraw_wifi_ssid)
-    parse_seniverse_response                 0x080146d1   Thumb Code   246  weather.o(i.parse_seniverse_response)
-    pvPortMalloc                             0x080153f5   Thumb Code   306  heap_4.o(i.pvPortMalloc)
-    pvTaskIncrementMutexHeldCount            0x08015569   Thumb Code    26  tasks.o(i.pvTaskIncrementMutexHeldCount)
-    pvTimerGetTimerID                        0x08015589   Thumb Code    32  timers.o(i.pvTimerGetTimerID)
-    pxPortInitialiseStack                    0x080155c9   Thumb Code    38  port.o(i.pxPortInitialiseStack)
-    rtc_get_time                             0x080155f5   Thumb Code    42  rtc.o(i.rtc_get_time)
-    rtc_init                                 0x0801561f   Thumb Code    26  rtc.o(i.rtc_init)
-    rtc_set_time                             0x08015639   Thumb Code    30  rtc.o(i.rtc_set_time)
-    st7789_draw_image                        0x0801576d   Thumb Code    86  st7789.o(i.st7789_draw_image)
-    st7789_fill_color                        0x080157c3   Thumb Code    70  st7789.o(i.st7789_fill_color)
-    st7789_init                              0x08015809   Thumb Code    52  st7789.o(i.st7789_init)
-    st7789_write_string                      0x08015ebd   Thumb Code   126  st7789.o(i.st7789_write_string)
-    tim_delay_init                           0x08015f3d   Thumb Code   116  tim_delay.o(i.tim_delay_init)
-    tim_delay_us                             0x08015fb5   Thumb Code    34  tim_delay.o(i.tim_delay_us)
-    tim_get_us                               0x08015fd7   Thumb Code     8  tim_delay.o(i.tim_get_us)
-    tim_now                                  0x08015fe1   Thumb Code    52  tim_delay.o(i.tim_now)
-    ui_draw_image                            0x080161a1   Thumb Code    44  ui.o(i.ui_draw_image)
-    ui_fill_color                            0x080161d1   Thumb Code    64  ui.o(i.ui_fill_color)
-    ui_init                                  0x080162b9   Thumb Code    52  ui.o(i.ui_init)
-    ui_write_string                          0x08016305   Thumb Code   106  ui.o(i.ui_write_string)
-    uxListRemove                             0x08016399   Thumb Code    40  list.o(i.uxListRemove)
-    vApplicationMallocFailedHook             0x080163c1   Thumb Code    18  board.o(i.vApplicationMallocFailedHook)
-    vApplicationStackOverflowHook            0x080163f5   Thumb Code    24  board.o(i.vApplicationStackOverflowHook)
-    vAssertCalled                            0x08016435   Thumb Code    36  board.o(i.vAssertCalled)
-    vListInitialise                          0x08016471   Thumb Code    26  list.o(i.vListInitialise)
-    vListInitialiseItem                      0x0801648b   Thumb Code     6  list.o(i.vListInitialiseItem)
-    vListInsert                              0x08016491   Thumb Code    52  list.o(i.vListInsert)
-    vListInsertEnd                           0x080164c5   Thumb Code    24  list.o(i.vListInsertEnd)
-    vPortEnterCritical                       0x080164dd   Thumb Code    66  port.o(i.vPortEnterCritical)
-    vPortExitCritical                        0x08016551   Thumb Code    46  port.o(i.vPortExitCritical)
-    vPortFree                                0x080165ad   Thumb Code   126  heap_4.o(i.vPortFree)
-    vPortSetupTimerInterrupt                 0x08016661   Thumb Code    36  port.o(i.vPortSetupTimerInterrupt)
-    vPortValidateInterruptPriority           0x08016689   Thumb Code    82  port.o(i.vPortValidateInterruptPriority)
-    vQueueAddToRegistry                      0x08016711   Thumb Code    38  queue.o(i.vQueueAddToRegistry)
-    vQueueWaitForMessageRestricted           0x0801673d   Thumb Code    74  queue.o(i.vQueueWaitForMessageRestricted)
-    vTaskDelay                               0x08016789   Thumb Code    70  tasks.o(i.vTaskDelay)
-    vTaskDelete                              0x080167f9   Thumb Code   198  tasks.o(i.vTaskDelete)
-    vTaskInternalSetTimeOutState             0x08016909   Thumb Code    14  tasks.o(i.vTaskInternalSetTimeOutState)
-    vTaskMissedYield                         0x08016921   Thumb Code     8  tasks.o(i.vTaskMissedYield)
-    vTaskPlaceOnEventList                    0x0801692d   Thumb Code    40  tasks.o(i.vTaskPlaceOnEventList)
-    vTaskPlaceOnEventListRestricted          0x08016979   Thumb Code    48  tasks.o(i.vTaskPlaceOnEventListRestricted)
-    vTaskPriorityDisinheritAfterTimeout      0x080169cd   Thumb Code   192  tasks.o(i.vTaskPriorityDisinheritAfterTimeout)
-    vTaskStartScheduler                      0x08016ab9   Thumb Code   110  tasks.o(i.vTaskStartScheduler)
-    vTaskSuspendAll                          0x08016b69   Thumb Code    12  tasks.o(i.vTaskSuspendAll)
-    vTaskSwitchContext                       0x08016b79   Thumb Code   136  tasks.o(i.vTaskSwitchContext)
-    welcome_page_display                     0x08016c6d   Thumb Code   100  welcome_page.o(i.welcome_page_display)
-    wifi_init                                0x08016d01   Thumb Code    74  wifi.o(i.wifi_init)
-    wifi_page_display                        0x08016dd1   Thumb Code   136  wifi_page.o(i.wifi_page_display)
-    wifi_wait_connect                        0x08016f95   Thumb Code   104  wifi.o(i.wifi_wait_connect)
-    workqueue_init                           0x080170e1   Thumb Code    54  workqueue.o(i.workqueue_init)
-    workqueue_run                            0x08017141   Thumb Code    40  workqueue.o(i.workqueue_run)
-    xPortStartScheduler                      0x08017181   Thumb Code   312  port.o(i.xPortStartScheduler)
-    xQueueGenericCreate                      0x080172fd   Thumb Code   126  queue.o(i.xQueueGenericCreate)
-    xQueueGenericReset                       0x0801739d   Thumb Code   134  queue.o(i.xQueueGenericReset)
-    xQueueGenericSend                        0x08017449   Thumb Code   418  queue.o(i.xQueueGenericSend)
-    xQueueGenericSendFromISR                 0x08017611   Thumb Code   262  queue.o(i.xQueueGenericSendFromISR)
-    xQueueGiveFromISR                        0x08017739   Thumb Code   232  queue.o(i.xQueueGiveFromISR)
-    xQueueReceive                            0x08017841   Thumb Code   320  queue.o(i.xQueueReceive)
-    xQueueSemaphoreTake                      0x080179a5   Thumb Code   386  queue.o(i.xQueueSemaphoreTake)
-    xTaskCheckForTimeOut                     0x08017b4d   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
-    xTaskCreate                              0x08017be5   Thumb Code    96  tasks.o(i.xTaskCreate)
-    xTaskGetSchedulerState                   0x08017c45   Thumb Code    24  tasks.o(i.xTaskGetSchedulerState)
-    xTaskGetTickCount                        0x08017c65   Thumb Code     6  tasks.o(i.xTaskGetTickCount)
-    xTaskIncrementTick                       0x08017c71   Thumb Code   270  tasks.o(i.xTaskIncrementTick)
-    xTaskPriorityDisinherit                  0x08017dcd   Thumb Code   150  tasks.o(i.xTaskPriorityDisinherit)
-    xTaskPriorityInherit                     0x08017e91   Thumb Code   172  tasks.o(i.xTaskPriorityInherit)
-    xTaskRemoveFromEventList                 0x08017f49   Thumb Code   116  tasks.o(i.xTaskRemoveFromEventList)
-    xTaskResumeAll                           0x08017ff5   Thumb Code   212  tasks.o(i.xTaskResumeAll)
-    xTimerCreate                             0x0801810d   Thumb Code    54  timers.o(i.xTimerCreate)
-    xTimerCreateTimerTask                    0x08018145   Thumb Code    52  timers.o(i.xTimerCreateTimerTask)
-    xTimerGenericCommand                     0x080181ad   Thumb Code   114  timers.o(i.xTimerGenericCommand)
-    font24_maple_bold                        0x0801996c   Data          16  font24_maple_bold.o(.constdata)
-    font32_maple_bold                        0x0801b71c   Data          16  font32_maple_bold.o(.constdata)
-    font20_maple_bold                        0x0801cbe4   Data          16  font20_maple_bold.o(.constdata)
-    font16_maple                             0x0801d1e4   Data          16  font16_maple.o(.constdata)
-    font24_maple_semibold                    0x0801d6ac   Data          16  font24_maple_semibold.o(.constdata)
-    font54_maple_bold                        0x0801e1b4   Data          16  font54_maple_bold.o(.constdata)
-    font54_maple_semibold                    0x0801ecbc   Data          16  font54_maple_semibold.o(.constdata)
-    font64_maple_extrabold                   0x0801f9cc   Data          16  font64_maple_extrabold.o(.constdata)
-    font76_maple_extrabold                   0x08020d28   Data          16  font76_maple_extrabold.o(.constdata)
-    icon_duoyun                              0x08022400   Data           8  icon_duoyun.o(.constdata)
-    icon_leizhenyu                           0x08023ad0   Data           8  icon_leizhenyu.o(.constdata)
-    icon_na                                  0x080251a0   Data           8  icon_na.o(.constdata)
-    icon_qing                                0x08026870   Data           8  icon_qing.o(.constdata)
-    icon_wenduji                             0x080270d8   Data           8  icon_wenduji.o(.constdata)
-    icon_wifi                                0x08027560   Data           8  icon_wifi.o(.constdata)
-    icon_yintian                             0x08028c30   Data           8  icon_yintian.o(.constdata)
-    icon_yueliang                            0x0802a300   Data           8  icon_yueliang.o(.constdata)
-    icon_zhongxue                            0x0802b9d0   Data           8  icon_zhongxue.o(.constdata)
-    icon_zhongyu                             0x0802d0a0   Data           8  icon_zhongyu.o(.constdata)
-    img_error                                0x080398a8   Data           8  img_error.o(.constdata)
-    img_meihua                               0x08059020   Data           8  img_meihua.o(.constdata)
-    img_touxiang                             0x08059028   Data           8  img_meihua.o(.constdata)
-    img_wifi                                 0x080676d0   Data           8  img_wifi.o(.constdata)
-    __ctype_categories                       0x0806774c   Data          64  ctype_c.o(.constdata)
-    Region$$Table$$Base                      0x08067924   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08067944   Number         0  anon$$obj.o(Region$$Table)
+    board_lowlevel_init                      0x080135a1   Thumb Code   154  board.o(i.board_lowlevel_init)
+    console_init                             0x080136a1   Thumb Code    48  console.o(i.console_init)
+    error_page_display                       0x080137c1   Thumb Code    92  error_page.o(i.error_page_display)
+    esp_at_connect_wifi                      0x08013825   Thumb Code    72  esp_at.o(i.esp_at_connect_wifi)
+    esp_at_get_wifi_info                     0x080138f1   Thumb Code    84  esp_at.o(i.esp_at_get_wifi_info)
+    esp_at_http_get                          0x08013961   Thumb Code    44  esp_at.o(i.esp_at_http_get)
+    esp_at_init                              0x080139b1   Thumb Code    82  esp_at.o(i.esp_at_init)
+    esp_at_sntp_get_time                     0x08013ad1   Thumb Code    42  esp_at.o(i.esp_at_sntp_get_time)
+    esp_at_sntp_init                         0x08013b11   Thumb Code    22  esp_at.o(i.esp_at_sntp_init)
+    esp_at_wifi_init                         0x08013c5d   Thumb Code    14  esp_at.o(i.esp_at_wifi_init)
+    fputc                                    0x08013cdd   Thumb Code    40  board.o(i.fputc)
+    main                                     0x08013eb5   Thumb Code    40  main.o(i.main)
+    main_page_display                        0x08013f39   Thumb Code   290  main_page.o(i.main_page_display)
+    main_page_redraw_date                    0x080140bd   Thumb Code   128  main_page.o(i.main_page_redraw_date)
+    main_page_redraw_inner_humidity          0x08014179   Thumb Code    92  main_page.o(i.main_page_redraw_inner_humidity)
+    main_page_redraw_inner_temperature       0x080141e5   Thumb Code   102  main_page.o(i.main_page_redraw_inner_temperature)
+    main_page_redraw_outdoor_city            0x08014261   Thumb Code    44  main_page.o(i.main_page_redraw_outdoor_city)
+    main_page_redraw_outdoor_temperature     0x08014295   Thumb Code   102  main_page.o(i.main_page_redraw_outdoor_temperature)
+    main_page_redraw_outdoor_weather_icon    0x08014311   Thumb Code   152  main_page.o(i.main_page_redraw_outdoor_weather_icon)
+    main_page_redraw_time                    0x080143c9   Thumb Code    68  main_page.o(i.main_page_redraw_time)
+    main_page_redraw_wifi_ssid               0x0801441d   Thumb Code    46  main_page.o(i.main_page_redraw_wifi_ssid)
+    parse_seniverse_response                 0x080146fd   Thumb Code   246  weather.o(i.parse_seniverse_response)
+    pvPortMalloc                             0x08015421   Thumb Code   306  heap_4.o(i.pvPortMalloc)
+    pvTaskIncrementMutexHeldCount            0x08015595   Thumb Code    26  tasks.o(i.pvTaskIncrementMutexHeldCount)
+    pvTimerGetTimerID                        0x080155b5   Thumb Code    32  timers.o(i.pvTimerGetTimerID)
+    pxPortInitialiseStack                    0x080155f5   Thumb Code    38  port.o(i.pxPortInitialiseStack)
+    rtc_get_time                             0x08015621   Thumb Code    42  rtc.o(i.rtc_get_time)
+    rtc_init                                 0x0801564b   Thumb Code    26  rtc.o(i.rtc_init)
+    rtc_set_time                             0x08015665   Thumb Code    30  rtc.o(i.rtc_set_time)
+    st7789_draw_image                        0x08015799   Thumb Code    86  st7789.o(i.st7789_draw_image)
+    st7789_fill_color                        0x080157ef   Thumb Code    70  st7789.o(i.st7789_fill_color)
+    st7789_init                              0x08015835   Thumb Code    52  st7789.o(i.st7789_init)
+    st7789_write_string                      0x08015ee9   Thumb Code   126  st7789.o(i.st7789_write_string)
+    tim_delay_init                           0x08015f69   Thumb Code   116  tim_delay.o(i.tim_delay_init)
+    tim_delay_us                             0x08015fe1   Thumb Code    34  tim_delay.o(i.tim_delay_us)
+    tim_get_us                               0x08016003   Thumb Code     8  tim_delay.o(i.tim_get_us)
+    tim_now                                  0x0801600d   Thumb Code    52  tim_delay.o(i.tim_now)
+    ui_draw_image                            0x080161cd   Thumb Code    44  ui.o(i.ui_draw_image)
+    ui_fill_color                            0x080161fd   Thumb Code    64  ui.o(i.ui_fill_color)
+    ui_init                                  0x080162e5   Thumb Code    52  ui.o(i.ui_init)
+    ui_write_string                          0x08016331   Thumb Code   106  ui.o(i.ui_write_string)
+    uxListRemove                             0x080163c5   Thumb Code    40  list.o(i.uxListRemove)
+    vApplicationMallocFailedHook             0x080163ed   Thumb Code    18  board.o(i.vApplicationMallocFailedHook)
+    vApplicationStackOverflowHook            0x08016421   Thumb Code    24  board.o(i.vApplicationStackOverflowHook)
+    vAssertCalled                            0x08016461   Thumb Code    36  board.o(i.vAssertCalled)
+    vListInitialise                          0x0801649d   Thumb Code    26  list.o(i.vListInitialise)
+    vListInitialiseItem                      0x080164b7   Thumb Code     6  list.o(i.vListInitialiseItem)
+    vListInsert                              0x080164bd   Thumb Code    52  list.o(i.vListInsert)
+    vListInsertEnd                           0x080164f1   Thumb Code    24  list.o(i.vListInsertEnd)
+    vPortEnterCritical                       0x08016509   Thumb Code    66  port.o(i.vPortEnterCritical)
+    vPortExitCritical                        0x0801657d   Thumb Code    46  port.o(i.vPortExitCritical)
+    vPortFree                                0x080165d9   Thumb Code   126  heap_4.o(i.vPortFree)
+    vPortSetupTimerInterrupt                 0x0801668d   Thumb Code    36  port.o(i.vPortSetupTimerInterrupt)
+    vPortValidateInterruptPriority           0x080166b5   Thumb Code    82  port.o(i.vPortValidateInterruptPriority)
+    vQueueAddToRegistry                      0x0801673d   Thumb Code    38  queue.o(i.vQueueAddToRegistry)
+    vQueueWaitForMessageRestricted           0x08016769   Thumb Code    74  queue.o(i.vQueueWaitForMessageRestricted)
+    vTaskDelay                               0x080167b5   Thumb Code    70  tasks.o(i.vTaskDelay)
+    vTaskDelete                              0x08016825   Thumb Code   198  tasks.o(i.vTaskDelete)
+    vTaskInternalSetTimeOutState             0x08016935   Thumb Code    14  tasks.o(i.vTaskInternalSetTimeOutState)
+    vTaskMissedYield                         0x0801694d   Thumb Code     8  tasks.o(i.vTaskMissedYield)
+    vTaskPlaceOnEventList                    0x08016959   Thumb Code    40  tasks.o(i.vTaskPlaceOnEventList)
+    vTaskPlaceOnEventListRestricted          0x080169a5   Thumb Code    48  tasks.o(i.vTaskPlaceOnEventListRestricted)
+    vTaskPriorityDisinheritAfterTimeout      0x080169f9   Thumb Code   192  tasks.o(i.vTaskPriorityDisinheritAfterTimeout)
+    vTaskStartScheduler                      0x08016ae5   Thumb Code   110  tasks.o(i.vTaskStartScheduler)
+    vTaskSuspendAll                          0x08016b95   Thumb Code    12  tasks.o(i.vTaskSuspendAll)
+    vTaskSwitchContext                       0x08016ba5   Thumb Code   136  tasks.o(i.vTaskSwitchContext)
+    welcome_page_display                     0x08016c99   Thumb Code   100  welcome_page.o(i.welcome_page_display)
+    wifi_init                                0x08016d2d   Thumb Code    74  wifi.o(i.wifi_init)
+    wifi_page_display                        0x08016dfd   Thumb Code   136  wifi_page.o(i.wifi_page_display)
+    wifi_wait_connect                        0x08016fc1   Thumb Code   104  wifi.o(i.wifi_wait_connect)
+    workqueue_init                           0x0801710d   Thumb Code    54  workqueue.o(i.workqueue_init)
+    workqueue_run                            0x0801716d   Thumb Code    40  workqueue.o(i.workqueue_run)
+    xPortStartScheduler                      0x080171ad   Thumb Code   312  port.o(i.xPortStartScheduler)
+    xQueueGenericCreate                      0x08017329   Thumb Code   126  queue.o(i.xQueueGenericCreate)
+    xQueueGenericReset                       0x080173c9   Thumb Code   134  queue.o(i.xQueueGenericReset)
+    xQueueGenericSend                        0x08017475   Thumb Code   418  queue.o(i.xQueueGenericSend)
+    xQueueGenericSendFromISR                 0x0801763d   Thumb Code   262  queue.o(i.xQueueGenericSendFromISR)
+    xQueueGiveFromISR                        0x08017765   Thumb Code   232  queue.o(i.xQueueGiveFromISR)
+    xQueueReceive                            0x0801786d   Thumb Code   320  queue.o(i.xQueueReceive)
+    xQueueSemaphoreTake                      0x080179d1   Thumb Code   386  queue.o(i.xQueueSemaphoreTake)
+    xTaskCheckForTimeOut                     0x08017b79   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
+    xTaskCreate                              0x08017c11   Thumb Code    96  tasks.o(i.xTaskCreate)
+    xTaskGetSchedulerState                   0x08017c71   Thumb Code    24  tasks.o(i.xTaskGetSchedulerState)
+    xTaskGetTickCount                        0x08017c91   Thumb Code     6  tasks.o(i.xTaskGetTickCount)
+    xTaskIncrementTick                       0x08017c9d   Thumb Code   270  tasks.o(i.xTaskIncrementTick)
+    xTaskPriorityDisinherit                  0x08017df9   Thumb Code   150  tasks.o(i.xTaskPriorityDisinherit)
+    xTaskPriorityInherit                     0x08017ebd   Thumb Code   172  tasks.o(i.xTaskPriorityInherit)
+    xTaskRemoveFromEventList                 0x08017f75   Thumb Code   116  tasks.o(i.xTaskRemoveFromEventList)
+    xTaskResumeAll                           0x08018021   Thumb Code   212  tasks.o(i.xTaskResumeAll)
+    xTimerCreate                             0x08018139   Thumb Code    54  timers.o(i.xTimerCreate)
+    xTimerCreateTimerTask                    0x08018171   Thumb Code    52  timers.o(i.xTimerCreateTimerTask)
+    xTimerGenericCommand                     0x080181d9   Thumb Code   114  timers.o(i.xTimerGenericCommand)
+    font24_maple_bold                        0x08019998   Data          16  font24_maple_bold.o(.constdata)
+    font32_maple_bold                        0x0801b748   Data          16  font32_maple_bold.o(.constdata)
+    font20_maple_bold                        0x0801cc10   Data          16  font20_maple_bold.o(.constdata)
+    font16_maple                             0x0801d210   Data          16  font16_maple.o(.constdata)
+    font24_maple_semibold                    0x0801d6d8   Data          16  font24_maple_semibold.o(.constdata)
+    font54_maple_bold                        0x0801e1e0   Data          16  font54_maple_bold.o(.constdata)
+    font54_maple_semibold                    0x0801ece8   Data          16  font54_maple_semibold.o(.constdata)
+    font64_maple_extrabold                   0x0801f9f8   Data          16  font64_maple_extrabold.o(.constdata)
+    font76_maple_extrabold                   0x08020d54   Data          16  font76_maple_extrabold.o(.constdata)
+    icon_duoyun                              0x0802242c   Data           8  icon_duoyun.o(.constdata)
+    icon_leizhenyu                           0x08023afc   Data           8  icon_leizhenyu.o(.constdata)
+    icon_na                                  0x080251cc   Data           8  icon_na.o(.constdata)
+    icon_qing                                0x0802689c   Data           8  icon_qing.o(.constdata)
+    icon_wenduji                             0x08027104   Data           8  icon_wenduji.o(.constdata)
+    icon_wifi                                0x0802758c   Data           8  icon_wifi.o(.constdata)
+    icon_yintian                             0x08028c5c   Data           8  icon_yintian.o(.constdata)
+    icon_yueliang                            0x0802a32c   Data           8  icon_yueliang.o(.constdata)
+    icon_zhongxue                            0x0802b9fc   Data           8  icon_zhongxue.o(.constdata)
+    icon_zhongyu                             0x0802d0cc   Data           8  icon_zhongyu.o(.constdata)
+    img_error                                0x080398d4   Data           8  img_error.o(.constdata)
+    img_meihua                               0x0805904c   Data           8  img_meihua.o(.constdata)
+    img_touxiang                             0x08059054   Data           8  img_meihua.o(.constdata)
+    img_wifi                                 0x080676fc   Data           8  img_wifi.o(.constdata)
+    __ctype_categories                       0x08067778   Data          64  ctype_c.o(.constdata)
+    Region$$Table$$Base                      0x08067950   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08067970   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x2000005c   Data           4  system_stm32f4xx.o(.data)
     AHBPrescTable                            0x20000060   Data          16  system_stm32f4xx.o(.data)
     pxCurrentTCB                             0x20000080   Data           4  tasks.o(.data)
@@ -3708,9 +3709,9 @@ Memory Map of the image
 
   Image Entry point : 0x08010189
 
-  Load Region LR_IROM1 (Base: 0x08010000, Size: 0x00057a4c, Max: 0x00070000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08010000, Size: 0x00057a78, Max: 0x00070000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08010000, Load base: 0x08010000, Size: 0x00057944, Max: 0x00070000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08010000, Load base: 0x08010000, Size: 0x00057970, Max: 0x00070000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3890,250 +3891,250 @@ Memory Map of the image
     0x080134c0   0x080134c0   0x0000000a   Code   RO          290    i.app_work          app.o
     0x080134ca   0x080134ca   0x00000052   Code   RO         1242    i.ascii_get_model   st7789.o
     0x0801351c   0x0801351c   0x00000084   Code   RO          212    i.board_init        board.o
-    0x080135a0   0x080135a0   0x0000009c   Code   RO          213    i.board_lowlevel_init  board.o
-    0x0801363c   0x0801363c   0x0000005c   Code   RO         1091    i.console_dma_init  console.o
-    0x08013698   0x08013698   0x00000050   Code   RO         1092    i.console_init      console.o
-    0x080136e8   0x080136e8   0x0000003e   Code   RO         1093    i.console_int_init  console.o
-    0x08013726   0x08013726   0x00000002   PAD
-    0x08013728   0x08013728   0x0000003c   Code   RO         1094    i.console_io_init   console.o
-    0x08013764   0x08013764   0x00000054   Code   RO         1096    i.console_usart_init  console.o
-    0x080137b8   0x080137b8   0x00000064   Code   RO          911    i.error_page_display  error_page.o
-    0x0801381c   0x0801381c   0x0000006c   Code   RO         1387    i.esp_at_connect_wifi  esp_at.o
-    0x08013888   0x08013888   0x00000058   Code   RO         1388    i.esp_at_dma_init   esp_at.o
-    0x080138e0   0x080138e0   0x00000008   Code   RO         1389    i.esp_at_get_response  esp_at.o
-    0x080138e8   0x080138e8   0x00000070   Code   RO         1390    i.esp_at_get_wifi_info  esp_at.o
-    0x08013958   0x08013958   0x00000050   Code   RO         1391    i.esp_at_http_get   esp_at.o
-    0x080139a8   0x080139a8   0x00000084   Code   RO         1392    i.esp_at_init       esp_at.o
-    0x08013a2c   0x08013a2c   0x0000004c   Code   RO         1393    i.esp_at_int_init   esp_at.o
-    0x08013a78   0x08013a78   0x0000003c   Code   RO         1394    i.esp_at_io_init    esp_at.o
-    0x08013ab4   0x08013ab4   0x00000014   Code   RO         1395    i.esp_at_lowlevel_init  esp_at.o
-    0x08013ac8   0x08013ac8   0x00000040   Code   RO         1396    i.esp_at_sntp_get_time  esp_at.o
-    0x08013b08   0x08013b08   0x0000002c   Code   RO         1397    i.esp_at_sntp_init  esp_at.o
-    0x08013b34   0x08013b34   0x00000054   Code   RO         1398    i.esp_at_usart_init  esp_at.o
-    0x08013b88   0x08013b88   0x00000054   Code   RO         1399    i.esp_at_usart_wait_receive  esp_at.o
-    0x08013bdc   0x08013bdc   0x00000038   Code   RO         1400    i.esp_at_usart_write  esp_at.o
-    0x08013c14   0x08013c14   0x00000028   Code   RO         1401    i.esp_at_wait_boot  esp_at.o
-    0x08013c3c   0x08013c3c   0x00000016   Code   RO         1402    i.esp_at_wait_ready  esp_at.o
-    0x08013c52   0x08013c52   0x00000002   PAD
-    0x08013c54   0x08013c54   0x00000020   Code   RO         1403    i.esp_at_wifi_init  esp_at.o
-    0x08013c74   0x08013c74   0x00000060   Code   RO         1404    i.esp_at_write_command  esp_at.o
-    0x08013cd4   0x08013cd4   0x0000002c   Code   RO          214    i.fputc             board.o
-    0x08013d00   0x08013d00   0x00000030   Code   RO         1243    i.in_screen_range   st7789.o
-    0x08013d30   0x08013d30   0x00000168   Code   RO          291    i.inner_update      app.o
-    0x08013e98   0x08013e98   0x00000012   Code   RO         1244    i.is_gb2312         st7789.o
-    0x08013eaa   0x08013eaa   0x00000002   PAD
-    0x08013eac   0x08013eac   0x00000034   Code   RO            4    i.main              main.o
-    0x08013ee0   0x08013ee0   0x0000002c   Code   RO            5    i.main_init         main.o
-    0x08013f0c   0x08013f0c   0x00000184   Code   RO          965    i.main_page_display  main_page.o
-    0x08014090   0x08014090   0x000000bc   Code   RO          966    i.main_page_redraw_date  main_page.o
-    0x0801414c   0x0801414c   0x0000006c   Code   RO          967    i.main_page_redraw_inner_humidity  main_page.o
-    0x080141b8   0x080141b8   0x0000007c   Code   RO          968    i.main_page_redraw_inner_temperature  main_page.o
-    0x08014234   0x08014234   0x00000034   Code   RO          969    i.main_page_redraw_outdoor_city  main_page.o
-    0x08014268   0x08014268   0x0000007c   Code   RO          970    i.main_page_redraw_outdoor_temperature  main_page.o
-    0x080142e4   0x080142e4   0x000000b8   Code   RO          971    i.main_page_redraw_outdoor_weather_icon  main_page.o
-    0x0801439c   0x0801439c   0x00000054   Code   RO          972    i.main_page_redraw_time  main_page.o
-    0x080143f0   0x080143f0   0x0000003c   Code   RO          973    i.main_page_redraw_wifi_ssid  main_page.o
-    0x0801442c   0x0801442c   0x00000030   Code   RO         1405    i.match_internal_ack  esp_at.o
-    0x0801445c   0x0801445c   0x0000003c   Code   RO         1406    i.month_str_to_num  esp_at.o
-    0x08014498   0x08014498   0x000000dc   Code   RO          292    i.outdoor_update    app.o
-    0x08014574   0x08014574   0x00000090   Code   RO         1407    i.parse_cipsntptime_response  esp_at.o
-    0x08014604   0x08014604   0x00000068   Code   RO         1408    i.parse_cwjap_response  esp_at.o
-    0x0801466c   0x0801466c   0x00000064   Code   RO         1409    i.parse_cwstate_response  esp_at.o
-    0x080146d0   0x080146d0   0x000001b0   Code   RO          412    i.parse_seniverse_response  weather.o
-    0x08014880   0x08014880   0x00000098   Code   RO         6996    i.prvAddCurrentTaskToDelayedList  tasks.o
-    0x08014918   0x08014918   0x000000b4   Code   RO         6997    i.prvAddNewTaskToReadyList  tasks.o
-    0x080149cc   0x080149cc   0x00000064   Code   RO         7393    i.prvCheckForValidListAndQueue  timers.o
-    0x08014a30   0x08014a30   0x00000048   Code   RO         6998    i.prvCheckTasksWaitingTermination  tasks.o
-    0x08014a78   0x08014a78   0x0000002a   Code   RO         6737    i.prvCopyDataFromQueue  queue.o
-    0x08014aa2   0x08014aa2   0x0000007e   Code   RO         6738    i.prvCopyDataToQueue  queue.o
-    0x08014b20   0x08014b20   0x00000012   Code   RO         6999    i.prvDeleteTCB      tasks.o
-    0x08014b32   0x08014b32   0x00000014   Code   RO         6739    i.prvGetDisinheritPriorityAfterTimeout  queue.o
-    0x08014b46   0x08014b46   0x00000002   PAD
-    0x08014b48   0x08014b48   0x00000028   Code   RO         7394    i.prvGetNextExpireTime  timers.o
-    0x08014b70   0x08014b70   0x0000007c   Code   RO         7538    i.prvHeapInit       heap_4.o
-    0x08014bec   0x08014bec   0x00000028   Code   RO         7000    i.prvIdleTask       tasks.o
-    0x08014c14   0x08014c14   0x0000002a   Code   RO         6741    i.prvInitialiseNewQueue  queue.o
-    0x08014c3e   0x08014c3e   0x00000002   PAD
-    0x08014c40   0x08014c40   0x000000e4   Code   RO         7001    i.prvInitialiseNewTask  tasks.o
-    0x08014d24   0x08014d24   0x00000070   Code   RO         7395    i.prvInitialiseNewTimer  timers.o
-    0x08014d94   0x08014d94   0x00000068   Code   RO         7002    i.prvInitialiseTaskLists  tasks.o
-    0x08014dfc   0x08014dfc   0x00000068   Code   RO         7539    i.prvInsertBlockIntoFreeList  heap_4.o
-    0x08014e64   0x08014e64   0x00000058   Code   RO         7396    i.prvInsertTimerInActiveList  timers.o
-    0x08014ebc   0x08014ebc   0x0000001a   Code   RO         6742    i.prvIsQueueEmpty   queue.o
-    0x08014ed6   0x08014ed6   0x0000001e   Code   RO         6743    i.prvIsQueueFull    queue.o
-    0x08014ef4   0x08014ef4   0x000000a8   Code   RO         6744    i.prvNotifyQueueSetContainer  queue.o
-    0x08014f9c   0x08014f9c   0x00000088   Code   RO         7397    i.prvProcessExpiredTimer  timers.o
-    0x08015024   0x08015024   0x00000140   Code   RO         7398    i.prvProcessReceivedCommands  timers.o
-    0x08015164   0x08015164   0x00000074   Code   RO         7399    i.prvProcessTimerOrBlockTask  timers.o
-    0x080151d8   0x080151d8   0x00000030   Code   RO         7003    i.prvResetNextTaskUnblockTime  tasks.o
-    0x08015208   0x08015208   0x0000002c   Code   RO         7400    i.prvSampleTimeNow  timers.o
-    0x08015234   0x08015234   0x000000b8   Code   RO         7401    i.prvSwitchTimerLists  timers.o
-    0x080152ec   0x080152ec   0x0000005c   Code   RO         7607    i.prvTaskExitError  port.o
-    0x08015348   0x08015348   0x0000001a   Code   RO         7402    i.prvTimerTask      timers.o
-    0x08015362   0x08015362   0x00000090   Code   RO         6745    i.prvUnlockQueue    queue.o
-    0x080153f2   0x080153f2   0x00000002   PAD
-    0x080153f4   0x080153f4   0x00000174   Code   RO         7540    i.pvPortMalloc      heap_4.o
-    0x08015568   0x08015568   0x00000020   Code   RO         7008    i.pvTaskIncrementMutexHeldCount  tasks.o
-    0x08015588   0x08015588   0x00000040   Code   RO         7403    i.pvTimerGetTimerID  timers.o
-    0x080155c8   0x080155c8   0x0000002c   Code   RO         7608    i.pxPortInitialiseStack  port.o
-    0x080155f4   0x080155f4   0x0000002a   Code   RO         1044    i.rtc_get_time      rtc.o
-    0x0801561e   0x0801561e   0x0000001a   Code   RO         1045    i.rtc_init          rtc.o
-    0x08015638   0x08015638   0x0000001e   Code   RO         1046    i.rtc_set_time      rtc.o
-    0x08015656   0x08015656   0x00000002   PAD
-    0x08015658   0x08015658   0x00000060   Code   RO         1245    i.st7789_dma_init   st7789.o
-    0x080156b8   0x080156b8   0x000000b4   Code   RO         1246    i.st7789_draw_font  st7789.o
-    0x0801576c   0x0801576c   0x00000056   Code   RO         1247    i.st7789_draw_image  st7789.o
-    0x080157c2   0x080157c2   0x00000046   Code   RO         1248    i.st7789_fill_color  st7789.o
-    0x08015808   0x08015808   0x00000054   Code   RO         1249    i.st7789_init       st7789.o
-    0x0801585c   0x0801585c   0x000001ac   Code   RO         1250    i.st7789_init_display  st7789.o
-    0x08015a08   0x08015a08   0x0000004c   Code   RO         1251    i.st7789_int_init   st7789.o
-    0x08015a54   0x08015a54   0x0000009c   Code   RO         1252    i.st7789_io_init    st7789.o
-    0x08015af0   0x08015af0   0x00000024   Code   RO         1253    i.st7789_reset      st7789.o
-    0x08015b14   0x08015b14   0x00000014   Code   RO         1254    i.st7789_set_backlight  st7789.o
-    0x08015b28   0x08015b28   0x0000005e   Code   RO         1255    i.st7789_set_range_and_prepare_gram  st7789.o
-    0x08015b86   0x08015b86   0x00000002   PAD
-    0x08015b88   0x08015b88   0x0000005c   Code   RO         1256    i.st7789_spi_init   st7789.o
-    0x08015be4   0x08015be4   0x0000006a   Code   RO         1257    i.st7789_write_ascii  st7789.o
-    0x08015c4e   0x08015c4e   0x00000072   Code   RO         1258    i.st7789_write_chinese  st7789.o
-    0x08015cc0   0x08015cc0   0x00000168   Code   RO         1259    i.st7789_write_gram  st7789.o
-    0x08015e28   0x08015e28   0x00000094   Code   RO         1260    i.st7789_write_register  st7789.o
-    0x08015ebc   0x08015ebc   0x0000007e   Code   RO         1261    i.st7789_write_string  st7789.o
-    0x08015f3a   0x08015f3a   0x00000002   PAD
-    0x08015f3c   0x08015f3c   0x00000078   Code   RO         1556    i.tim_delay_init    tim_delay.o
-    0x08015fb4   0x08015fb4   0x00000022   Code   RO         1558    i.tim_delay_us      tim_delay.o
-    0x08015fd6   0x08015fd6   0x00000008   Code   RO         1560    i.tim_get_us        tim_delay.o
-    0x08015fde   0x08015fde   0x00000002   PAD
-    0x08015fe0   0x08015fe0   0x0000003c   Code   RO         1561    i.tim_now           tim_delay.o
-    0x0801601c   0x0801601c   0x00000140   Code   RO          293    i.time_sync         app.o
-    0x0801615c   0x0801615c   0x00000044   Code   RO          294    i.time_update       app.o
-    0x080161a0   0x080161a0   0x00000030   Code   RO          437    i.ui_draw_image     ui.o
-    0x080161d0   0x080161d0   0x00000044   Code   RO          438    i.ui_fill_color     ui.o
-    0x08016214   0x08016214   0x000000a4   Code   RO          439    i.ui_func           ui.o
-    0x080162b8   0x080162b8   0x0000004c   Code   RO          440    i.ui_init           ui.o
-    0x08016304   0x08016304   0x00000094   Code   RO          441    i.ui_write_string   ui.o
-    0x08016398   0x08016398   0x00000028   Code   RO         6676    i.uxListRemove      list.o
-    0x080163c0   0x080163c0   0x00000034   Code   RO          215    i.vApplicationMallocFailedHook  board.o
-    0x080163f4   0x080163f4   0x00000040   Code   RO          216    i.vApplicationStackOverflowHook  board.o
-    0x08016434   0x08016434   0x0000003c   Code   RO          217    i.vAssertCalled     board.o
-    0x08016470   0x08016470   0x0000001a   Code   RO         6677    i.vListInitialise   list.o
-    0x0801648a   0x0801648a   0x00000006   Code   RO         6678    i.vListInitialiseItem  list.o
-    0x08016490   0x08016490   0x00000034   Code   RO         6679    i.vListInsert       list.o
-    0x080164c4   0x080164c4   0x00000018   Code   RO         6680    i.vListInsertEnd    list.o
-    0x080164dc   0x080164dc   0x00000074   Code   RO         7610    i.vPortEnterCritical  port.o
-    0x08016550   0x08016550   0x0000005c   Code   RO         7611    i.vPortExitCritical  port.o
-    0x080165ac   0x080165ac   0x000000b4   Code   RO         7541    i.vPortFree         heap_4.o
-    0x08016660   0x08016660   0x00000028   Code   RO         7612    i.vPortSetupTimerInterrupt  port.o
-    0x08016688   0x08016688   0x00000088   Code   RO         7613    i.vPortValidateInterruptPriority  port.o
-    0x08016710   0x08016710   0x0000002c   Code   RO         6749    i.vQueueAddToRegistry  queue.o
-    0x0801673c   0x0801673c   0x0000004a   Code   RO         6752    i.vQueueWaitForMessageRestricted  queue.o
-    0x08016786   0x08016786   0x00000002   PAD
-    0x08016788   0x08016788   0x00000070   Code   RO         7017    i.vTaskDelay        tasks.o
-    0x080167f8   0x080167f8   0x00000110   Code   RO         7018    i.vTaskDelete       tasks.o
-    0x08016908   0x08016908   0x00000018   Code   RO         7021    i.vTaskInternalSetTimeOutState  tasks.o
-    0x08016920   0x08016920   0x0000000c   Code   RO         7022    i.vTaskMissedYield  tasks.o
-    0x0801692c   0x0801692c   0x0000004c   Code   RO         7023    i.vTaskPlaceOnEventList  tasks.o
-    0x08016978   0x08016978   0x00000054   Code   RO         7024    i.vTaskPlaceOnEventListRestricted  tasks.o
-    0x080169cc   0x080169cc   0x000000ec   Code   RO         7026    i.vTaskPriorityDisinheritAfterTimeout  tasks.o
-    0x08016ab8   0x08016ab8   0x000000b0   Code   RO         7032    i.vTaskStartScheduler  tasks.o
-    0x08016b68   0x08016b68   0x00000010   Code   RO         7034    i.vTaskSuspendAll   tasks.o
-    0x08016b78   0x08016b78   0x000000bc   Code   RO         7035    i.vTaskSwitchContext  tasks.o
-    0x08016c34   0x08016c34   0x00000038   Code   RO         1410    i.weekday_str_to_num  esp_at.o
-    0x08016c6c   0x08016c6c   0x00000094   Code   RO          899    i.welcome_page_display  welcome_page.o
-    0x08016d00   0x08016d00   0x000000d0   Code   RO          375    i.wifi_init         wifi.o
-    0x08016dd0   0x08016dd0   0x000000ac   Code   RO          926    i.wifi_page_display  wifi_page.o
-    0x08016e7c   0x08016e7c   0x00000118   Code   RO          295    i.wifi_update       app.o
-    0x08016f94   0x08016f94   0x00000110   Code   RO          376    i.wifi_wait_connect  wifi.o
-    0x080170a4   0x080170a4   0x00000020   Code   RO          507    i.work_func         workqueue.o
-    0x080170c4   0x080170c4   0x0000001c   Code   RO          296    i.work_timer_cb     app.o
-    0x080170e0   0x080170e0   0x00000060   Code   RO          508    i.workqueue_init    workqueue.o
-    0x08017140   0x08017140   0x00000040   Code   RO          509    i.workqueue_run     workqueue.o
-    0x08017180   0x08017180   0x0000017c   Code   RO         7614    i.xPortStartScheduler  port.o
-    0x080172fc   0x080172fc   0x000000a0   Code   RO         6757    i.xQueueGenericCreate  queue.o
-    0x0801739c   0x0801739c   0x000000ac   Code   RO         6758    i.xQueueGenericReset  queue.o
-    0x08017448   0x08017448   0x000001c8   Code   RO         6759    i.xQueueGenericSend  queue.o
-    0x08017610   0x08017610   0x00000128   Code   RO         6760    i.xQueueGenericSendFromISR  queue.o
-    0x08017738   0x08017738   0x00000108   Code   RO         6761    i.xQueueGiveFromISR  queue.o
-    0x08017840   0x08017840   0x00000164   Code   RO         6767    i.xQueueReceive     queue.o
-    0x080179a4   0x080179a4   0x000001a8   Code   RO         6772    i.xQueueSemaphoreTake  queue.o
-    0x08017b4c   0x08017b4c   0x00000098   Code   RO         7037    i.xTaskCheckForTimeOut  tasks.o
-    0x08017be4   0x08017be4   0x00000060   Code   RO         7038    i.xTaskCreate       tasks.o
-    0x08017c44   0x08017c44   0x00000020   Code   RO         7047    i.xTaskGetSchedulerState  tasks.o
-    0x08017c64   0x08017c64   0x0000000c   Code   RO         7048    i.xTaskGetTickCount  tasks.o
-    0x08017c70   0x08017c70   0x0000015c   Code   RO         7050    i.xTaskIncrementTick  tasks.o
-    0x08017dcc   0x08017dcc   0x000000c4   Code   RO         7051    i.xTaskPriorityDisinherit  tasks.o
-    0x08017e90   0x08017e90   0x000000b8   Code   RO         7052    i.xTaskPriorityInherit  tasks.o
-    0x08017f48   0x08017f48   0x000000ac   Code   RO         7053    i.xTaskRemoveFromEventList  tasks.o
-    0x08017ff4   0x08017ff4   0x00000118   Code   RO         7054    i.xTaskResumeAll    tasks.o
-    0x0801810c   0x0801810c   0x00000036   Code   RO         7407    i.xTimerCreate      timers.o
-    0x08018142   0x08018142   0x00000002   PAD
-    0x08018144   0x08018144   0x00000068   Code   RO         7408    i.xTimerCreateTimerTask  timers.o
-    0x080181ac   0x080181ac   0x00000098   Code   RO         7409    i.xTimerGenericCommand  timers.o
-    0x08018244   0x08018244   0x00001738   Data   RO          592    .constdata          font24_maple_bold.o
-    0x0801997c   0x0801997c   0x00001db0   Data   RO          606    .constdata          font32_maple_bold.o
-    0x0801b72c   0x0801b72c   0x000014c8   Data   RO          620    .constdata          font20_maple_bold.o
-    0x0801cbf4   0x0801cbf4   0x00000600   Data   RO          634    .constdata          font16_maple.o
-    0x0801d1f4   0x0801d1f4   0x000004c8   Data   RO          647    .constdata          font24_maple_semibold.o
-    0x0801d6bc   0x0801d6bc   0x00000b08   Data   RO          661    .constdata          font54_maple_bold.o
-    0x0801e1c4   0x0801e1c4   0x00000b08   Data   RO          675    .constdata          font54_maple_semibold.o
-    0x0801eccc   0x0801eccc   0x00000d10   Data   RO          689    .constdata          font64_maple_extrabold.o
-    0x0801f9dc   0x0801f9dc   0x0000135c   Data   RO          703    .constdata          font76_maple_extrabold.o
-    0x08020d38   0x08020d38   0x000016d0   Data   RO          730    .constdata          icon_duoyun.o
-    0x08022408   0x08022408   0x000016d0   Data   RO          743    .constdata          icon_leizhenyu.o
-    0x08023ad8   0x08023ad8   0x000016d0   Data   RO          756    .constdata          icon_na.o
-    0x080251a8   0x080251a8   0x000016d0   Data   RO          769    .constdata          icon_qing.o
-    0x08026878   0x08026878   0x00000868   Data   RO          782    .constdata          icon_wenduji.o
-    0x080270e0   0x080270e0   0x00000488   Data   RO          795    .constdata          icon_wifi.o
-    0x08027568   0x08027568   0x000016d0   Data   RO          808    .constdata          icon_yintian.o
-    0x08028c38   0x08028c38   0x000016d0   Data   RO          821    .constdata          icon_yueliang.o
-    0x0802a308   0x0802a308   0x000016d0   Data   RO          834    .constdata          icon_zhongxue.o
-    0x0802b9d8   0x0802b9d8   0x000016d0   Data   RO          847    .constdata          icon_zhongyu.o
-    0x0802d0a8   0x0802d0a8   0x0000c808   Data   RO          860    .constdata          img_error.o
-    0x080398b0   0x080398b0   0x0001f780   Data   RO          873    .constdata          img_meihua.o
-    0x08059030   0x08059030   0x0000e6a8   Data   RO          886    .constdata          img_wifi.o
-    0x080676d8   0x080676d8   0x00000007   Data   RO          974    .constdata          main_page.o
-    0x080676df   0x080676df   0x00000001   PAD
-    0x080676e0   0x080676e0   0x0000006c   Data   RO         1413    .constdata          esp_at.o
-    0x0806774c   0x0806774c   0x00000040   Data   RO         8057    .constdata          mc_w.l(ctype_c.o)
-    0x0806778c   0x0806778c   0x00000068   Data   RO          298    .conststring        app.o
-    0x080677f4   0x080677f4   0x0000003f   Data   RO          593    .conststring        font24_maple_bold.o
-    0x08067833   0x08067833   0x00000001   PAD
-    0x08067834   0x08067834   0x0000002b   Data   RO          607    .conststring        font32_maple_bold.o
+    0x080135a0   0x080135a0   0x000000a4   Code   RO          213    i.board_lowlevel_init  board.o
+    0x08013644   0x08013644   0x0000005c   Code   RO         1091    i.console_dma_init  console.o
+    0x080136a0   0x080136a0   0x00000050   Code   RO         1092    i.console_init      console.o
+    0x080136f0   0x080136f0   0x0000003e   Code   RO         1093    i.console_int_init  console.o
+    0x0801372e   0x0801372e   0x00000002   PAD
+    0x08013730   0x08013730   0x0000003c   Code   RO         1094    i.console_io_init   console.o
+    0x0801376c   0x0801376c   0x00000054   Code   RO         1096    i.console_usart_init  console.o
+    0x080137c0   0x080137c0   0x00000064   Code   RO          911    i.error_page_display  error_page.o
+    0x08013824   0x08013824   0x0000006c   Code   RO         1387    i.esp_at_connect_wifi  esp_at.o
+    0x08013890   0x08013890   0x00000058   Code   RO         1388    i.esp_at_dma_init   esp_at.o
+    0x080138e8   0x080138e8   0x00000008   Code   RO         1389    i.esp_at_get_response  esp_at.o
+    0x080138f0   0x080138f0   0x00000070   Code   RO         1390    i.esp_at_get_wifi_info  esp_at.o
+    0x08013960   0x08013960   0x00000050   Code   RO         1391    i.esp_at_http_get   esp_at.o
+    0x080139b0   0x080139b0   0x00000084   Code   RO         1392    i.esp_at_init       esp_at.o
+    0x08013a34   0x08013a34   0x0000004c   Code   RO         1393    i.esp_at_int_init   esp_at.o
+    0x08013a80   0x08013a80   0x0000003c   Code   RO         1394    i.esp_at_io_init    esp_at.o
+    0x08013abc   0x08013abc   0x00000014   Code   RO         1395    i.esp_at_lowlevel_init  esp_at.o
+    0x08013ad0   0x08013ad0   0x00000040   Code   RO         1396    i.esp_at_sntp_get_time  esp_at.o
+    0x08013b10   0x08013b10   0x0000002c   Code   RO         1397    i.esp_at_sntp_init  esp_at.o
+    0x08013b3c   0x08013b3c   0x00000054   Code   RO         1398    i.esp_at_usart_init  esp_at.o
+    0x08013b90   0x08013b90   0x00000054   Code   RO         1399    i.esp_at_usart_wait_receive  esp_at.o
+    0x08013be4   0x08013be4   0x00000038   Code   RO         1400    i.esp_at_usart_write  esp_at.o
+    0x08013c1c   0x08013c1c   0x00000028   Code   RO         1401    i.esp_at_wait_boot  esp_at.o
+    0x08013c44   0x08013c44   0x00000016   Code   RO         1402    i.esp_at_wait_ready  esp_at.o
+    0x08013c5a   0x08013c5a   0x00000002   PAD
+    0x08013c5c   0x08013c5c   0x00000020   Code   RO         1403    i.esp_at_wifi_init  esp_at.o
+    0x08013c7c   0x08013c7c   0x00000060   Code   RO         1404    i.esp_at_write_command  esp_at.o
+    0x08013cdc   0x08013cdc   0x0000002c   Code   RO          214    i.fputc             board.o
+    0x08013d08   0x08013d08   0x00000030   Code   RO         1243    i.in_screen_range   st7789.o
+    0x08013d38   0x08013d38   0x00000168   Code   RO          291    i.inner_update      app.o
+    0x08013ea0   0x08013ea0   0x00000012   Code   RO         1244    i.is_gb2312         st7789.o
+    0x08013eb2   0x08013eb2   0x00000002   PAD
+    0x08013eb4   0x08013eb4   0x00000034   Code   RO            4    i.main              main.o
+    0x08013ee8   0x08013ee8   0x00000050   Code   RO            5    i.main_init         main.o
+    0x08013f38   0x08013f38   0x00000184   Code   RO          965    i.main_page_display  main_page.o
+    0x080140bc   0x080140bc   0x000000bc   Code   RO          966    i.main_page_redraw_date  main_page.o
+    0x08014178   0x08014178   0x0000006c   Code   RO          967    i.main_page_redraw_inner_humidity  main_page.o
+    0x080141e4   0x080141e4   0x0000007c   Code   RO          968    i.main_page_redraw_inner_temperature  main_page.o
+    0x08014260   0x08014260   0x00000034   Code   RO          969    i.main_page_redraw_outdoor_city  main_page.o
+    0x08014294   0x08014294   0x0000007c   Code   RO          970    i.main_page_redraw_outdoor_temperature  main_page.o
+    0x08014310   0x08014310   0x000000b8   Code   RO          971    i.main_page_redraw_outdoor_weather_icon  main_page.o
+    0x080143c8   0x080143c8   0x00000054   Code   RO          972    i.main_page_redraw_time  main_page.o
+    0x0801441c   0x0801441c   0x0000003c   Code   RO          973    i.main_page_redraw_wifi_ssid  main_page.o
+    0x08014458   0x08014458   0x00000030   Code   RO         1405    i.match_internal_ack  esp_at.o
+    0x08014488   0x08014488   0x0000003c   Code   RO         1406    i.month_str_to_num  esp_at.o
+    0x080144c4   0x080144c4   0x000000dc   Code   RO          292    i.outdoor_update    app.o
+    0x080145a0   0x080145a0   0x00000090   Code   RO         1407    i.parse_cipsntptime_response  esp_at.o
+    0x08014630   0x08014630   0x00000068   Code   RO         1408    i.parse_cwjap_response  esp_at.o
+    0x08014698   0x08014698   0x00000064   Code   RO         1409    i.parse_cwstate_response  esp_at.o
+    0x080146fc   0x080146fc   0x000001b0   Code   RO          412    i.parse_seniverse_response  weather.o
+    0x080148ac   0x080148ac   0x00000098   Code   RO         6996    i.prvAddCurrentTaskToDelayedList  tasks.o
+    0x08014944   0x08014944   0x000000b4   Code   RO         6997    i.prvAddNewTaskToReadyList  tasks.o
+    0x080149f8   0x080149f8   0x00000064   Code   RO         7393    i.prvCheckForValidListAndQueue  timers.o
+    0x08014a5c   0x08014a5c   0x00000048   Code   RO         6998    i.prvCheckTasksWaitingTermination  tasks.o
+    0x08014aa4   0x08014aa4   0x0000002a   Code   RO         6737    i.prvCopyDataFromQueue  queue.o
+    0x08014ace   0x08014ace   0x0000007e   Code   RO         6738    i.prvCopyDataToQueue  queue.o
+    0x08014b4c   0x08014b4c   0x00000012   Code   RO         6999    i.prvDeleteTCB      tasks.o
+    0x08014b5e   0x08014b5e   0x00000014   Code   RO         6739    i.prvGetDisinheritPriorityAfterTimeout  queue.o
+    0x08014b72   0x08014b72   0x00000002   PAD
+    0x08014b74   0x08014b74   0x00000028   Code   RO         7394    i.prvGetNextExpireTime  timers.o
+    0x08014b9c   0x08014b9c   0x0000007c   Code   RO         7538    i.prvHeapInit       heap_4.o
+    0x08014c18   0x08014c18   0x00000028   Code   RO         7000    i.prvIdleTask       tasks.o
+    0x08014c40   0x08014c40   0x0000002a   Code   RO         6741    i.prvInitialiseNewQueue  queue.o
+    0x08014c6a   0x08014c6a   0x00000002   PAD
+    0x08014c6c   0x08014c6c   0x000000e4   Code   RO         7001    i.prvInitialiseNewTask  tasks.o
+    0x08014d50   0x08014d50   0x00000070   Code   RO         7395    i.prvInitialiseNewTimer  timers.o
+    0x08014dc0   0x08014dc0   0x00000068   Code   RO         7002    i.prvInitialiseTaskLists  tasks.o
+    0x08014e28   0x08014e28   0x00000068   Code   RO         7539    i.prvInsertBlockIntoFreeList  heap_4.o
+    0x08014e90   0x08014e90   0x00000058   Code   RO         7396    i.prvInsertTimerInActiveList  timers.o
+    0x08014ee8   0x08014ee8   0x0000001a   Code   RO         6742    i.prvIsQueueEmpty   queue.o
+    0x08014f02   0x08014f02   0x0000001e   Code   RO         6743    i.prvIsQueueFull    queue.o
+    0x08014f20   0x08014f20   0x000000a8   Code   RO         6744    i.prvNotifyQueueSetContainer  queue.o
+    0x08014fc8   0x08014fc8   0x00000088   Code   RO         7397    i.prvProcessExpiredTimer  timers.o
+    0x08015050   0x08015050   0x00000140   Code   RO         7398    i.prvProcessReceivedCommands  timers.o
+    0x08015190   0x08015190   0x00000074   Code   RO         7399    i.prvProcessTimerOrBlockTask  timers.o
+    0x08015204   0x08015204   0x00000030   Code   RO         7003    i.prvResetNextTaskUnblockTime  tasks.o
+    0x08015234   0x08015234   0x0000002c   Code   RO         7400    i.prvSampleTimeNow  timers.o
+    0x08015260   0x08015260   0x000000b8   Code   RO         7401    i.prvSwitchTimerLists  timers.o
+    0x08015318   0x08015318   0x0000005c   Code   RO         7607    i.prvTaskExitError  port.o
+    0x08015374   0x08015374   0x0000001a   Code   RO         7402    i.prvTimerTask      timers.o
+    0x0801538e   0x0801538e   0x00000090   Code   RO         6745    i.prvUnlockQueue    queue.o
+    0x0801541e   0x0801541e   0x00000002   PAD
+    0x08015420   0x08015420   0x00000174   Code   RO         7540    i.pvPortMalloc      heap_4.o
+    0x08015594   0x08015594   0x00000020   Code   RO         7008    i.pvTaskIncrementMutexHeldCount  tasks.o
+    0x080155b4   0x080155b4   0x00000040   Code   RO         7403    i.pvTimerGetTimerID  timers.o
+    0x080155f4   0x080155f4   0x0000002c   Code   RO         7608    i.pxPortInitialiseStack  port.o
+    0x08015620   0x08015620   0x0000002a   Code   RO         1044    i.rtc_get_time      rtc.o
+    0x0801564a   0x0801564a   0x0000001a   Code   RO         1045    i.rtc_init          rtc.o
+    0x08015664   0x08015664   0x0000001e   Code   RO         1046    i.rtc_set_time      rtc.o
+    0x08015682   0x08015682   0x00000002   PAD
+    0x08015684   0x08015684   0x00000060   Code   RO         1245    i.st7789_dma_init   st7789.o
+    0x080156e4   0x080156e4   0x000000b4   Code   RO         1246    i.st7789_draw_font  st7789.o
+    0x08015798   0x08015798   0x00000056   Code   RO         1247    i.st7789_draw_image  st7789.o
+    0x080157ee   0x080157ee   0x00000046   Code   RO         1248    i.st7789_fill_color  st7789.o
+    0x08015834   0x08015834   0x00000054   Code   RO         1249    i.st7789_init       st7789.o
+    0x08015888   0x08015888   0x000001ac   Code   RO         1250    i.st7789_init_display  st7789.o
+    0x08015a34   0x08015a34   0x0000004c   Code   RO         1251    i.st7789_int_init   st7789.o
+    0x08015a80   0x08015a80   0x0000009c   Code   RO         1252    i.st7789_io_init    st7789.o
+    0x08015b1c   0x08015b1c   0x00000024   Code   RO         1253    i.st7789_reset      st7789.o
+    0x08015b40   0x08015b40   0x00000014   Code   RO         1254    i.st7789_set_backlight  st7789.o
+    0x08015b54   0x08015b54   0x0000005e   Code   RO         1255    i.st7789_set_range_and_prepare_gram  st7789.o
+    0x08015bb2   0x08015bb2   0x00000002   PAD
+    0x08015bb4   0x08015bb4   0x0000005c   Code   RO         1256    i.st7789_spi_init   st7789.o
+    0x08015c10   0x08015c10   0x0000006a   Code   RO         1257    i.st7789_write_ascii  st7789.o
+    0x08015c7a   0x08015c7a   0x00000072   Code   RO         1258    i.st7789_write_chinese  st7789.o
+    0x08015cec   0x08015cec   0x00000168   Code   RO         1259    i.st7789_write_gram  st7789.o
+    0x08015e54   0x08015e54   0x00000094   Code   RO         1260    i.st7789_write_register  st7789.o
+    0x08015ee8   0x08015ee8   0x0000007e   Code   RO         1261    i.st7789_write_string  st7789.o
+    0x08015f66   0x08015f66   0x00000002   PAD
+    0x08015f68   0x08015f68   0x00000078   Code   RO         1556    i.tim_delay_init    tim_delay.o
+    0x08015fe0   0x08015fe0   0x00000022   Code   RO         1558    i.tim_delay_us      tim_delay.o
+    0x08016002   0x08016002   0x00000008   Code   RO         1560    i.tim_get_us        tim_delay.o
+    0x0801600a   0x0801600a   0x00000002   PAD
+    0x0801600c   0x0801600c   0x0000003c   Code   RO         1561    i.tim_now           tim_delay.o
+    0x08016048   0x08016048   0x00000140   Code   RO          293    i.time_sync         app.o
+    0x08016188   0x08016188   0x00000044   Code   RO          294    i.time_update       app.o
+    0x080161cc   0x080161cc   0x00000030   Code   RO          437    i.ui_draw_image     ui.o
+    0x080161fc   0x080161fc   0x00000044   Code   RO          438    i.ui_fill_color     ui.o
+    0x08016240   0x08016240   0x000000a4   Code   RO          439    i.ui_func           ui.o
+    0x080162e4   0x080162e4   0x0000004c   Code   RO          440    i.ui_init           ui.o
+    0x08016330   0x08016330   0x00000094   Code   RO          441    i.ui_write_string   ui.o
+    0x080163c4   0x080163c4   0x00000028   Code   RO         6676    i.uxListRemove      list.o
+    0x080163ec   0x080163ec   0x00000034   Code   RO          215    i.vApplicationMallocFailedHook  board.o
+    0x08016420   0x08016420   0x00000040   Code   RO          216    i.vApplicationStackOverflowHook  board.o
+    0x08016460   0x08016460   0x0000003c   Code   RO          217    i.vAssertCalled     board.o
+    0x0801649c   0x0801649c   0x0000001a   Code   RO         6677    i.vListInitialise   list.o
+    0x080164b6   0x080164b6   0x00000006   Code   RO         6678    i.vListInitialiseItem  list.o
+    0x080164bc   0x080164bc   0x00000034   Code   RO         6679    i.vListInsert       list.o
+    0x080164f0   0x080164f0   0x00000018   Code   RO         6680    i.vListInsertEnd    list.o
+    0x08016508   0x08016508   0x00000074   Code   RO         7610    i.vPortEnterCritical  port.o
+    0x0801657c   0x0801657c   0x0000005c   Code   RO         7611    i.vPortExitCritical  port.o
+    0x080165d8   0x080165d8   0x000000b4   Code   RO         7541    i.vPortFree         heap_4.o
+    0x0801668c   0x0801668c   0x00000028   Code   RO         7612    i.vPortSetupTimerInterrupt  port.o
+    0x080166b4   0x080166b4   0x00000088   Code   RO         7613    i.vPortValidateInterruptPriority  port.o
+    0x0801673c   0x0801673c   0x0000002c   Code   RO         6749    i.vQueueAddToRegistry  queue.o
+    0x08016768   0x08016768   0x0000004a   Code   RO         6752    i.vQueueWaitForMessageRestricted  queue.o
+    0x080167b2   0x080167b2   0x00000002   PAD
+    0x080167b4   0x080167b4   0x00000070   Code   RO         7017    i.vTaskDelay        tasks.o
+    0x08016824   0x08016824   0x00000110   Code   RO         7018    i.vTaskDelete       tasks.o
+    0x08016934   0x08016934   0x00000018   Code   RO         7021    i.vTaskInternalSetTimeOutState  tasks.o
+    0x0801694c   0x0801694c   0x0000000c   Code   RO         7022    i.vTaskMissedYield  tasks.o
+    0x08016958   0x08016958   0x0000004c   Code   RO         7023    i.vTaskPlaceOnEventList  tasks.o
+    0x080169a4   0x080169a4   0x00000054   Code   RO         7024    i.vTaskPlaceOnEventListRestricted  tasks.o
+    0x080169f8   0x080169f8   0x000000ec   Code   RO         7026    i.vTaskPriorityDisinheritAfterTimeout  tasks.o
+    0x08016ae4   0x08016ae4   0x000000b0   Code   RO         7032    i.vTaskStartScheduler  tasks.o
+    0x08016b94   0x08016b94   0x00000010   Code   RO         7034    i.vTaskSuspendAll   tasks.o
+    0x08016ba4   0x08016ba4   0x000000bc   Code   RO         7035    i.vTaskSwitchContext  tasks.o
+    0x08016c60   0x08016c60   0x00000038   Code   RO         1410    i.weekday_str_to_num  esp_at.o
+    0x08016c98   0x08016c98   0x00000094   Code   RO          899    i.welcome_page_display  welcome_page.o
+    0x08016d2c   0x08016d2c   0x000000d0   Code   RO          375    i.wifi_init         wifi.o
+    0x08016dfc   0x08016dfc   0x000000ac   Code   RO          926    i.wifi_page_display  wifi_page.o
+    0x08016ea8   0x08016ea8   0x00000118   Code   RO          295    i.wifi_update       app.o
+    0x08016fc0   0x08016fc0   0x00000110   Code   RO          376    i.wifi_wait_connect  wifi.o
+    0x080170d0   0x080170d0   0x00000020   Code   RO          507    i.work_func         workqueue.o
+    0x080170f0   0x080170f0   0x0000001c   Code   RO          296    i.work_timer_cb     app.o
+    0x0801710c   0x0801710c   0x00000060   Code   RO          508    i.workqueue_init    workqueue.o
+    0x0801716c   0x0801716c   0x00000040   Code   RO          509    i.workqueue_run     workqueue.o
+    0x080171ac   0x080171ac   0x0000017c   Code   RO         7614    i.xPortStartScheduler  port.o
+    0x08017328   0x08017328   0x000000a0   Code   RO         6757    i.xQueueGenericCreate  queue.o
+    0x080173c8   0x080173c8   0x000000ac   Code   RO         6758    i.xQueueGenericReset  queue.o
+    0x08017474   0x08017474   0x000001c8   Code   RO         6759    i.xQueueGenericSend  queue.o
+    0x0801763c   0x0801763c   0x00000128   Code   RO         6760    i.xQueueGenericSendFromISR  queue.o
+    0x08017764   0x08017764   0x00000108   Code   RO         6761    i.xQueueGiveFromISR  queue.o
+    0x0801786c   0x0801786c   0x00000164   Code   RO         6767    i.xQueueReceive     queue.o
+    0x080179d0   0x080179d0   0x000001a8   Code   RO         6772    i.xQueueSemaphoreTake  queue.o
+    0x08017b78   0x08017b78   0x00000098   Code   RO         7037    i.xTaskCheckForTimeOut  tasks.o
+    0x08017c10   0x08017c10   0x00000060   Code   RO         7038    i.xTaskCreate       tasks.o
+    0x08017c70   0x08017c70   0x00000020   Code   RO         7047    i.xTaskGetSchedulerState  tasks.o
+    0x08017c90   0x08017c90   0x0000000c   Code   RO         7048    i.xTaskGetTickCount  tasks.o
+    0x08017c9c   0x08017c9c   0x0000015c   Code   RO         7050    i.xTaskIncrementTick  tasks.o
+    0x08017df8   0x08017df8   0x000000c4   Code   RO         7051    i.xTaskPriorityDisinherit  tasks.o
+    0x08017ebc   0x08017ebc   0x000000b8   Code   RO         7052    i.xTaskPriorityInherit  tasks.o
+    0x08017f74   0x08017f74   0x000000ac   Code   RO         7053    i.xTaskRemoveFromEventList  tasks.o
+    0x08018020   0x08018020   0x00000118   Code   RO         7054    i.xTaskResumeAll    tasks.o
+    0x08018138   0x08018138   0x00000036   Code   RO         7407    i.xTimerCreate      timers.o
+    0x0801816e   0x0801816e   0x00000002   PAD
+    0x08018170   0x08018170   0x00000068   Code   RO         7408    i.xTimerCreateTimerTask  timers.o
+    0x080181d8   0x080181d8   0x00000098   Code   RO         7409    i.xTimerGenericCommand  timers.o
+    0x08018270   0x08018270   0x00001738   Data   RO          592    .constdata          font24_maple_bold.o
+    0x080199a8   0x080199a8   0x00001db0   Data   RO          606    .constdata          font32_maple_bold.o
+    0x0801b758   0x0801b758   0x000014c8   Data   RO          620    .constdata          font20_maple_bold.o
+    0x0801cc20   0x0801cc20   0x00000600   Data   RO          634    .constdata          font16_maple.o
+    0x0801d220   0x0801d220   0x000004c8   Data   RO          647    .constdata          font24_maple_semibold.o
+    0x0801d6e8   0x0801d6e8   0x00000b08   Data   RO          661    .constdata          font54_maple_bold.o
+    0x0801e1f0   0x0801e1f0   0x00000b08   Data   RO          675    .constdata          font54_maple_semibold.o
+    0x0801ecf8   0x0801ecf8   0x00000d10   Data   RO          689    .constdata          font64_maple_extrabold.o
+    0x0801fa08   0x0801fa08   0x0000135c   Data   RO          703    .constdata          font76_maple_extrabold.o
+    0x08020d64   0x08020d64   0x000016d0   Data   RO          730    .constdata          icon_duoyun.o
+    0x08022434   0x08022434   0x000016d0   Data   RO          743    .constdata          icon_leizhenyu.o
+    0x08023b04   0x08023b04   0x000016d0   Data   RO          756    .constdata          icon_na.o
+    0x080251d4   0x080251d4   0x000016d0   Data   RO          769    .constdata          icon_qing.o
+    0x080268a4   0x080268a4   0x00000868   Data   RO          782    .constdata          icon_wenduji.o
+    0x0802710c   0x0802710c   0x00000488   Data   RO          795    .constdata          icon_wifi.o
+    0x08027594   0x08027594   0x000016d0   Data   RO          808    .constdata          icon_yintian.o
+    0x08028c64   0x08028c64   0x000016d0   Data   RO          821    .constdata          icon_yueliang.o
+    0x0802a334   0x0802a334   0x000016d0   Data   RO          834    .constdata          icon_zhongxue.o
+    0x0802ba04   0x0802ba04   0x000016d0   Data   RO          847    .constdata          icon_zhongyu.o
+    0x0802d0d4   0x0802d0d4   0x0000c808   Data   RO          860    .constdata          img_error.o
+    0x080398dc   0x080398dc   0x0001f780   Data   RO          873    .constdata          img_meihua.o
+    0x0805905c   0x0805905c   0x0000e6a8   Data   RO          886    .constdata          img_wifi.o
+    0x08067704   0x08067704   0x00000007   Data   RO          974    .constdata          main_page.o
+    0x0806770b   0x0806770b   0x00000001   PAD
+    0x0806770c   0x0806770c   0x0000006c   Data   RO         1413    .constdata          esp_at.o
+    0x08067778   0x08067778   0x00000040   Data   RO         8057    .constdata          mc_w.l(ctype_c.o)
+    0x080677b8   0x080677b8   0x00000068   Data   RO          298    .conststring        app.o
+    0x08067820   0x08067820   0x0000003f   Data   RO          593    .conststring        font24_maple_bold.o
     0x0806785f   0x0806785f   0x00000001   PAD
-    0x08067860   0x08067860   0x00000023   Data   RO          621    .conststring        font20_maple_bold.o
-    0x08067883   0x08067883   0x00000001   PAD
-    0x08067884   0x08067884   0x00000003   Data   RO          648    .conststring        font24_maple_semibold.o
-    0x08067887   0x08067887   0x00000001   PAD
-    0x08067888   0x08067888   0x0000000e   Data   RO          662    .conststring        font54_maple_bold.o
-    0x08067896   0x08067896   0x00000002   PAD
-    0x08067898   0x08067898   0x0000000e   Data   RO          704    .conststring        font76_maple_extrabold.o
-    0x080678a6   0x080678a6   0x00000002   PAD
-    0x080678a8   0x080678a8   0x00000009   Data   RO          927    .conststring        wifi_page.o
-    0x080678b1   0x080678b1   0x00000003   PAD
-    0x080678b4   0x080678b4   0x00000070   Data   RO         1414    .conststring        esp_at.o
-    0x08067924   0x08067924   0x00000020   Data   RO         8061    Region$$Table       anon$$obj.o
+    0x08067860   0x08067860   0x0000002b   Data   RO          607    .conststring        font32_maple_bold.o
+    0x0806788b   0x0806788b   0x00000001   PAD
+    0x0806788c   0x0806788c   0x00000023   Data   RO          621    .conststring        font20_maple_bold.o
+    0x080678af   0x080678af   0x00000001   PAD
+    0x080678b0   0x080678b0   0x00000003   Data   RO          648    .conststring        font24_maple_semibold.o
+    0x080678b3   0x080678b3   0x00000001   PAD
+    0x080678b4   0x080678b4   0x0000000e   Data   RO          662    .conststring        font54_maple_bold.o
+    0x080678c2   0x080678c2   0x00000002   PAD
+    0x080678c4   0x080678c4   0x0000000e   Data   RO          704    .conststring        font76_maple_extrabold.o
+    0x080678d2   0x080678d2   0x00000002   PAD
+    0x080678d4   0x080678d4   0x00000009   Data   RO          927    .conststring        wifi_page.o
+    0x080678dd   0x080678dd   0x00000003   PAD
+    0x080678e0   0x080678e0   0x00000070   Data   RO         1414    .conststring        esp_at.o
+    0x08067950   0x08067950   0x00000020   Data   RO         8061    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08067944, Size: 0x0001a448, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08067970, Size: 0x0001a448, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08067944   0x00000024   Data   RW          299    .data               app.o
-    0x20000024   0x08067968   0x00000004   Data   RW          442    .data               ui.o
-    0x20000028   0x0806796c   0x00000004   Data   RW          510    .data               workqueue.o
-    0x2000002c   0x08067970   0x00000004   Data   RW          928    .data               wifi_page.o
-    0x20000030   0x08067974   0x00000008   Data   RW         1098    .data               console.o
-    0x20000038   0x0806797c   0x00000004   Data   RW         1263    .data               st7789.o
-    0x2000003c   0x08067980   0x00000010   Data   RW         1415    .data               esp_at.o
-    0x2000004c   0x08067990   0x00000004   PAD
-    0x20000050   0x08067994   0x0000000c   Data   RW         1563    .data               tim_delay.o
-    0x2000005c   0x080679a0   0x00000014   Data   RW         1633    .data               system_stm32f4xx.o
-    0x20000070   0x080679b4   0x00000010   Data   RW         4525    .data               stm32f4xx_rcc.o
-    0x20000080   0x080679c4   0x00000040   Data   RW         7057    .data               tasks.o
-    0x200000c0   0x08067a04   0x00000014   Data   RW         7415    .data               timers.o
-    0x200000d4   0x08067a18   0x00000020   Data   RW         7547    .data               heap_4.o
-    0x200000f4   0x08067a38   0x0000000c   Data   RW         7615    .data               port.o
-    0x20000100   0x08067a44   0x00000004   Data   RW         8007    .data               mc_w.l(stdout.o)
-    0x20000104   0x08067a48   0x00000004   Data   RW         8017    .data               mc_w.l(errno.o)
+    0x20000000   0x08067970   0x00000024   Data   RW          299    .data               app.o
+    0x20000024   0x08067994   0x00000004   Data   RW          442    .data               ui.o
+    0x20000028   0x08067998   0x00000004   Data   RW          510    .data               workqueue.o
+    0x2000002c   0x0806799c   0x00000004   Data   RW          928    .data               wifi_page.o
+    0x20000030   0x080679a0   0x00000008   Data   RW         1098    .data               console.o
+    0x20000038   0x080679a8   0x00000004   Data   RW         1263    .data               st7789.o
+    0x2000003c   0x080679ac   0x00000010   Data   RW         1415    .data               esp_at.o
+    0x2000004c   0x080679bc   0x00000004   PAD
+    0x20000050   0x080679c0   0x0000000c   Data   RW         1563    .data               tim_delay.o
+    0x2000005c   0x080679cc   0x00000014   Data   RW         1633    .data               system_stm32f4xx.o
+    0x20000070   0x080679e0   0x00000010   Data   RW         4525    .data               stm32f4xx_rcc.o
+    0x20000080   0x080679f0   0x00000040   Data   RW         7057    .data               tasks.o
+    0x200000c0   0x08067a30   0x00000014   Data   RW         7415    .data               timers.o
+    0x200000d4   0x08067a44   0x00000020   Data   RW         7547    .data               heap_4.o
+    0x200000f4   0x08067a64   0x0000000c   Data   RW         7615    .data               port.o
+    0x20000100   0x08067a70   0x00000004   Data   RW         8007    .data               mc_w.l(stdout.o)
+    0x20000104   0x08067a74   0x00000004   Data   RW         8017    .data               mc_w.l(errno.o)
     0x20000108        -       0x00000118   Zero   RW          297    .bss                app.o
     0x20000220        -       0x00002880   Zero   RW         1262    .bss                st7789.o
     0x20002aa0        -       0x00000400   Zero   RW         1412    .bss                esp_at.o
@@ -4141,7 +4142,7 @@ Memory Map of the image
     0x20002ef0        -       0x0000012c   Zero   RW         7056    .bss                tasks.o
     0x2000301c        -       0x00000028   Zero   RW         7414    .bss                timers.o
     0x20003044        -       0x00017000   Zero   RW         7546    .bss                heap_4.o
-    0x2001a044   0x08067a4c   0x00000004   PAD
+    0x2001a044   0x08067a78   0x00000004   PAD
     0x2001a048        -       0x00000400   Zero   RW         1620    STACK               startup_stm32f40_41xxx.o
 
 
@@ -4152,9 +4153,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       922         64          0          0          0       7289   aht20.o
+       922         66          0          0          0       7293   aht20.o
       1686        656        104         36        280       9567   app.o
-       508        198          0          0          0      14802   board.o
+       516        198          0          0          0      14810   board.o
        550         82          0          8          0       7077   console.o
        100          8          0          0          0       1301   error_page.o
       1894        526        220         16       1024      17618   esp_at.o
@@ -4182,7 +4183,7 @@ Image component sizes
          0          0     128896          0          0       1731   img_meihua.o
          0          0      59048          0          0       1671   img_wifi.o
        148          0          0          0          0       6086   list.o
-        96         12          0          0          0     354390   main.o
+       132         42          0          0          0     354398   main.o
       1312        288          7          0          0       7223   main_page.o
        120         14          0          0          0       1216   misc.o
       1142        296          0         12          0      11353   port.o
@@ -4211,7 +4212,7 @@ Image component sizes
        192         72          0          4          0       2545   workqueue.o
 
     ----------------------------------------------------------------------
-     26086       5072     325704        256     107328     686284   Object Totals
+     26130       5104     325704        256     107328     686304   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         46          0         12          4          4          0   (incl. Padding)
 
@@ -4292,15 +4293,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     32956       5258     325768        264     107328     662464   Grand Totals
-     32956       5258     325768        264     107328     662464   ELF Image Totals
-     32956       5258     325768        264          0          0   ROM Totals
+     33000       5290     325768        264     107328     662484   Grand Totals
+     33000       5290     325768        264     107328     662484   ELF Image Totals
+     33000       5290     325768        264          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               358724 ( 350.32kB)
+    Total RO  Size (Code + RO Data)               358768 ( 350.36kB)
     Total RW  Size (RW Data + ZI Data)            107592 ( 105.07kB)
-    Total ROM Size (Code + RO Data + RW Data)     358988 ( 350.57kB)
+    Total ROM Size (Code + RO Data + RW Data)     359032 ( 350.62kB)
 
 ==============================================================================
 

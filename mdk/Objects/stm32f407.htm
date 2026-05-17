@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\stm32f407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\stm32f407.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri May 15 16:51:50 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun May 17 22:15:48 2026
 <BR><P>
 <H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1255,6 +1255,7 @@ Global Symbols
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_wait_connect
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_init
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_init
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st7789_write_gram
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp_at_write_command
 </UL>
@@ -1315,7 +1316,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
-<P><STRONG><a name="[bd]"></a>aht20_init</STRONG> (Thumb, 196 bytes, Stack size 40 bytes, aht20.o(i.aht20_init))
+<P><STRONG><a name="[bd]"></a>aht20_init</STRONG> (Thumb, 194 bytes, Stack size 40 bytes, aht20.o(i.aht20_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = aht20_init &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; vAssertCalled &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
@@ -1380,7 +1381,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_init
 </UL>
 
-<P><STRONG><a name="[e0]"></a>board_lowlevel_init</STRONG> (Thumb, 146 bytes, Stack size 8 bytes, board.o(i.board_lowlevel_init))
+<P><STRONG><a name="[e0]"></a>board_lowlevel_init</STRONG> (Thumb, 154 bytes, Stack size 8 bytes, board.o(i.board_lowlevel_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = board_lowlevel_init &rArr; RCC_GetFlagStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_RTCCLKConfig
@@ -2468,7 +2469,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[6d]"></a>main_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, main.o(i.main_init))
+<P><STRONG><a name="[6d]"></a>main_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, main.o(i.main_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = main_init &rArr; wifi_wait_connect &rArr; esp_at_get_wifi_info &rArr; parse_cwjap_response &rArr; __0sscanf &rArr; __vfscanf_char &rArr; __vfscanf &rArr; _scanf_real
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_wait_connect
@@ -2480,6 +2481,7 @@ Local Symbols
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_page_display
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_init
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>

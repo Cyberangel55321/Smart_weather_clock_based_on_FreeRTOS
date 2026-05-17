@@ -1,6 +1,6 @@
 Dependencies for Project 'stm32f407', Target 'stm32f407': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (..\app\main.c)(0x69FF09AF)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\app\main.c)(0x6A09CC6D)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\app\main.h)(0x69FEE9AA)
 I (F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\include\stdint.h)(0x69B51E2E)
 I (F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -58,7 +58,7 @@ I (..\third_lib\FreeRTOS\portable\portmacro.h)(0x69F89213)
 I (..\third_lib\FreeRTOS\include\mpu_wrappers.h)(0x69DCFC68)
 I (..\third_lib\FreeRTOS\include\task.h)(0x69E5E974)
 I (..\third_lib\FreeRTOS\include\list.h)(0x69DCFC68)
-F (..\app\board.c)(0x6A06DD92)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
+F (..\app\board.c)(0x6A074332)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
 I (F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\include\stdint.h)(0x69B51E2E)
 I (F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (..\third_lib\FreeRTOS\include\FreeRTOS.h)(0x69DD0420)
@@ -640,7 +640,7 @@ I (..\third_lib\FreeRTOS\include\semphr.h)(0x69DCFC68)
 I (..\third_lib\FreeRTOS\include\queue.h)(0x69DCFC68)
 I (..\third_lib\FreeRTOS\include\task.h)(0x69E5E974)
 I (..\third_lib\FreeRTOS\include\list.h)(0x69DCFC68)
-F (..\driver\aht20\aht20.c)(0x69F89783)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\aht20.o --omf_browse .\objects\aht20.crf --depend .\objects\aht20.d)
+F (..\driver\aht20\aht20.c)(0x6A074444)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\aht20.o --omf_browse .\objects\aht20.crf --depend .\objects\aht20.d)
 I (..\firmware\cmsis\device\stm32f4xx.h)(0x67F66F08)
 I (..\firmware\cmsis\core\core_cm4.h)(0x67F66B72)
 I (F:\APP\keil\keil5\Keil_v5\ARM\ARMCC\include\stdint.h)(0x69B51E2E)
@@ -832,7 +832,7 @@ I (..\firmware\driver\inc\stm32f4xx_dac.h)(0x67F66B74)
 I (..\firmware\driver\inc\stm32f4xx_dcmi.h)(0x67F66B74)
 I (..\firmware\driver\inc\stm32f4xx_fsmc.h)(0x67F66B74)
 I (..\driver\tim_delay\tim_delay.h)(0x69F8B3BE)
-F (..\firmware\cmsis\device\startup_stm32f40_41xxx.s)(0x69FF1017)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"--pd "__UVISION_VERSION SETA 536" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
+F (..\firmware\cmsis\device\startup_stm32f40_41xxx.s)(0x6A09C6F6)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"--pd "__UVISION_VERSION SETA 536" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
 F (..\firmware\cmsis\device\system_stm32f4xx.c)(0x69F9964B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\app -I ..\app\font -I ..\app\image -I ..\app\page -I ..\driver\aht20 -I ..\driver\tim_delay -I ..\driver\esp_at -I ..\driver\led -I ..\driver\console -I ..\driver\st7789 -I ..\driver\rtc -I ..\third_lib\FreeRTOS\include -I ..\third_lib\FreeRTOS\portable-D__UVISION_VERSION="536" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
 I (..\firmware\cmsis\device\stm32f4xx.h)(0x67F66F08)
 I (..\firmware\cmsis\core\core_cm4.h)(0x67F66B72)

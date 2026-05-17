@@ -6,6 +6,8 @@ static void main_init(void *param)
     ui_init();
 
     welcome_page_display();
+	
+	printf("current app version: V1.0\r\n");
 
     wifi_init();
     wifi_page_display();
