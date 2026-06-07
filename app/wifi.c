@@ -48,8 +48,8 @@ void wifi_wait_connect(void)
     
     for (uint32_t t = 0; t < 10 * 1000; t += 100)
     {
-        // vTaskDelay(pdMS_TO_TICKS(100));
-        tim_delay_us(100 * 1000);
+        vTaskDelay(pdMS_TO_TICKS(100));
+        // tim_delay_us(100 * 1000);
         esp_wifi_info_t wifi = { 0 };
         if (esp_at_get_wifi_info(&wifi) && wifi.connected)
         {

@@ -204,11 +204,11 @@ static void st7789_write_gram(uint8_t data[], uint32_t length, bool singlecolor)
 static void st7789_reset(void)
 {
     GPIO_ResetBits(RESET_PORT, RESET_PIN);
-    // vTaskDelay(pdMS_TO_TICKS(2)); // 20us at least
-    tim_delay_us(20);
+    vTaskDelay(pdMS_TO_TICKS(2)); // 20us at least
+    // tim_delay_us(20);
     GPIO_SetBits(RESET_PORT, RESET_PIN);
-    // vTaskDelay(pdMS_TO_TICKS(120));
-    tim_delay_us(120 * 1000);
+    vTaskDelay(pdMS_TO_TICKS(120));
+    // tim_delay_us(120 * 1000);
 }
 
 static void st7789_set_backlight(bool on)
@@ -221,8 +221,8 @@ static void st7789_init_display(void)
     st7789_reset(); 
     
     st7789_write_register(0x11, NULL, 0);
-	// vTaskDelay(pdMS_TO_TICKS(5));
-    tim_delay_us(5 * 1000);
+	vTaskDelay(pdMS_TO_TICKS(5));
+    // tim_delay_us(5 * 1000);
     
     st7789_write_register(0x3A, (uint8_t[]){0x05}, 1); // RGB565
     st7789_write_register(0x36, (uint8_t[]){0x00}, 1); 
