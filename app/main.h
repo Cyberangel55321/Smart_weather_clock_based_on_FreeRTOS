@@ -17,7 +17,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#define APP_VERSION "v1.0"
+#define APP_VERSION "v1.1"
 #define WIFI_SSID   "iPhone14"
 #define WIFI_PASSWD "19159925209"
 

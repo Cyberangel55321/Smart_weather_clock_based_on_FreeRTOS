@@ -9,7 +9,9 @@ void error_page_display(const char *msg)
 {
     const uint16_t color_bg = mkcolor(0, 0, 0);
     ui_fill_color(0, 0, UI_WIDTH - 1, UI_HEIGHT - 1, color_bg);
-    ui_draw_image(40, 37, &img_error);
+    // ui_draw_image(40, 37, &img_error);
+
+    ui_write_string(70, 100, "ERROR", mkcolor(255, 0, 0), color_bg, &font32_maple_bold);
     
     uint16_t startx = 0;
     int len = strlen(msg) * font20_maple_bold.size / 2;

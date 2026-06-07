@@ -153,15 +153,15 @@ static void st7789_write_gram(uint8_t data[], uint32_t length, bool singlecolor)
     GPIO_ResetBits(CS_PORT, CS_PIN);
     GPIO_SetBits(DC_PORT, DC_PIN);
 
-    // ======== 起始测试帧率部分开始 ========
-    uint32_t original_length = length;
-    uint64_t start_us = 0;
-    // 当传输内容是全屏时（宽度*高度*每像素2字节），开始计时
-    if (original_length >= ST7789_WIDTH * ST7789_HEIGHT * 2) 
-    {
-        start_us = tim_get_us();
-    }
-    // ======== 起始测试帧率部分开始 ========
+    // // ======== 起始测试帧率部分开始 ========
+    // uint32_t original_length = length;
+    // uint64_t start_us = 0;
+    // // 当传输内容是全屏时（宽度*高度*每像素2字节），开始计时
+    // if (original_length >= ST7789_WIDTH * ST7789_HEIGHT * 2) 
+    // {
+    //     start_us = tim_get_us();
+    // }
+    // // ======== 起始测试帧率部分开始 ========
     
     length >>= 1;
     
@@ -189,24 +189,26 @@ static void st7789_write_gram(uint8_t data[], uint32_t length, bool singlecolor)
 
     GPIO_SetBits(CS_PORT, CS_PIN);
 
-    // ======== 终止测试帧率部分开始 ========
-    if (start_us != 0) 
-    {
-        // 由于是微秒求差，1秒内的数据uint32完全够算，防溢出
-        uint32_t cost_us = (uint32_t)(tim_get_us() - start_us);
-        float fps = 1000000.0f / (float)cost_us;
-        // 使用整数+小数点后两位的形式代替%f（考虑到单片机printf有时候不支持%f）
-        printf("[TEST] LCD Full Refresh Time: %lu us, FPS: %lu.%02lu\r\n", cost_us, (uint32_t)fps, (uint32_t)(fps * 100) % 100);
-    }
-    // ======== 终止测试帧率部分结束 ========
+    // // ======== 终止测试帧率部分开始 ========
+    // if (start_us != 0) 
+    // {
+    //     // 由于是微秒求差，1秒内的数据uint32完全够算，防溢出
+    //     uint32_t cost_us = (uint32_t)(tim_get_us() - start_us);
+    //     float fps = 1000000.0f / (float)cost_us;
+    //     // 使用整数+小数点后两位的形式代替%f（考虑到单片机printf有时候不支持%f）
+    //     printf("[TEST] LCD Full Refresh Time: %lu us, FPS: %lu.%02lu\r\n", cost_us, (uint32_t)fps, (uint32_t)(fps * 100) % 100);
+    // }
+    // // ======== 终止测试帧率部分结束 ========
 }
 
 static void st7789_reset(void)
 {
     GPIO_ResetBits(RESET_PORT, RESET_PIN);
-    vTaskDelay(pdMS_TO_TICKS(2)); // 20us at least
+    // vTaskDelay(pdMS_TO_TICKS(2)); // 20us at least
+    tim_delay_us(20);
     GPIO_SetBits(RESET_PORT, RESET_PIN);
-    vTaskDelay(pdMS_TO_TICKS(120));
+    // vTaskDelay(pdMS_TO_TICKS(120));
+    tim_delay_us(120 * 1000);
 }
 
 static void st7789_set_backlight(bool on)
@@ -219,7 +221,8 @@ static void st7789_init_display(void)
     st7789_reset(); 
     
     st7789_write_register(0x11, NULL, 0);
-    vTaskDelay(pdMS_TO_TICKS(5));
+	// vTaskDelay(pdMS_TO_TICKS(5));
+    tim_delay_us(5 * 1000);
     
     st7789_write_register(0x3A, (uint8_t[]){0x05}, 1); // RGB565
     st7789_write_register(0x36, (uint8_t[]){0x00}, 1); 

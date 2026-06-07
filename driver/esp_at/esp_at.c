@@ -348,9 +348,11 @@ static bool parse_cipsntptime_response(const char *response, esp_date_time_t *da
 
 bool esp_at_sntp_get_time(esp_date_time_t *date)
 {
+    // 发送并带超时的等待挂起 
     if (!esp_at_write_command("AT+CIPSNTPTIME?\r\n", 2000))
         return false;
     
+    // 获取数据数组指针对其解包
     if (!parse_cipsntptime_response(esp_at_get_response(), date))
         return false;
     
@@ -375,7 +377,8 @@ void USART2_IRQHandler(void)
     {
         if (rxlen < sizeof(rxbuf) - 1)
         {
-            rxbuf[rxlen++] = USART_ReceiveData(USART2);
+            rxbuf[rxlen] = USART_ReceiveData(USART2);
+            rxlen++;
             if (rxbuf[rxlen - 1] == '\n')
             {
                 rxbuf[rxlen] = '\0';

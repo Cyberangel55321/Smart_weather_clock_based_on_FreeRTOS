@@ -9,9 +9,31 @@
 #include "aht20.h"
 #include "st7789.h"
 
+extern void board_lowlevel_init(void);
+
 void board_lowlevel_init(void)
 {
-	SCB->VTOR = 0x8010000;
+    /* 从Boot Config读取活动分区，动态设置VTOR */
+    /* Boot Config地址: 0x0800C000 */
+    /* active_partition字段偏移: 8字节 (magic=4 + crc32=4) */
+    volatile uint32_t boot_config_magic = *(volatile uint32_t *)0x0800C000;
+    if (boot_config_magic == 0x424F4F54)  // "BOOT"
+    {
+        volatile uint8_t active_partition = *(volatile uint8_t *)0x0800C008;
+        if (active_partition == 0x01)
+        {
+            SCB->VTOR = 0x08050100;  // APP1
+        }
+        else if (active_partition == 0x00)
+        {
+            SCB->VTOR = 0x08010100;  // APP0
+        }
+    }
+    else
+    {
+        SCB->VTOR = 0x08010100;  // 默认APP0
+    }
+
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
@@ -34,12 +56,16 @@ void board_lowlevel_init(void)
 
 void board_init(void)
 {
-    tim_delay_init();
 	console_init();
+	
     printf("[SYS] Build Date: %s %s\n", __DATE__, __TIME__);
     
     rtc_init();
+	
+	tim_delay_init();
+	
     st7789_init();
+	
 	if (!aht20_init())
 	{
 		printf("[ERROR] aht20 init failed!!!\r\n");

@@ -5,29 +5,58 @@
 
 static volatile uint64_t tim_tick_count;
 static tim_periodic_callback_t periodic_callback;
+//void tim_delay_init(void)
+//{
+//    RCC_ClocksTypeDef RCC_ClocksStruct;
+//    RCC_GetClocksFreq(&RCC_ClocksStruct);
+//    uint32_t apb1_tim_freq_mhz = RCC_ClocksStruct.PCLK1_Frequency / 1000 / 1000 * 2;
+//    
+//    TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+//    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
+//    TIM_TimeBaseStructure.TIM_Prescaler = apb1_tim_freq_mhz - 1;
+//    TIM_TimeBaseStructure.TIM_Period = 999;
+//    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+//    TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+//    TIM_TimeBaseInit(TIM6, &TIM_TimeBaseStructure);
+//    TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
+//    TIM_Cmd(TIM6, ENABLE);
+//    
+//    NVIC_InitTypeDef NVIC_InitStructure;
+//    NVIC_InitStructure.NVIC_IRQChannel = TIM6_DAC_IRQn;
+//    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 5;
+//    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+//    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+//    NVIC_Init(&NVIC_InitStructure);
+//	NVIC_SetPriority(TIM6_DAC_IRQn, 8);
+//}
 
 void tim_delay_init(void)
 {
     RCC_ClocksTypeDef RCC_ClocksStruct;
     RCC_GetClocksFreq(&RCC_ClocksStruct);
-    uint32_t apb1_tim_freq_mhz = RCC_ClocksStruct.PCLK1_Frequency / 1000 / 1000 * 2;
-    
+
+    uint32_t timclk = RCC_ClocksStruct.PCLK1_Frequency * 2;
+
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
     TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
-    TIM_TimeBaseStructure.TIM_Prescaler = apb1_tim_freq_mhz - 1;
-    TIM_TimeBaseStructure.TIM_Period = 999;
-    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-    TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+
+    TIM_TimeBaseStructure.TIM_Prescaler = timclk / 1000000 - 1;
+    TIM_TimeBaseStructure.TIM_Period = 1000 - 1;
+
     TIM_TimeBaseInit(TIM6, &TIM_TimeBaseStructure);
+
+    TIM_ClearFlag(TIM6, TIM_FLAG_Update);
+
     TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
-    TIM_Cmd(TIM6, ENABLE);
-    
+
     NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = TIM6_DAC_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 5;
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
+
+    TIM_Cmd(TIM6, ENABLE);
 }
 
 uint64_t tim_now(void)

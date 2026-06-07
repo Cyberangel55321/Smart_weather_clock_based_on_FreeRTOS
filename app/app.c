@@ -43,9 +43,9 @@ static TimerHandle_t outdoor_update_timer;
 static void time_sync(void)
 {
     uint32_t restart_sync_delay = TIME_SYNC_INTERVAL;
+    esp_date_time_t esp_date = { 0 };
     rtc_date_time_t rtc_date = { 0 };
 
-    esp_date_time_t esp_date = { 0 };
     if (!esp_at_sntp_get_time(&esp_date))
     {
         printf("[SNTP] get time failed\n");
@@ -212,22 +212,23 @@ static void app_work(void *param)
     job();
 }
 
-static void work_timer_cb(TimerHandle_t timer)
-{
-    app_job_t job = (app_job_t)pvTimerGetTimerID(timer);
-    workqueue_run(app_work, job);
-}
-
 static void app_timer_cb(TimerHandle_t timer)
 {
     app_job_t job = (app_job_t)pvTimerGetTimerID(timer);
     job();
 }
 
+static void work_timer_cb(TimerHandle_t timer)
+{
+    app_job_t job = (app_job_t)pvTimerGetTimerID(timer);
+    workqueue_run(app_work, job);
+}
+
+
 void app_init(void)
 {
     time_update_timer = xTimerCreate("time update", pdMS_TO_TICKS(TIME_UPDATE_INTERVAL), pdTRUE, time_update, app_timer_cb);
-    time_sync_timer = xTimerCreate("time sync", pdMS_TO_TICKS(200), pdFALSE, time_sync, work_timer_cb);
+    time_sync_timer = xTimerCreate("time sync", pdMS_TO_TICKS(TIME_SYNC_INTERVAL), pdFALSE, time_sync, work_timer_cb);
     wifi_update_timer = xTimerCreate("wifi update", pdMS_TO_TICKS(WIFI_UPDATE_INTERVAL), pdTRUE, wifi_update, work_timer_cb);
     inner_update_timer = xTimerCreate("inner upadte", pdMS_TO_TICKS(INNER_UPDATE_INTERVAL), pdTRUE, inner_update, work_timer_cb);
     outdoor_update_timer = xTimerCreate("outdoor update", pdMS_TO_TICKS(OUTDOOR_UPDATE_INTERVAL), pdTRUE, outdoor_update, work_timer_cb);

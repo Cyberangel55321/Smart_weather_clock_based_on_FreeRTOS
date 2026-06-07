@@ -10,12 +10,8 @@ typedef struct
     const uint8_t *data;
 } image_t;
 
-extern const image_t image_touxiang;
-extern const image_t image_ktxy;
-
-extern const image_t img_touxiang;
-extern const image_t img_meihua;
-extern const image_t img_error;
+// extern const image_t img_touxiang;
+// extern const image_t img_error;
 extern const image_t img_wifi;
 extern const image_t icon_wenduji;
 extern const image_t icon_wifi;

@@ -37,7 +37,8 @@ bool aht20_init(void)
     I2C_Init(I2C1, &I2C_InitStruct);
     I2C_Cmd(I2C1, ENABLE);
 
-    vTaskDelay(pdMS_TO_TICKS(40));
+    // vTaskDelay(pdMS_TO_TICKS(40));
+    tim_delay_us(40 * 1000);
     if (aht20_is_ready())
         return true;
 
@@ -46,7 +47,8 @@ bool aht20_init(void)
 
     for (uint32_t t = 0; t < 100; t++)
     {
-        vTaskDelay(pdMS_TO_TICKS(5));
+        // vTaskDelay(pdMS_TO_TICKS(5));
+        tim_delay_us(5 * 1000);
         if (aht20_is_ready())
             return true;
     }
@@ -148,7 +150,8 @@ bool aht20_wait_for_measurement(void)
 {
     for (uint32_t t = 0; t < 200; t++)
     {
-        vTaskDelay(pdMS_TO_TICKS(10));
+        // vTaskDelay(pdMS_TO_TICKS(10));
+        tim_delay_us(10 * 1000);
         if (!aht20_is_busy())
             return true;
     }

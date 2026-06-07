@@ -17,10 +17,6 @@ typedef struct
     uint16_t size;
 } font_t;
 
-extern const font_t font16;
-extern const font_t font32;
-extern const font_t font48;
-
 extern const font_t font16_maple;
 extern const font_t font20_maple_bold;
 extern const font_t font24_maple_semibold;
