@@ -16,4 +16,9 @@
    *.lnp
    *.sct
    *.__i
+   *xbin
+   *bin
+   *.axf
+   *.uvguix.55321
    *.htm
+
