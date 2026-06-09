@@ -24,6 +24,12 @@ JLinkLog.txt
 *.build_log.htm
 *.55321
 *.uvoptx
+*.scvd
+*.uvprojx
+*.dbgconf
+*.lst
+*.map
+*.iex
     
 
 
