@@ -1,29 +1,27 @@
 !*.c 
 !*.h
 !*.cpp
-   *.log
-   *.plg
-   *.bak
-   *.dep
-   *.uvgui.*
-   JLinkLog.txt
-   *.o
-   *.d
-   *.crf
-   *.tra
-   *.axf
-   *.hex
-   *.lnp
-   *.sct
-   *.__i
-   *xbin
-   *bin
-   *.axf
-   *.uvguix.55321
-   *.htm
-   *.build_log.htm
-   F:/project/Smart_weather_clock_based_on_FreeRTOS/my_project/STM32F4_Clock/mdk/stm32f407.uvguix.55321/
-   F:/project/Smart_weather_clock_based_on_FreeRTOS/my_project/STM32F4_Clock/mdk/stm32f407.uvoptx/
+
+*.log
+*.plg
+*.bak
+*.dep
+*.uvgui.*
+JLinkLog.txt
+*.o
+*.d
+*.crf
+*.tra
+*.axf
+*.hex
+*.lnp
+*.sct
+*.__i
+*.xbin
+*.bin
+*.axf
+*.htm
+*.build_log.htm
     
 
 
