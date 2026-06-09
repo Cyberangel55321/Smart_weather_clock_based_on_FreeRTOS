@@ -1,0 +1,16 @@
+; *************************************************************
+; *** Scatter-Loading Description File for APP0 ***
+; *************************************************************
+
+LR_IROM1 0x08010100 0x0003FF00  {    ; APP0: start=0x08010100, size=256KB-256B
+  ER_IROM1 0x08010100 0x0003FF00  {
+   *.o (RESET, +First)
+   *(InRoot$$Sections)
+   .ANY (+RO)
+   .ANY (+XO)
+  }
+  RW_IRAM1 0x20000000 0x00020000  {
+   .ANY (+RW +ZI)
+  }
+}
+
