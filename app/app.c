@@ -12,6 +12,7 @@
 #include "weather.h"
 #include "page.h"
 #include "main.h"
+#include "board.h"
 
 #define MILLISECONDS(x) (x)
 #define SECONDS(x)      MILLISECONDS((x) * 1000)
